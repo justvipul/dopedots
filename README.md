@@ -1,4 +1,4 @@
-# mxtest-dope-dots
+# mxtst-dope-dots
 ## things to delete from mx after first install
 ```
 sudo aptitude remove vim-tiny vim-common asunder bluetooth clementine gimp gimp-data gimp-python libgimp2.0 simple-scan gscan2pdf hexchat lbreakout2 gnome-mahjongg mc mc-data nomacs nomacs-l10n thunderbird transmission-gtk transmission-common xfburn
