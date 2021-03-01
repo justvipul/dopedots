@@ -1,0 +1,6 @@
+[app] (name=tint2) (class=Tint2)
+  [Layer] {12}
+[end]
+[app] (class=Conky)
+  [Layer] {12}
+[end]

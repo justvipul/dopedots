@@ -1,0 +1,10 @@
+[roxterm profile]
+saturation=0.000000
+hide_menubar=1
+show_add_tab_btn=0
+always_show_tabs=0
+font=Monospace 10
+bold_is_bright=1
+text_blink_mode=3
+scrollbar_pos=0
+colour_scheme=hemisu dark

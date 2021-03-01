@@ -1,0 +1,27 @@
+#!/bin/bash
+
+pkill wmalauncher
+
+#set up slit location
+sed -i 's/^session.screen0.slit.placement:.*/session.screen0.slit.placement: LeftCenter/' $HOME/.fluxbox/init
+
+fluxbox-remote restart; sleep 1
+
+# TOOLTIPS
+TTIPS+=" --tooltip-show-delay       250"
+TTIPS+=" --tooltip-text-padding     3"
+TTIPS+=" --tooltip-border-size		3"
+TTIPS+=" --tooltip-foreground-color black"
+TTIPS+=" --tooltip-background-color #d3d3d3"
+
+#commands for dock launchers
+wmalauncher --command xfce4-appfinder --icon /usr/local/share/icons/mxfcelogo-rounded.png --background-color black --border-color black --window-size 32 --tooltip-text "All applications" $TTIPS& sleep 0.1
+wmalauncher --desktop-file mx-tools.desktop --background-color black --border-color black --window-size 48 --tooltip-text "MX Tools" $TTIPS& sleep 0.1
+wmalauncher --desktop-file thunar.desktop --background-color black --border-color black --window-size 48 --tooltip-text "File manager" $TTIPS& sleep 0.1
+wmalauncher --desktop-file clementine.desktop --background-color black --border-color black --window-size 48 --tooltip-text "Music player" $TTIPS& sleep 0.1
+wmalauncher --desktop-file libreoffice-startcenter.desktop --background-color black --border-color black --window-size 48 --tooltip-text "Office suite" $TTIPS& sleep 0.1
+wmalauncher --command thunar /usr/share/mxflux/help/ --icon /usr/share/icons/Moka/48x48/apps/wine-help.png --background-color black --border-color black --window-size 48 --tooltip-text "MX-Fluxbox documentation" $TTIPS& sleep 0.1
+wmalauncher --desktop-file xfce4-terminal.desktop --background-color black --border-color black --window-size 48 --tooltip-text "Terminal" $TTIPS& sleep 0.1
+wmalauncher --desktop-file thunderbird.desktop --background-color black --border-color black --window-size 48 --tooltip-text "Email" $TTIPS& sleep 0.1
+wmalauncher --desktop-file firefox.desktop --background-color black --border-color black --window-size 48 --tooltip-text "Browser" $TTIPS& sleep 0.1
+wmalauncher --command exit-options --icon /usr/share/icons/Faenza/actions/48/add.png --background-color black --border-color black --window-size 48 --tooltip-text "Exit" $TTIPS& sleep 0.1

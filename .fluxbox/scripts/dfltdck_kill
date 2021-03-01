@@ -1,0 +1,7 @@
+#! /bin/bash
+
+#disable the default dock
+
+sed -i 's/$HOME/#$HOME/' $HOME/.fluxbox/startup
+
+exit

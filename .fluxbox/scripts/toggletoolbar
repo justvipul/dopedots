@@ -1,0 +1,12 @@
+#! /bin/bash
+
+FILE="$HOME/.fluxbox/init"
+sed -i  -e '/session.screen0.toolbar.autoHide/{/false/{s//true/;b}; s/true/false/}'  "$FILE"
+
+fluxbox-remote restart
+
+sleep 0.1
+
+idesktoggle idesk refresh
+
+exit

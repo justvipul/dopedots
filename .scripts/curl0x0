@@ -1,0 +1,6 @@
+#!/bin/bash
+
+file=$(find $HOME -type f | rofi -show -dmenu -lines 20 -i -l 25)
+curl -F "file=@$file" https://0x0.st | xclip -selection c
+notify-send "📂 Your file 🔗 in 📎"
+

@@ -1,0 +1,14 @@
+configuration {
+
+	modi: "drun,calc:qalc,window,run";
+	width: 25;
+	show-icons: true;
+	icon-theme: "papirus";
+	lines: 10;
+	fake-transparency: true;
+	sidebar-mode: true;
+	
+}
+
+
+@import "/usr/share/rofi/themes/glue_pro_blue.rasi"

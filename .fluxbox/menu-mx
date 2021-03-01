@@ -1,0 +1,30 @@
+# the submenus can be found in /usr/share/mxflux/menu/
+
+[begin] (Fluxbox)
+	[exec] (All Apps) {rofi -show drun}
+    [exec] (Browser) {firefox}
+    [exec] (Email) {thunderbird}
+    [exec] (File manager ) {thunar $HOME/.fluxbox} 
+    [exec] (Help ) {thunar /usr/share/mxflux/help}
+    [exec] (Music) {clementine}
+    [exec] (Run ) {rofi -show run} 
+    [exec] (Terminal) {xfce4-terminal} 
+    [separator]
+    [submenu] (Appearance)
+    [include] (/usr/share/mxflux/menu/appearance)
+    [end]
+    [submenu] (Settings)
+    [include] (/usr/share/mxflux/menu/settings)
+    [end]
+    [separator]
+    [submenu] (Out of sight)
+        [include] (/usr/share/mxflux/menu/out-of-sight)
+    [end]
+    [submenu] (Leave)
+        [exec] (Refresh) { fluxbox-remote restart; idesktoggle idesk refresh }
+        [exec] (Suspend ) {sudo 'pm-suspend'}
+        [exit] (Logout  ) 
+        [exec] (Reboot  ) {sudo /sbin/reboot} 
+        [exec] (Shutdown) {sudo /sbin/halt}
+    [end]
+[end]

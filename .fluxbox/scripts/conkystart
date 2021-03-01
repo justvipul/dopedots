@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#start conky
+if [ -n "$(grep "Hidden=false" "$HOME/.config/autostart/conky.desktop")" ]; then
+      if [ -f "$HOME/.conky/conky-startup.sh" ]; then
+           sh "$HOME/.conky/conky-startup.sh" &
+      fi
+fi
+

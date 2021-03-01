@@ -1,0 +1,2 @@
+#!/bin/bash
+grep alias ~/.bashrc | rofi -show -dmenu -yoffset 01 -i -l 25 

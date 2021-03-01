@@ -1,0 +1,103 @@
+#!/bin/sh
+#
+# fluxbox startup-script:
+#
+# Lines starting with a '#' are ignored.
+
+# Applications you want to run with fluxbox.
+# MAKE SURE THAT APPS THAT KEEP RUNNING HAVE AN ''&'' AT THE END.
+
+#setup default translated mx-fluxbox menu
+#only do on first setup of new user
+#upgrades are handled by mxflux_install.sh script
+
+# localize fluxbox menu
+# to reset default localized menu configuration, delete ~/.fluxbox/menu-chkd
+# logout, then log back in to fluxbox session
+localize_fluxbox_menu-mx
+
+# User folders update
+xdg-user-dirs-update
+# Update common folders names to match current locale
+xdg-user-dirs-gtk-update
+
+#start a compositor if using complicated conkies
+compton -b &
+
+# add launcher for legacy toolbar
+wmalauncher-menu
+
+#start Xfce panel
+#xfce4-panel &
+
+#add system monitors 
+#gkrellm &
+
+# arandr genrated screenlayout 
+# before conky
+
+# export Qt variables
+export QT_QPA_PLATFORMTHEME=gtk2
+export QT_PLATFORMTHEME=gtk2
+export QT_PLATFORM_PLUGIN=gtk2
+
+# add tint2 panel
+#tint2 &
+
+# add desktop icons
+idesktoggle idesk on 1>/dev/null 2>&1 &
+
+# add root access
+/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+
+#set the default dock
+$HOME/.fluxbox/scripts/DefaultDock.mxdk
+
+# provide a screensaver
+xfce4-screensaver-command &
+xfce4-screensaver &
+
+#conky to follow conky toggle settings
+$HOME/.fluxbox/scripts/conkystart
+
+#place network manager on the toolbar
+nm-applet &
+
+#start pulseaudio before volumeicon so unmute works
+start-pulseaudio-x11 &
+sleep 2
+volumeicon -c volumeicon-fluxbox & 
+
+#place clipboard on the toolbar
+clipit &
+
+#put brightness controller and battery monitor on toolbar
+xfce4-power-manager &
+
+
+#tool to set and preserve screen resolution, if necessary
+#arandr
+
+# start user accessibility bus - if not already running
+/usr/lib/at-spi2-core/at-spi-bus-launcher --launch-immediately  &
+
+#start fehbg to get last background selected
+~/.fehbg
+
+# Debian-local change:
+#   - fbautostart has been added with a quick hack to check to see if it
+#     exists. If it does, we'll start it up by default.
+which fbautostart > /dev/null
+if [ $? -eq 0 ]; then
+    fbautostart
+fi
+
+# put apt-notifier on the toolbar
+nohup sh -c 'sleep 3; ionice -c3 nice -n19 nohup python /usr/bin/apt-notifier.py 1>/dev/null 2>&1  &'  1>/dev/null 2>&1  &
+
+# And last but not least we start fluxbox.
+# Because it is the last app you have to run it with ''exec'' before it.
+
+exec fluxbox
+# or if you want to keep a log:
+# exec fluxbox -log "~/.fluxbox/log"
