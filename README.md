@@ -130,7 +130,7 @@ sudo ninja -C build install
 
 ## copy bat,exa,rsfetch and atomicparsley to /usr/bin
 ```
-sudo cp ~/copytousrbinlocal /usr/bin/
+sudo cp ~/copytousrbinlocal/* /usr/bin/
 ```
 
 
