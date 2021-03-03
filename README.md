@@ -67,6 +67,7 @@ https://st.suckless.org/patches/bold-is-not-bright/
 cd nnn 
 make
 sudo make O_NERD=1
+sudo cp nnn /usr/bin/
 
 ```
 
