@@ -126,11 +126,11 @@ xterm*|rxvt*)
 esac
 
 eval "$(starship init bash)"
-source $HOME/.config/colorscripts/panes
-alias rsfetch='rsfetch -PdbcklrstuU@w -L uzi2.txt | lolcat'
+#source $HOME/.config/colorscripts/panes
+alias rsfetch='rsfetch -PdbcklrstuU@w -L uzi.txt | lolcat'
 alias duf='duf | lolcat'
 alias cat="bat"
-alias nnn="nnn -Dc"
+alias nnn="nnn -Ddc"
 
 ### ARCHIVE EXTRACTION
 # usage: ex <file>
@@ -178,6 +178,8 @@ alias aptin="sudo aptitude install"
 alias aptrem="sudo aptitude remove"
 alias aptser="aptitude search"
 alias pixterm300="pixterm -tc 330 -tr 330 -s 2"
+alias ls="exa -lgh --group-directories-first"
+alias la="exa -lgha --group-directories-first"
 set -o vi
 
 
@@ -192,3 +194,4 @@ export NNN_PLUG='f:finder;o:fzopen;p:preview-tabbed;v:vidthumb;n:nuke;'
 export NNN_OPENER=/home/mxtest/.config/nnn/plugins/nuke
 export NNN_FIFO=/tmp/nnn.fifo
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+colorscript random
