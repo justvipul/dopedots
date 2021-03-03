@@ -1,6 +1,5 @@
 
 
-
 # mxtst-dope-dots
 
 ```
@@ -106,8 +105,10 @@ sudo make install
 
 cd ~/git-src/vte-ng
 sudo make uninstall
+```
+for saner working of termite
 
-for saner working
+```
 wget https://raw.githubusercontent.com/thestinger/termite/master/termite.terminfo
 tic -x termite.terminfo
 ```
