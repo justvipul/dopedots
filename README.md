@@ -133,6 +133,8 @@ sudo ninja -C build install
 sudo cp ~/copytousrbinlocal/* /usr/bin/
 ```
 
+`fc-cache -fv`
+
 
 ### misc. links
 [Bgra-debian](https://github.com/ra-c/libxft-bgra-debian)\
