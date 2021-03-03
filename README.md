@@ -1,5 +1,4 @@
 
-
 # mxtst-dope-dots
 
 ```
@@ -113,6 +112,22 @@ wget https://raw.githubusercontent.com/thestinger/termite/master/termite.terminf
 tic -x termite.terminfo
 ```
 
+## install shell color scripts
+```
+cd ~/gitall/shell-color-scripts
+rm -rf /opt/shell-color-scripts || return 1
+sudo mkdir -p /opt/shell-color-scripts/colorscripts || return 1
+sudo cp -rf colorscripts/* /opt/shell-color-scripts/colorscripts
+sudo cp colorscript.sh /usr/bin/colorscript
+```
+## install picom
+```
+cd ~/gitall/picom
+meson --buildtype=release . build
+ninja -C build
+# To install the binaries in /usr/local/bin (optional)
+sudo ninja -C build install
+```
 
 
 ### misc. links
