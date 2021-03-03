@@ -8,8 +8,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
     " Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
     Plug 'fatih/vim-go', { 'tag': '*' }
-    " Unmanaged plugin (manually installed and updated)
-    Plug '~/my-prototype-plugin'
     "add icons
     Plug 'ryanoasis/vim-devicons'
     Plug 'francoiscabrol/ranger.vim'
@@ -22,6 +20,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-utils/vim-man'
     Plug 'sheerun/vim-polyglot'
     Plug 'chun-yang/auto-pairs'
+    Plug 'chrisbra/colorizer'
+    Plug 'vitalk/vim-simple-todo'
+
 
 
 
