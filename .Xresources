@@ -1,10 +1,10 @@
 ! DO NOT CHANGE THE ORDER
 
 ! URXVT APPEARANCE
-URxvt.font:   xft:VictorMono Nerd Font Mono:style=Regular,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular
-URxvt.boldFont:  xft:VictorMono Nerd Font Mono:style=Bold,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular
-URxvt.italicFont:  xft:VictorMono Nerd Font Mono:style=Italic,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular
-URxvt.boldItalicfont: xft:VictorMono Nerd Font Mono:style=Bold Italic,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular
+URxvt.font:   xft:VictorMono Nerd Font Mono:pixelsize=13:style=Regular,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular
+URxvt.boldFont:  xft:VictorMono Nerd Font Mono:pixelsize=13:style=Bold,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular
+URxvt.italicFont:  xft:VictorMono Nerd Font Mono:pixelsize=13:style=Italic,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular
+URxvt.boldItalicfont: xft:VictorMono Nerd Font Mono:pixelsize=13:style=Bold Italic,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular
 URxvt.geometry:                   84x16
 URxvt.internalBorder:             2
 URxvt.cursorBlink:                true
