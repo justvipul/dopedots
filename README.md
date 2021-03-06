@@ -1,5 +1,10 @@
 # mxtst-dope-dots
 
+![doperice1](.screenshot/1.png)
+![doperice2](.screenshot/2.png)
+
+
+
 ```
 git clone https://gitlab.com/only_vip/mxtest-dope-dots.git
 ```
