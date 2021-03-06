@@ -136,6 +136,9 @@ sudo cp ~/copytousrbinlocal/* /usr/bin/
 
 `fc-cache -fv`
 
+![-Pf1.png](https://0x0.st/-Pf1.png)
+
+
 
 ### misc. links
 [Bgra-debian](https://github.com/ra-c/libxft-bgra-debian)\
