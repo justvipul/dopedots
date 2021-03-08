@@ -1,10 +1,10 @@
 ! DO NOT CHANGE THE ORDER
 
 ! URXVT APPEARANCE
-URxvt.font:   xft:VictorMono Nerd Font Mono:pixelsize=13:style=Regular,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular
-URxvt.boldFont:  xft:VictorMono Nerd Font Mono:pixelsize=13:style=Bold,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular
-URxvt.italicFont:  xft:VictorMono Nerd Font Mono:pixelsize=13:style=Italic,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular
-URxvt.boldItalicfont: xft:VictorMono Nerd Font Mono:pixelsize=13:style=Bold Italic,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular
+URxvt.font:   xft:VictorMono Nerd Font Mono:pixelsize=15:style=Bold,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular
+URxvt.boldFont:  xft:VictorMono Nerd Font Mono:pixelsize=15:style=Bold,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular
+URxvt.italicFont:  xft:VictorMono Nerd Font Mono:pixelsize=15:style=Italic,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular
+URxvt.boldItalicfont: xft:VictorMono Nerd Font Mono:pixelsize=15:style=Bold Italic,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular
 URxvt.geometry:                   84x16
 URxvt.internalBorder:             2
 URxvt.cursorBlink:                true
@@ -63,61 +63,61 @@ URxvt.keysym.Control-question:    resize-font:show
 ! CLIPBOARD
 URxvt.clipboard.copycmd:          xclip -i -selection clipboard
 URxvt.clipboard.pastecmd:         xclip -o -selection clipboard
-URxvt.keysym.M-c:                 perl:clipboard:copy
-URxvt.keysym.M-v:                 perl:clipboard:paste
+URxvt.keysym.M-h:                 perl:clipboard:copy
+URxvt.keysym.M-j:                 perl:clipboard:paste
 
 ! URL
 URxvt.keysym.M-u:                 perl:url-select:select_next
 URvxt.url-select.button:          2
-URxvt.url-select.launcher:        brave-bin
+URxvt.url-select.launcher:        firefox-bin
 URxvt.url-select.underline:       true
 
 ! COLOR SCHEME
 ! black > red > green > yellow > blue > magenta > cyan > white
-#define black0                    #373E4D
-#define black1                    #3B4252
-#define black2                    #434C5E
-#define black3                    #4C566A
-#define red0                      #FA5AA4
-#define red1                      #FA74B2
-#define green0                    #2BE491
-#define green1                    #44EB9F
-#define yellow0                   #FA946E
-#define yellow1                   #FAA687
-#define blue0                     #63C5EA
-#define blue1                     #7ACBEA
-#define magenta0                  #CF8EF4
-#define magenta1                  #D8A6F4
-#define cyan0                     #89CCF7
-#define cyan1                     #A1D5F7
-#define white0                    #F9F9F9
-#define white1                    #F7F7F7
-#define white2                    #F4F4F4
-
-*.color1:                         red0
-*.color2:                         green0
-*.color3:                         yellow0
-*.color4:                         blue0
-*.color5:                         magenta0
-*.color6:                         cyan0
-
-*.color9:                         red1
-*.color10:                        green1
-*.color11:                        yellow1
-*.color12:                        blue1
-*.color13:                        magenta1
-*.color14:                        cyan1
-
-! FOR REVERSING ONLY (INVERT BG/FG)
-*.foreground:                     white0
-*.background:                     black0
-*.cursorColor:                    white0
-
-*.color0:                         black2
-*.color7:                         white1
-
-*.color8:                         black3
-*.color15:                        white2
+!*#define black0                    #373E4D
+!*#define black1                    #3B4252
+!*#define black2                    #434C5E
+!*#define black3                    #4C566A
+!*#define red0                      #FA5AA4
+!*#define red1                      #FA74B2
+!*#define green0                    #2BE491
+!*#define green1                    #44EB9F
+!*#define yellow0                   #FA946E
+!*#define yellow1                   #FAA687
+!*#define blue0                     #63C5EA
+!*#define blue1                     #7ACBEA
+!*#define magenta0                  #CF8EF4
+!*#define magenta1                  #D8A6F4
+!*#define cyan0                     #89CCF7
+!*#define cyan1                     #A1D5F7
+!*#define white0                    #F9F9F9
+!*#define white1                    #F7F7F7
+!*#define white2                    #F4F4F4
+!*
+!**.color1:                         red0
+!**.color2:                         green0
+!**.color3:                         yellow0
+!**.color4:                         blue0
+!**.color5:                         magenta0
+!**.color6:                         cyan0
+!*
+!**.color9:                         red1
+!**.color10:                        green1
+!**.color11:                        yellow1
+!**.color12:                        blue1
+!**.color13:                        magenta1
+!**.color14:                        cyan1
+!*
+!*! FOR REVERSING ONLY (INVERT BG/FG)
+!**.foreground:                     white0
+!**.background:                     black0
+!**.cursorColor:                    white0
+!*
+!**.color0:                         black2
+!**.color7:                         white1
+!*
+!**.color8:                         black3
+!**.color15:                        white2
 
 !*.foreground:                     black0
 !*.background:                     white0
@@ -128,4 +128,417 @@ URxvt.url-select.underline:       true
 
 !*.color8:                         white2
 !*.color15:                        black3
-
+!#include       ".Xresources-themes/arcadia.Xresources"
+!#include       ".Xresources-themes/arcadia_Midnight.Xresources"
+!#include       ".Xresources-themes/arcadia_Pitch.Xresources"
+!#include       ".Xresources-themes/arcadia_Sunset.Xresources"
+!#include       ".Xresources-themes/arcadia_Twilight.Xresources"
+!#include       ".Xresources-themes/base16-3024-256.Xresources"
+!#include       ".Xresources-themes/base16-3024.Xresources"
+!#include       ".Xresources-themes/base16-apathy-256.Xresources"
+!#include       ".Xresources-themes/base16-apathy.Xresources"
+!#include       ".Xresources-themes/base16-ashes-256.Xresources"
+!#include       ".Xresources-themes/base16-ashes.Xresources"
+!#include       ".Xresources-themes/base16-atelier-cave-256.Xresources"
+!#include       ".Xresources-themes/base16-atelier-cave.Xresources"
+!#include       ".Xresources-themes/base16-atelier-dune-256.Xresources"
+!#include       ".Xresources-themes/base16-atelier-dune.Xresources"
+!#include       ".Xresources-themes/base16-atelier-estuary-256.Xresources"
+!#include       ".Xresources-themes/base16-atelier-estuary.Xresources"
+!#include       ".Xresources-themes/base16-atelier-forest-256.Xresources"
+!#include       ".Xresources-themes/base16-atelier-forest.Xresources"
+!#include       ".Xresources-themes/base16-atelier-heath-256.Xresources"
+!#include       ".Xresources-themes/base16-atelier-heath.Xresources"
+!#include       ".Xresources-themes/base16-atelier-lakeside-256.Xresources"
+!#include       ".Xresources-themes/base16-atelier-lakeside.Xresources"
+!#include       ".Xresources-themes/base16-atelier-plateau-256.Xresources"
+!#include       ".Xresources-themes/base16-atelier-plateau.Xresources"
+!#include       ".Xresources-themes/base16-atelier-savanna-256.Xresources"
+!#include       ".Xresources-themes/base16-atelier-savanna.Xresources"
+!#include       ".Xresources-themes/base16-atelier-seaside-256.Xresources"
+!#include       ".Xresources-themes/base16-atelier-seaside.Xresources"
+!#include       ".Xresources-themes/base16-atelier-sulphurpool-256.Xresources"
+!#include       ".Xresources-themes/base16-atelier-sulphurpool.Xresources"
+!#include       ".Xresources-themes/base16-bespin-256.Xresources"
+!#include       ".Xresources-themes/base16-bespin.Xresources"
+!#include       ".Xresources-themes/base16-brewer-256.Xresources"
+!#include       ".Xresources-themes/base16-brewer.Xresources"
+!#include       ".Xresources-themes/base16-bright-256.Xresources"
+!#include       ".Xresources-themes/base16-bright.Xresources"
+!#include       ".Xresources-themes/base16-chalk-256.Xresources"
+!#include       ".Xresources-themes/base16-chalk.Xresources"
+!#include       ".Xresources-themes/base16-codeschool-256.Xresources"
+!#include       ".Xresources-themes/base16-codeschool.Xresources"
+!#include       ".Xresources-themes/base16-cupcake-256.Xresources"
+!#include       ".Xresources-themes/base16-cupcake.Xresources"
+!#include       ".Xresources-themes/base16-darktooth-256.Xresources"
+!#include       ".Xresources-themes/base16-darktooth.Xresources"
+#include       ".Xresources-themes/base16-default-dark-256.Xresources"
+!#include       ".Xresources-themes/base16-default-dark.Xresources"
+!#include       ".Xresources-themes/base16-dracula-256.Xresources"
+!#include       ".Xresources-themes/base16-dracula.Xresources"
+!#include       ".Xresources-themes/base16-eighties-256.Xresources"
+!#include       ".Xresources-themes/base16-eighties.Xresources"
+!#include       ".Xresources-themes/base16-embers-256.Xresources"
+!#include       ".Xresources-themes/base16-embers.Xresources"
+!#include       ".Xresources-themes/base16-flat-256.Xresources"
+!#include       ".Xresources-themes/base16-flat.Xresources"
+!#include       ".Xresources-themes/base16-github-256.Xresources"
+!#include       ".Xresources-themes/base16-github.Xresources"
+!#include       ".Xresources-themes/base16-google-dark-256.Xresources"
+!#include       ".Xresources-themes/base16-google-dark.Xresources"
+!#include       ".Xresources-themes/base16-grayscale-dark-256.Xresources"
+!#include       ".Xresources-themes/base16-grayscale-dark.Xresources"
+!#include       ".Xresources-themes/base16-greenscreen-256.Xresources"
+!#include       ".Xresources-themes/base16-greenscreen.Xresources"
+!#include       ".Xresources-themes/base16-gruvbox-dark-hard-256.Xresources"
+!#include       ".Xresources-themes/base16-gruvbox-dark-hard.Xresources"
+!#include       ".Xresources-themes/base16-gruvbox-dark-medium-256.Xresources"
+!#include       ".Xresources-themes/base16-gruvbox-dark-medium.Xresources"
+!#include       ".Xresources-themes/base16-gruvbox-dark-pale-256.Xresources"
+!#include       ".Xresources-themes/base16-gruvbox-dark-pale.Xresources"
+!#include       ".Xresources-themes/base16-gruvbox-dark-soft-256.Xresources"
+!#include       ".Xresources-themes/base16-gruvbox-dark-soft.Xresources"
+!#include       ".Xresources-themes/base16-harmonic-dark-256.Xresources"
+!#include       ".Xresources-themes/base16-harmonic-dark.Xresources"
+!#include       ".Xresources-themes/base16-hopscotch-256.Xresources"
+!#include       ".Xresources-themes/base16-hopscotch.Xresources"
+!#include       ".Xresources-themes/base16-irblack-256.Xresources"
+!#include       ".Xresources-themes/base16-irblack.Xresources"
+!#include       ".Xresources-themes/base16-isotope-256.Xresources"
+!#include       ".Xresources-themes/base16-isotope.Xresources"
+!#include       ".Xresources-themes/base16-macintosh-256.Xresources"
+!#include       ".Xresources-themes/base16-macintosh.Xresources"
+!#include       ".Xresources-themes/base16-marrakesh-256.Xresources"
+!#include       ".Xresources-themes/base16-marrakesh.Xresources"
+!#include       ".Xresources-themes/base16-materia-256.Xresources"
+!#include       ".Xresources-themes/base16-materia.Xresources"
+!#include       ".Xresources-themes/base16-mocha-256.Xresources"
+!#include       ".Xresources-themes/base16-mocha.Xresources"
+!#include       ".Xresources-themes/base16-monokai-256.Xresources"
+!#include       ".Xresources-themes/base16-monokai.Xresources"
+!#include       ".Xresources-themes/base16-ocean-256.Xresources"
+!#include       ".Xresources-themes/base16-ocean.Xresources"
+!#include       ".Xresources-themes/base16-oceanicnext-256.Xresources"
+!#include       ".Xresources-themes/base16-oceanicnext.Xresources"
+!#include       ".Xresources-themes/base16-onedark-256.Xresources"
+!#include       ".Xresources-themes/base16-onedark.Xresources"
+!#include       ".Xresources-themes/base16-paraiso-256.Xresources"
+!#include       ".Xresources-themes/base16-paraiso.Xresources"
+!#include       ".Xresources-themes/base16-phd-256.Xresources"
+!#include       ".Xresources-themes/base16-phd.Xresources"
+!#include       ".Xresources-themes/base16-pico-256.Xresources"
+!#include       ".Xresources-themes/base16-pico.Xresources"
+!#include       ".Xresources-themes/base16-pop-256.Xresources"
+!#include       ".Xresources-themes/base16-pop.Xresources"
+!#include       ".Xresources-themes/base16-railscasts-256.Xresources"
+!#include       ".Xresources-themes/base16-railscasts.Xresources"
+!#include       ".Xresources-themes/base16-seti-256.Xresources"
+!#include       ".Xresources-themes/base16-seti.Xresources"
+!#include       ".Xresources-themes/base16-solarflare-256.Xresources"
+!#include       ".Xresources-themes/base16-solarflare.Xresources"
+!#include       ".Xresources-themes/base16-solarized-dark-256.Xresources"
+!#include       ".Xresources-themes/base16-solarized-dark.Xresources"
+!#include       ".Xresources-themes/base16-spacemacs-256.Xresources"
+!#include       ".Xresources-themes/base16-spacemacs.Xresources"
+!#include       ".Xresources-themes/base16-summerfruit-dark-256.Xresources"
+!#include       ".Xresources-themes/base16-summerfruit-dark.Xresources"
+!#include       ".Xresources-themes/base16-tomorrow-256.Xresources"
+!#include       ".Xresources-themes/base16-tomorrow-night-256.Xresources"
+!#include       ".Xresources-themes/base16-tomorrow-night.Xresources"
+!#include       ".Xresources-themes/base16-tomorrow.Xresources"
+!#include       ".Xresources-themes/base16-tube-256.Xresources"
+!#include       ".Xresources-themes/base16-tube.Xresources"
+!#include       ".Xresources-themes/base16-unikitty-dark-256.Xresources"
+!#include       ".Xresources-themes/base16-unikitty-dark.Xresources"
+!#include       ".Xresources-themes/base16-woodland-256.Xresources"
+!#include       ".Xresources-themes/base16-woodland.Xresources"
+!#include       ".Xresources-themes/blueChocolate.Xresources"
+!#include       ".Xresources-themes/bunsenlabs.Xresources"
+!#include       ".Xresources-themes/dark_Custom.Xresources"
+!#include       ".Xresources-themes/hyper-snazzy.Xresources"
+!#include       ".Xresources-themes/hyper.Xresources"
+!#include       ".Xresources-themes/icyphox.Xresources"
+!#include       ".Xresources-themes/iterm-3024_Night.Xresources"
+!#include       ".Xresources-themes/iterm-AdventureTime.Xresources"
+!#include       ".Xresources-themes/iterm-Afterglow.Xresources"
+!#include       ".Xresources-themes/iterm-AlienBlood.Xresources"
+!#include       ".Xresources-themes/iterm-Argonaut.Xresources"
+!#include       ".Xresources-themes/iterm-Arthur.Xresources"
+!#include       ".Xresources-themes/iterm-AtelierSulphurpool.Xresources"
+!#include       ".Xresources-themes/iterm-Atom.Xresources"
+!#include       ".Xresources-themes/iterm-ayu.Xresources"
+!#include       ".Xresources-themes/iterm-Batman.Xresources"
+!#include       ".Xresources-themes/iterm-Belafonte_Night.Xresources"
+!#include       ".Xresources-themes/iterm-BirdsOfParadise.Xresources"
+!#include       ".Xresources-themes/iterm-Blazer.Xresources"
+!#include       ".Xresources-themes/iterm-Borland.Xresources"
+!#include       ".Xresources-themes/iterm-Bright_Lights.Xresources"
+!#include       ".Xresources-themes/iterm-Broadcast.Xresources"
+!#include       ".Xresources-themes/iterm-Brogrammer.Xresources"
+!#include       ".Xresources-themes/iterm-C64.Xresources"
+!#include       ".Xresources-themes/iterm-Chalk.Xresources"
+!#include       ".Xresources-themes/iterm-Chalkboard.Xresources"
+!#include       ".Xresources-themes/iterm-Ciapre.Xresources"
+!#include       ".Xresources-themes/iterm-Cobalt2.Xresources"
+!#include       ".Xresources-themes/iterm-Cobalt_Neon.Xresources"
+!#include       ".Xresources-themes/iterm-CrayonPonyFish.Xresources"
+!#include       ".Xresources-themes/iterm-Dark_Pastel.Xresources"
+!#include       ".Xresources-themes/iterm-Darkside.Xresources"
+!#include       ".Xresources-themes/iterm-deep.Xresources"
+!#include       ".Xresources-themes/iterm-Desert.Xresources"
+!#include       ".Xresources-themes/iterm-DimmedMonokai.Xresources"
+!#include       ".Xresources-themes/iterm-DotGov.Xresources"
+!#include       ".Xresources-themes/iterm-Dracula.Xresources"
+!#include       ".Xresources-themes/iterm-Duotone_Dark.Xresources"
+!#include       ".Xresources-themes/iterm-Earthsong.Xresources"
+!#include       ".Xresources-themes/iterm-Elemental.Xresources"
+!#include       ".Xresources-themes/iterm-Elementary.Xresources"
+!#include       ".Xresources-themes/iterm-ENCOM.Xresources"
+!#include       ".Xresources-themes/iterm-Espresso.Xresources"
+!#include       ".Xresources-themes/iterm-Espresso_Libre.Xresources"
+!#include       ".Xresources-themes/iterm-Fideloper.Xresources"
+!#include       ".Xresources-themes/iterm-FirefoxDev.Xresources"
+!#include       ".Xresources-themes/iterm-Firewatch.Xresources"
+!#include       ".Xresources-themes/iterm-FishTank.Xresources"
+!#include       ".Xresources-themes/iterm-Flat.Xresources"
+!#include       ".Xresources-themes/iterm-Flatland.Xresources"
+!#include       ".Xresources-themes/iterm-Floraverse.Xresources"
+!#include       ".Xresources-themes/iterm-ForestBlue.Xresources"
+!#include       ".Xresources-themes/iterm-FrontEndDelight.Xresources"
+!#include       ".Xresources-themes/iterm-FunForrest.Xresources"
+!#include       ".Xresources-themes/iterm-Galaxy.Xresources"
+!#include       ".Xresources-themes/iterm-Github.Xresources"
+!#include       ".Xresources-themes/iterm-Glacier.Xresources"
+!#include       ".Xresources-themes/iterm-Grape.Xresources"
+!#include       ".Xresources-themes/iterm-Grass.Xresources"
+!#include       ".Xresources-themes/iterm-Gruvbox_Dark.Xresources"
+!#include       ".Xresources-themes/iterm-Hardcore.Xresources"
+!#include       ".Xresources-themes/iterm-Harper.Xresources"
+!#include       ".Xresources-themes/iterm-Highway.Xresources"
+!#include       ".Xresources-themes/iterm-Hipster_Green.Xresources"
+!#include       ".Xresources-themes/iterm-Homebrew.Xresources"
+!#include       ".Xresources-themes/iterm-Hurtado.Xresources"
+!#include       ".Xresources-themes/iterm-Hybrid.Xresources"
+!#include       ".Xresources-themes/iterm-IC_Green_PPL.Xresources"
+!#include       ".Xresources-themes/iterm-IC_Orange_PPL.Xresources"
+!#include       ".Xresources-themes/iterm-idleToes.Xresources"
+!#include       ".Xresources-themes/iterm-IR_Black.Xresources"
+!#include       ".Xresources-themes/iterm-Jackie_Brown.Xresources"
+!#include       ".Xresources-themes/iterm-Japanesque.Xresources"
+!#include       ".Xresources-themes/iterm-Jellybeans.Xresources"
+!#include       ".Xresources-themes/iterm-JetBrains_Darcula.Xresources"
+!#include       ".Xresources-themes/iterm-Kibble.Xresources"
+!#include       ".Xresources-themes/iterm-Later_This_Evening.Xresources"
+!#include       ".Xresources-themes/iterm-Lavandula.Xresources"
+!#include       ".Xresources-themes/iterm-LiquidCarbon.Xresources"
+!#include       ".Xresources-themes/iterm-LiquidCarbonTransparent.Xresources"
+!#include       ".Xresources-themes/iterm-LiquidCarbonTransparentInverse.Xresources"
+!#include       ".Xresources-themes/iterm-Man_Page.Xresources"
+!#include       ".Xresources-themes/iterm-Material.Xresources"
+!#include       ".Xresources-themes/iterm-MaterialDark.Xresources"
+!#include       ".Xresources-themes/iterm-Mathias.Xresources"
+!#include       ".Xresources-themes/iterm-Medallion.Xresources"
+!#include       ".Xresources-themes/iterm-Misterioso.Xresources"
+!#include       ".Xresources-themes/iterm-Molokai.Xresources"
+!#include       ".Xresources-themes/iterm-MonaLisa.Xresources"
+!#include       ".Xresources-themes/iterm-Monokai_Soda.Xresources"
+!#include       ".Xresources-themes/iterm-Monokai_Vivid.Xresources"
+!#include       ".Xresources-themes/iterm-N0tch2k.Xresources"
+!#include       ".Xresources-themes/iterm-Neopolitan.Xresources"
+!#include       ".Xresources-themes/iterm-Neutron.Xresources"
+!#include       ".Xresources-themes/iterm-NightLion_v1.Xresources"
+!#include       ".Xresources-themes/iterm-NightLion_v2.Xresources"
+!#include       ".Xresources-themes/iterm-Novel.Xresources"
+!#include       ".Xresources-themes/iterm-Obsidian.Xresources"
+!#include       ".Xresources-themes/iterm-Ocean.Xresources"
+!#include       ".Xresources-themes/iterm-OceanicMaterial.Xresources"
+!#include       ".Xresources-themes/iterm-Ollie.Xresources"
+!#include       ".Xresources-themes/iterm-OneHalfDark.Xresources"
+!#include       ".Xresources-themes/iterm-OneHalfLight.Xresources"
+!#include       ".Xresources-themes/iterm-Pandora.Xresources"
+!#include       ".Xresources-themes/iterm-Paraiso_Dark.Xresources"
+!#include       ".Xresources-themes/iterm-Parasio_Dark.Xresources"
+!#include       ".Xresources-themes/iterm-PaulMillr.Xresources"
+!#include       ".Xresources-themes/iterm-PencilDark.Xresources"
+!#include       ".Xresources-themes/iterm-PencilLight.Xresources"
+!#include       ".Xresources-themes/iterm-Piatto_Light.Xresources"
+!#include       ".Xresources-themes/iterm-Pnevma.Xresources"
+!#include       ".Xresources-themes/iterm-Pro.Xresources"
+!#include       ".Xresources-themes/iterm-Red_Alert.Xresources"
+!#include       ".Xresources-themes/iterm-Red_Sands.Xresources"
+!#include       ".Xresources-themes/iterm-Rippedcasts.Xresources"
+!#include       ".Xresources-themes/iterm-Royal.Xresources"
+!#include       ".Xresources-themes/iterm-Ryuuko.Xresources"
+!#include       ".Xresources-themes/iterm-Seafoam_Pastel.Xresources"
+!#include       ".Xresources-themes/iterm-SeaShells.Xresources"
+!#include       ".Xresources-themes/iterm-Seti.Xresources"
+!#include       ".Xresources-themes/iterm-Shaman.Xresources"
+!#include       ".Xresources-themes/iterm-Slate.Xresources"
+!#include       ".Xresources-themes/iterm-Smyck.Xresources"
+!#include       ".Xresources-themes/iterm-SoftServer.Xresources"
+!#include       ".Xresources-themes/iterm-Solarized_Darcula.Xresources"
+!#include       ".Xresources-themes/iterm-Solarized_Dark.Xresources"
+!#include       ".Xresources-themes/iterm-Solarized_Dark_-_Patched.Xresources"
+!#include       ".Xresources-themes/iterm-Solarized_Dark_Higher_Contrast.Xresources"
+!#include       ".Xresources-themes/iterm-Solarized_Light.Xresources"
+!#include       ".Xresources-themes/iterm-Spacedust.Xresources"
+!#include       ".Xresources-themes/iterm-SpaceGray.Xresources"
+!#include       ".Xresources-themes/iterm-SpaceGray_Eighties.Xresources"
+!#include       ".Xresources-themes/iterm-SpaceGray_Eighties_Dull.Xresources"
+!#include       ".Xresources-themes/iterm-Spiderman.Xresources"
+!#include       ".Xresources-themes/iterm-Spring.Xresources"
+!#include       ".Xresources-themes/iterm-Square.Xresources"
+!#include       ".Xresources-themes/iterm-Sundried.Xresources"
+!#include       ".Xresources-themes/iterm-Symfonic.Xresources"
+!#include       ".Xresources-themes/iterm-Teerb.Xresources"
+!#include       ".Xresources-themes/iterm-Terminal_Basic.Xresources"
+!#include       ".Xresources-themes/iterm-Thayer_Bright.Xresources"
+!#include       ".Xresources-themes/iterm-The_Hulk.Xresources"
+!#include       ".Xresources-themes/iterm-Tomorrow.Xresources"
+!#include       ".Xresources-themes/iterm-Tomorrow_Night.Xresources"
+!#include       ".Xresources-themes/iterm-Tomorrow_Night_Blue.Xresources"
+!#include       ".Xresources-themes/iterm-Tomorrow_Night_Bright.Xresources"
+!#include       ".Xresources-themes/iterm-Tomorrow_Night_Eighties.Xresources"
+!#include       ".Xresources-themes/iterm-ToyChest.Xresources"
+!#include       ".Xresources-themes/iterm-Treehouse.Xresources"
+!#include       ".Xresources-themes/iterm-Ubuntu.Xresources"
+!#include       ".Xresources-themes/iterm-UnderTheSea.Xresources"
+!#include       ".Xresources-themes/iterm-Urple.Xresources"
+!#include       ".Xresources-themes/iterm-Vaughn.Xresources"
+!#include       ".Xresources-themes/iterm-VibrantInk.Xresources"
+!#include       ".Xresources-themes/iterm-Violet_Dark.Xresources"
+!#include       ".Xresources-themes/iterm-Violet_Light.Xresources"
+!#include       ".Xresources-themes/iterm-WarmNeon.Xresources"
+!#include       ".Xresources-themes/iterm-Wez.Xresources"
+!#include       ".Xresources-themes/iterm-WildCherry.Xresources"
+!#include       ".Xresources-themes/iterm-Wombat.Xresources"
+!#include       ".Xresources-themes/iterm-Wryan.Xresources"
+!#include       ".Xresources-themes/iterm-Zenburn.Xresources"
+!#include       ".Xresources-themes/nord"
+!#include       ".Xresources-themes/nord.Xresources"
+!#include       ".Xresources-themes/numix.Xresources"
+!#include       ".Xresources-themes/one-dark.Xresources"
+!#include       ".Xresources-themes/pop_os.Xresources"
+!#include       ".Xresources-themes/raven-dark.Xresources"
+!#include       ".Xresources-themes/raven_m3-dark.Xresources"
+!#include       ".Xresources-themes/raven_m6-dark.Xresources"
+!#include       ".Xresources-themes/raven_m9-dark.Xresources"
+!#include       ".Xresources-themes/raven_p3-dark.Xresources"
+!#include       ".Xresources-themes/raven_p6-dark.Xresources"
+!#include       ".Xresources-themes/raven_p9-dark.Xresources"
+!#include       ".Xresources-themes/synthwave.Xresources"
+!#include       ".Xresources-themes/TomorrowNight.Xresources"
+!#include       ".Xresources-themes/TomorrowNightBlue.Xresources"
+!#include       ".Xresources-themes/TomorrowNightBright.Xresources"
+!#include       ".Xresources-themes/TomorrowNightEighties.Xresources"
+!#include       ".Xresources-themes/xcolors-apple-bright.Xresources"
+!#include       ".Xresources-themes/xcolors-apple-dark.Xresources"
+!#include       ".Xresources-themes/xcolors-astromouse.Xresources"
+!#include       ".Xresources-themes/xcolors-autumn.Xresources"
+!#include       ".Xresources-themes/xcolors-Baskerville_-_Count_Von_Count.Xresources"
+!#include       ".Xresources-themes/xcolors-Baskerville_-_Eldorado_dark.Xresources"
+!#include       ".Xresources-themes/xcolors-baskerville_-_FarSide.Xresources"
+!#include       ".Xresources-themes/xcolors-baskerville_-_ivory_dark.Xresources"
+!#include       ".Xresources-themes/xcolors-baskerville_-_lost_woods.Xresources"
+!#include       ".Xresources-themes/xcolors-belge.Xresources"
+!#include       ".Xresources-themes/xcolors-bitmute.Xresources"
+!#include       ".Xresources-themes/xcolors-bleh-1.Xresources"
+!#include       ".Xresources-themes/xcolors-blizzard-orb.Xresources"
+!#include       ".Xresources-themes/xcolors-brightly.Xresources"
+!#include       ".Xresources-themes/xcolors-chalk.Xresources"
+!#include       ".Xresources-themes/xcolors-cheesecake-dark.Xresources"
+!#include       ".Xresources-themes/xcolors-cinder.Xresources"
+!#include       ".Xresources-themes/xcolors-cloud.Xresources"
+!#include       ".Xresources-themes/xcolors-cold-bruise.Xresources"
+!#include       ".Xresources-themes/xcolors-colorfulcolors.Xresources"
+!#include       ".Xresources-themes/xcolors-cool-beans.Xresources"
+!#include       ".Xresources-themes/xcolors-cotton-candy.Xresources"
+!#include       ".Xresources-themes/xcolors-darkly.Xresources"
+!#include       ".Xresources-themes/xcolors-deafened.Xresources"
+!#include       ".Xresources-themes/xcolors-derp.Xresources"
+!#include       ".Xresources-themes/xcolors-digerati.Xresources"
+!#include       ".Xresources-themes/xcolors-dkeg_-_canvasedpastel.Xresources"
+!#include       ".Xresources-themes/xcolors-dkeg_-_catchmeifyoucan.Xresources"
+!#include       ".Xresources-themes/xcolors-dkeg_-_citystreets.Xresources"
+!#include       ".Xresources-themes/xcolors-dkeg_-_colorstar.Xresources"
+!#include       ".Xresources-themes/xcolors-dkeg_-_panels.Xresources"
+!#include       ".Xresources-themes/xcolors-dkeg_-_redphoenix.Xresources"
+!#include       ".Xresources-themes/xcolors-dkeg_-_teva.Xresources"
+!#include       ".Xresources-themes/xcolors-dkeg_-_unsiftedwheat.Xresources"
+!#include       ".Xresources-themes/xcolors-dkeg_-_vwbug.Xresources"
+!#include       ".Xresources-themes/xcolors-DOOMICIDE_darkocean.Xresources"
+!#include       ".Xresources-themes/xcolors-dotshare.Xresources"
+!#include       ".Xresources-themes/xcolors-dwmrob.Xresources"
+!#include       ".Xresources-themes/xcolors-epiphany.Xresources"
+!#include       ".Xresources-themes/xcolors-eqie6.Xresources"
+!#include       ".Xresources-themes/xcolors-erebus.Xresources"
+!#include       ".Xresources-themes/xcolors-euphrasia.Xresources"
+!#include       ".Xresources-themes/xcolors-fishbone.Xresources"
+!#include       ".Xresources-themes/xcolors-flowers.Xresources"
+!#include       ".Xresources-themes/xcolors-Fulminated-Sunburn.Xresources"
+!#include       ".Xresources-themes/xcolors-gjm.Xresources"
+!#include       ".Xresources-themes/xcolors-gnometerm.Xresources"
+!#include       ".Xresources-themes/xcolors-good-pants.Xresources"
+!#include       ".Xresources-themes/xcolors-grandshell.Xresources"
+!#include       ".Xresources-themes/xcolors-Gslob_nature-suede.Xresources"
+!#include       ".Xresources-themes/xcolors-Gutterslob_-_aikofog.Xresources"
+!#include       ".Xresources-themes/xcolors-gutterslob_-_lumifoo.Xresources"
+!#include       ".Xresources-themes/xcolors-Gutterslob_lightwhite.Xresources"
+!#include       ".Xresources-themes/xcolors-hybrid.Xresources"
+!#include       ".Xresources-themes/xcolors-iiamblack.Xresources"
+!#include       ".Xresources-themes/xcolors-insignificato.Xresources"
+!#include       ".Xresources-themes/xcolors-jasonwryan.Xresources"
+!#include       ".Xresources-themes/xcolors-jeans.Xresources"
+!#include       ".Xresources-themes/xcolors-jellybeans.Xresources"
+!#include       ".Xresources-themes/xcolors-jellyx.Xresources"
+!#include       ".Xresources-themes/xcolors-jwr-dark.Xresources"
+!#include       ".Xresources-themes/xcolors-leather.Xresources"
+!#include       ".Xresources-themes/xcolors-material.Xresources"
+!#include       ".Xresources-themes/xcolors-medium-roast.Xresources"
+!#include       ".Xresources-themes/xcolors-mikado.Xresources"
+!#include       ".Xresources-themes/xcolors-mikazuki.Xresources"
+!#include       ".Xresources-themes/xcolors-monotheme.Xresources"
+!#include       ".Xresources-themes/xcolors-mostly-awful.Xresources"
+!#include       ".Xresources-themes/xcolors-Muse.Xresources"
+!#include       ".Xresources-themes/xcolors-Muzieca_lowcontrast.Xresources"
+!#include       ".Xresources-themes/xcolors-Muzieca_mono.Xresources"
+!#include       ".Xresources-themes/xcolors-Muzieca_pastel_white.Xresources"
+!#include       ".Xresources-themes/xcolors-nancy.Xresources"
+!#include       ".Xresources-themes/xcolors-neon.Xresources"
+!#include       ".Xresources-themes/xcolors-nucolors.Xresources"
+!#include       ".Xresources-themes/xcolors-nudge.Xresources"
+!#include       ".Xresources-themes/xcolors-NumixDarkest.Xresources"
+!#include       ".Xresources-themes/xcolors-nvert.Xresources"
+!#include       ".Xresources-themes/xcolors-OK100_-_Matrix.Xresources"
+!#include       ".Xresources-themes/xcolors-orangish.Xresources"
+!#include       ".Xresources-themes/xcolors-paperko.Xresources"
+!#include       ".Xresources-themes/xcolors-parker_brothers.Xresources"
+!#include       ".Xresources-themes/xcolors-petals.Xresources"
+!#include       ".Xresources-themes/xcolors-phrak1.Xresources"
+!#include       ".Xresources-themes/xcolors-plastic-toys.Xresources"
+!#include       ".Xresources-themes/xcolors-pulp.Xresources"
+!#include       ".Xresources-themes/xcolors-rasi.Xresources"
+!#include       ".Xresources-themes/xcolors-rezza.Xresources"
+!#include       ".Xresources-themes/xcolors-Rooster_-_SOS.Xresources"
+!#include       ".Xresources-themes/xcolors-rosewould.Xresources"
+!#include       ".Xresources-themes/xcolors-rydgel.Xresources"
+!#include       ".Xresources-themes/xcolors-sea-fox.Xresources"
+!#include       ".Xresources-themes/xcolors-sexcolors.Xresources"
+!#include       ".Xresources-themes/xcolors-shic.Xresources"
+!#include       ".Xresources-themes/xcolors-simple_rainbow.Xresources"
+!#include       ".Xresources-themes/xcolors-sour-candy.Xresources"
+!#include       ".Xresources-themes/xcolors-sourcerer.Xresources"
+!#include       ".Xresources-themes/xcolors-splurge.Xresources"
+!#include       ".Xresources-themes/xcolors-swayr.Xresources"
+!#include       ".Xresources-themes/xcolors-tango.Xresources"
+!#include       ".Xresources-themes/xcolors-tangoesque.Xresources"
+!#include       ".Xresources-themes/xcolors-Tartan.Xresources"
+!#include       ".Xresources-themes/xcolors-theme2.Xresources"
+!#include       ".Xresources-themes/xcolors-thwump.Xresources"
+!#include       ".Xresources-themes/xcolors-tlh.Xresources"
+!#include       ".Xresources-themes/xcolors-user_77_-_Mashup_colors.Xresources"
+!#include       ".Xresources-themes/xcolors-Visiblue.Xresources"
+!#include       ".Xresources-themes/xcolors-visibone.Xresources"
+!#include       ".Xresources-themes/xcolors-woodlands.Xresources"
+!#include       ".Xresources-themes/xcolors-zenburn.Xresources"
