@@ -152,11 +152,11 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ```
 
 ## install papirus icon theme
-###Papirus Installer
+### Papirus Installer
 
-##Use the scripts to install the latest version directly from this repo (independently of your distro):
+## Use the scripts to install the latest version directly from this repo (independently of your distro):
 
-####NOTE: Use the same script to update icon themes.
+#### NOTE: Use the same script to update icon themes.
 ### ROOT directory (recommended)
 ```
 wget -qO- https://git.io/papirus-icon-theme-install | sh
