@@ -12,7 +12,7 @@ git clone https://gitlab.com/only_vip/mxtest-dope-dots.git
 ```
 ## things to delete from mx after first install
 ```
-sudo aptitude remove vim-tiny vim-common asunder bluetooth clementine gimp gimp-data gimp-python libgimp2.0 simple-scan gscan2pdf hexchat lbreakout2 gnome-mahjongg mc mc-data nomacs nomacs-l10n thunderbird transmission-gtk transmission-common xfburn
+sudo aptitude remove vim-tiny vim-common asunder bluetooth clementine gimp gimp-data gimp-python libgimp2.0 simple-scan gscan2pdf hexchat lbreakout2 gnome-mahjongg mc mc-data nomacs nomacs-l10n thunderbird transmission-gtk transmission-common xfburn papirus-icon-theme
 ```
 ## things to install later
 ### fonts
@@ -149,6 +149,33 @@ sudo cp ~/copytousrbinlocal/* /usr/bin/
 ```
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
+```
+
+## install papirus icon theme
+###Papirus Installer
+
+##Use the scripts to install the latest version directly from this repo (independently of your distro):
+
+####NOTE: Use the same script to update icon themes.
+### ROOT directory (recommended)
+```
+wget -qO- https://git.io/papirus-icon-theme-install | sh
+```
+### HOME directory for GTK
+```
+wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.icons" sh
+```
+### HOME directory for KDE
+```
+wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.local/share/icons" sh
+```
+### *BSD systems
+```
+wget -qO- https://git.io/papirus-icon-theme-install | env DESTDIR="/usr/local/share/icons" sh
+```
+### Uninstall
+```
+wget -qO- https://git.io/papirus-icon-theme-uninstall | sh
 ```
 
 
