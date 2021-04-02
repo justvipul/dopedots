@@ -145,7 +145,7 @@ sudo cp ~/copytousrbinlocal/* /usr/bin/
 `fc-cache -fv`
 
 ## get pywal,colorz,schemer2,ueberzug.
-## get roxterm, and get updated fzf from github, get tmuz from bpo
+## get roxterm, and get updated fzf from github, get tmux from bpo
 ```
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
