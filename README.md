@@ -6,6 +6,8 @@
 
 
 ```
+mkdir ~/gitall
+cd ~/gitall
 git clone https://gitlab.com/only_vip/mxtest-dope-dots.git
 ```
 ## things to delete from mx after first install
@@ -19,7 +21,7 @@ sudo aptitude install fonts-noto-color-emoji fonts-noto-color-emoji fonts-symbol
 ```
 ## dependencies and apps
 ```
-sudo aptitude install vim cmake  bspwm sxhkd lxappearance polybar fzf evince w3m w3m-img youtube-dl lolcat arandr nitrogen sxiv mpv x11-utils mpd mpc ncmpcpp cargo cargo-doc dh-cargo cargo-lichking rustc pylint dmenu netcat jq ffmpeg caca-utils chafa libsixel1 flameshot libsixel-bin qbittorrent uget qutebrowser rofi rofi-calc network-manager git curl wget tree libreadline-dev xattr zathura zathura-cb zathura-djvu zathura-pdf-poppler zathura-ps python3-setuptools atool bsdtar rar moc mediainfo exiftool odt2txt rtorrent papirus-folders exa
+sudo aptitude install vim cmake  bspwm sxhkd lxappearance polybar fzf evince w3m w3m-img youtube-dl lolcat arandr nitrogen sxiv mpv x11-utils mpd mpc ncmpcpp cargo cargo-doc dh-cargo cargo-lichking rustc pylint dmenu netcat jq ffmpeg caca-utils chafa libsixel1 flameshot libsixel-bin qbittorrent uget qutebrowser rofi rofi-calc network-manager git curl wget tree libreadline-dev xattr zathura zathura-cb zathura-djvu zathura-pdf-poppler zathura-ps python3-setuptools python3-dev python3-pip atool bsdtar rar moc mediainfo exiftool odt2txt rtorrent papirus-folders exa
 
 ```
 
@@ -37,6 +39,7 @@ sudo aptitude install meson libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xf
 
 ### all github links
 ```
+cd ~/gitall
 git clone https://github.com/lincheney/fzf-tab-completion
 git clone https://github.com/ranger/ranger
 git clone https://github.com/alexanderjeurissen/ranger_devicons
@@ -140,6 +143,14 @@ sudo cp ~/copytousrbinlocal/* /usr/bin/
 ```
 
 `fc-cache -fv`
+
+## get pywal,colorz,schemer2,ueberzug.
+## get roxterm, and get updated fzf from github, get tmuz from bpo
+```
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+```
+
 
 
 

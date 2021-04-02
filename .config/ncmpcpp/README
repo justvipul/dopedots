@@ -1,0 +1,27 @@
+get tmux 3.1c from bpo
+get kunst installed.
+
+# Clone the repo
+$ git clone https://github.com/sdushantha/kunst
+
+# Change your current directory to kunst
+$ cd kunst
+
+# Install it
+$ sudo make install
+
+sudo apt install inotify-tools
+
+process to get it working.
+
+check config path in image.sh tmux_session and music alias in bashrc
+
+before running alias once run these
+kunst &
+kill and run mpd then play something in ncmpcpp.
+comment out  in /usr/bin/kunst
+232             #sxiv -g "$SIZE$POSITION" -b "$COVER" -N "Kunst" &
+
+
+then run alais
+alias music='tmux new-session "tmux source-file ~/.config/ncmpcpp/tmux_session"'
