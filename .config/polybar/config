@@ -18,35 +18,58 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #4D1E1E1E
-background-alt = #4D1e1e1e
+;background = #1E1E1E
+;background=#B3282c34
+background-alt = #1e1e1e
 ;foreground = ${xrdb:color7:#222}
-foreground = #fffff2
+;foreground = #fffff2
 foreground-alt = #fff
-primary = #1b9fc6
-secondary = #ffffff
-alert = #bd2c40
+;primary = #1b9fc6
+;secondary = #ffffff
+;alert = #bd2c40
+;background =#66000000
+background = ${xrdb:color0:#222}
+foreground = ${xrdb:foreground}
+color0 = ${xrdb:color0}
+color1 = ${xrdb:color1}
+color2 = ${xrdb:color2}
+color3 = ${xrdb:color3}
+color4 = ${xrdb:color4}
+color5 = ${xrdb:color5}
+color6 = ${xrdb:color6}
+color7 = ${xrdb:color7}
+color8 = ${xrdb:color8}
+color9 = ${xrdb:color9}
+color10 = ${xrdb:color10}
+color11 = ${xrdb:color11}
+color12 = ${xrdb:color12}
+color13 = ${xrdb:color13}
+color14 = ${xrdb:color14}
+color15 = ${xrdb:color15}
+dark-light = #272A2B 
+active-light = #313435
 
 [bar/base]
-;monitor = ${env:MONITOR:HDMI-1}
+monitor = VGA-1
 ;width = 100%
-height = 20
+height = 15
 ;offset-x = 1%
 offset-y = 0.1%
 radius = 0
 ;fixed-center = false
+bottom=false
 
-background = ${colors.background}
+background = ${colors.background:#CC323232}
 foreground = ${colors.foreground}
 
 line-size = 1
-line-color = #00564d
+line-color = ${colors.color8}
 
-border-size = 1
-border-color = #6600564d
+border-size = 2
+border-color = ${colors.color5}
 
-padding-left = 5
-padding-right = 5
+padding-left = 1
+padding-right = 1
 
 module-margin-left = 1
 module-margin-right = 1
@@ -54,7 +77,7 @@ module-margin-right = 1
 
 separator = |
 
-;wm-restack = bspwm
+wm-restack = bspwm
 ;wm-restack = i3
 
 ;override-redirect = true
@@ -69,7 +92,7 @@ cursor-click = pointer
 eursor-scroll = ns-resize
 
 
-font-0 = Droid Sans Mono:style=Regular:pixelsize=10;2
+font-0 = DejaVuSansMono Nerd Font Mono:style=Regular:pixelsize=10;2
 # font-1 = Font Awesome 5 Brands Regular:style=Regular:pixelsize=12;2
 font-1 = unifont:fontformat=truetype:size=14:antialias=false;2
 font-2 = siji:style=Regular:pixelsize=24;2
@@ -79,37 +102,43 @@ font-5 = Font Awesome 5 Brands:pixelsize=12;2
 font-6 = Material Design Icons:style=Regular:size=12;1
 font-7 = "Fantasque Sans Mono:pixelsize=10;3"
 font-8 = "Iosevka Nerd Font:pixelsize=13;3"
+font-9= "Noto Color Emoji:fontformat=truetype:scale=10:antialias=false;2"
+;font-9 = "NotoColorEmoji:fontformat=truetype:scale=10:antialias=false;2"
+
 
 
 [bar/bar1]
 inherit = bar/base
-width = 28%
-offset-x = -20
+width = 100%
+offset-x = -00
 foreground = ${colors.foreground}
-modules-left =menu bspwm
+modules-left =menu bspwm cpu xwindow
+;modules-center =mpd 
+modules-right = mpd temperature filesystem  pulseaudio  xkeyboard memory date
+tray-position = center
+tray-padding = 0
 
 
 [bar/bar2]
 inherit = bar/base
-width = 35.5%
-offset-x = 64%
+width = 38.5%
+offset-x = 62%
 padding = 1
-modules-center =  septor filesystem  pulseaudio  xkeyboard memory date powermenu
 
 ;tray-position = left
 ;tray-padding = 2
 ;tray-background = #0063ff
-;modules-right =        septor filesystem  pulseaudio  xkeyboard memory date 
+;modules-right =     septor filesystem  pulseaudio  xkeyboard memory date 
 
 [bar/bar3]
 inherit = bar/base
 width = 24%
 offset-x = 34%
 padding = 1
-tray-position = left
-tray-padding = 2
 modules-right = xwindow
 
+tray-position = left
+tray-padding = 1
 
 
 [module/xwindow]
@@ -117,29 +146,22 @@ type = internal/xwindow
 label = %title:0:30:...    				 %
 format = <label>
 
-[module/spotify]
-type = custom/script
-interval = 1
-format-prefix = " "
-format = <label>
-exec = python /home/ermanno/.config/scripts/spotify_status.py -f '{artist}: {song}'
-format-underline = #1db954
 
 [module/xkeyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
 
 format-prefix = "󰌌"
-format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
+format-prefix-foreground = ${colors.color5}
+format-prefix-underline = ${colors.colors10}
 
 label-layout = %layout%
-label-layout-underline = ${colors.secondary}
-
-label-indicator-padding = 2
-label-indicator-margin = 1
-label-indicator-background = ${colors.secondary}
-label-indicator-underline = ${colors.secondary}
+label-layout-underline = ${colors.color9}
+label-layout-foreground = ${colors.color12}
+label-indicator-padding = 0
+label-indicator-margin = 0
+label-indicator-background = ${colors.color12}
+label-indicator-underline = ${colors.color6}
 
 [module/filesystem]
 type = internal/fs
@@ -147,131 +169,53 @@ interval = 25
 
 mount-0 = /
 
-label-mounted =  %free%
+label-mounted =󰋊 %free%
+label-mounted-foreground = ${colors.color10}
 label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
+label-unmounted-foreground = ${colors.colors10}
 
 [module/bspwm]
 type = internal/bspwm
 
 label-focused = %icon%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
+label-focused-background = ${colors.color2}
+label-focused-foreground = ${colors.color6}
+label-focused-underline= ${colors.color12}
 label-focused-padding = 1
 
+
 label-occupied = %icon%
+label-occupied-foreground = ${colors.color3}
 label-occupied-padding = 1
 
+
 label-urgent = %index%!
-label-urgent-background = ${colors.alert}
+label-urgent-background = ${colors.color7}
 label-urgent-padding = 1
 
 label-empty = %icon%
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 1
+label-empty-foreground = ${colors.color9}
+label-empty-padding = 0
 
 ; Separator in between workspaces
 label-separator =|
-ws-icon-0 = I;󰡗
-ws-icon-1 = II;󰈹
-ws-icon-2 = III;󰌨
-ws-icon-3 = IV;󰌨
-ws-icon-4 = V;󰌨
-ws-icon-5 = VI;󰌨
-ws-icon-6 = VII;󰌨
-ws-icon-7 = VIII;󰌨
-
-[module/i3]
-type = internal/i3
-format = <label-state> <label-mode>
-index-sort = true
-wrapping-scroll = false
-
-
-
-; Only show workspaces on the same output as the bar
-; pin-workspaces = true
-
-ws-icon-0 = 1;󱀤
-ws-icon-1 = 2;
-ws-icon-2 = 3;󰏝
-# ws-icon-3 = 4;♝
-# ws-icon-4 = 5;♞
-# ws-icon-default = 
-
-label-mode-padding = 2
-label-mode-foreground = #000
-label-mode-background = ${colors.primary}
-
-; focused = Active workspace on focused monitor
-label-focused =%icon%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
-label-focused-padding = 1
-
-; unfocused = Inactive workspace on any monitor
-label-unfocused = %icon%
-label-unfocused-padding = 1
-
-; visible = Active workspace on unfocused monitor
-label-visible = %icon%
-label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
-label-visible-padding = ${self.label-focused-padding}
-
-; urgent = Workspace with urgency hint set
-label-urgent = %icon%
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 1
-
-
-; Separator in between workspaces
-; label-separator = |
-
-
-[module/mpd]
-type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
-
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-
-label-song-maxlen = 25
-label-song-ellipsis = true
-
-[module/xbacklight]
-type = internal/xbacklight
-
-format = <label> <bar>
-label = BL
-
-bar-width = 10
-bar-indicator = |
-bar-indicator-foreground = #fff
-bar-indicator-font = 2
-bar-fill = ─
-bar-fill-font = 2
-bar-fill-foreground = #9f78e1
-bar-empty = ─
-bar-empty-font = 2
-bar-empty-foreground = ${colors.foreground-alt}
-
-[module/backlight-acpi]
-inherit = module/xbacklight
-type = internal/backlight
-card = intel_backlight
-
+ws-icon-0 = I;󱌃
+ws-icon-1 = II;󰣎
+ws-icon-2 = III;󰲓
+ws-icon-3 = IV;󰥫
+ws-icon-4 = V;󰀴
+ws-icon-5 = VI;󰡗
+ws-icon-6 = VII;󰲓
+ws-icon-7 = VIII;󱌃
 
 [module/memory]
 type = custom/script
 exec = free -m | sed -n 's/^Mem:\s\+[0-9]\+\s\+\([0-9]\+\)\s.\+/\1/p'
 format = <label>
  
-label = 󰳡 %output%
-label-padding = 1
+label =󰳡 %output%
+label-foreground = ${colors.color2}
+label-padding = 0
 
 [module/date]
 type = internal/date
@@ -280,21 +224,22 @@ interval = 1
 date =
 date-alt = " %Y-%m-%d"
 
-time = %H:%M
+time =%H:%M
 time-alt = %H:%M:%S
 
 format-prefix =  
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-foreground = ${colors.color3}
 format-underline = #0a6cf5
 
 label = %date% %time%
+label-foreground = ${colors.color9}
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
-label-volume = 󰝚 %percentage%%
-label-volume-foreground = ${root.foreground}
+label-volume =󰗶 %percentage%%
+label-volume-foreground = ${colors.color13}
 
 label-muted = ? muted
 label-muted-foreground = #666
@@ -344,43 +289,68 @@ bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
-[module/battery]
-type = internal/battery
-battery = BAT0
-adapter = ADP1
-full-at = 98
+[module/mpd]
+type = internal/mpd
+format-underline =  #FF0000
 
-format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+host = localhost 
+; Seconds to sleep between progressbar/song timer sync
+; Default: 1
+interval = 1
 
-format-discharging = <animation-discharging> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
+;format-online = <icon-prev> <icon-seekb> <icon-stop> <toggle> <icon-seekf> <icon-next>  <icon-repeat> <icon-random>  <bar-progress> <label-time>  <label-song>
+format-online =  <icon-prev> <icon-stop> <toggle> <icon-play> <icon-next>
+;format-playing = ${self.format-online}
+;format-paused = ${self.format-online}
+;format-stopped = ${self.format-online}
 
-format-full-prefix = " "
-format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
+;icon-play = ⏵
+;icon-pause = ⏸
+;icon-stop = ⏹
+;icon-prev = ⏮
+;icon-next = ⏭
+;icon-seekb = 
+;icon-seekf = 
+;icon-random = 
+;icon-repeat = 🔁
+;icon-repeatone = 🔂
+;icon-single = 🔂
+;icon-consume = ✀
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-foreground = ${colors.foreground-alt}
-animation-charging-framerate = 750
 
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
-animation-discharging-foreground = ${colors.foreground-alt}
-animation-discharging-framerate = 750
+
+icon-prev = 
+icon-stop = 🛑
+icon-play = 
+icon-pause = 
+icon-next = 
+
+label-song = %artist% - %title%
+
+label-song-maxlen = 75
+label-song-ellipsis = true
+
+; Available tokens:
+;   %elapsed%
+;   %total%
+; Default: %elapsed% / %total%
+label-time = %elapsed% 
+
+; Only applies if <bar-progress> is used
+bar-progress-width = 5
+bar-progress-indicator = |
+bar-progress-fill = ─
+bar-progress-empty = ─
 
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
-warn-temperature = 60
+interval = 0.5
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
+base-temperature = 20
+warn-temperature=55
+
 
 format = <ramp> <label>
 format-underline = #f50a4d
@@ -389,32 +359,24 @@ format-warn-underline = ${self.format-underline}
 
 label = %temperature-c%
 label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
+label-warn-foreground = ${colors.color2}
 
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 
-ramp-foreground = ${colors.foreground-alt}
+ramp-foreground = ${colors.color3}
 
-[module/powermenu]
-type = custom/menu
+[module/cpu]
+type = internal/cpu
+interval = 2.5
 
-expand-right = true
+format =  <label> 
+format-padding = 0
+format-margin = 0
 
-format-spacing = 1
-
-label-open = 󰐥
-label-open-foreground = ${colors.secondary}
-label-close =  cancel
-label-close-foreground = ${colors.secondary}
-label-separator = |
-label-separator-foreground = ${colors.foreground-alt}
-
-menu-0-0 = reboot
-menu-0-0-exec = systemctl reboot
-menu-0-1 =  poweroff
-menu-0-1-exec = sudo poweroff
-
+label =%percentage%%
+;format-background = #81A1C1
+format-foreground =${colors.color13}
 
 [settings]
 screenchange-reload = true
@@ -425,20 +387,20 @@ screenchange-reload = true
 ;pseudo-transparency = false
 
 [global/wm]
-margin-top = 5
-margin-bottom = 5
+margin-top = 0
+margin-bottom = 0
 
 ; vim:ft=dosini
 
 [module/menu]
 type = custom/text
-content = "󰨑"
-format = <label>
+content ="󰨑 "
+content-foreground = ${colors.color11}
 click-left = ~/.config/polybar/scripts/menu
 click-middle = ~/.config/polybar/scripts/menu_full
 format-underline = #1db954
 
-content-padding = 2
+content-padding = 0
 
 
 ###############################################################################
@@ -477,6 +439,6 @@ content-background = #668bd7
 [module/septor]
 type = custom/text
 content = " "
-content-padding = 2
+content-padding = 0
 
 
