@@ -1,4 +1,3 @@
-
 ;
 ;
 ;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
@@ -50,7 +49,7 @@ dark-light = #272A2B
 active-light = #313435
 
 [bar/base]
-monitor = Virtual1
+monitor = ${env:MONITOR:}
 width = 80%
 height = 18
 ;offset-x = 1%
