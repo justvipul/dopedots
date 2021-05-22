@@ -159,7 +159,10 @@ set encoding=utf8
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
-let g:airline_theme='base16_ashes'
+"let g:airline_theme='base16_ashes'
+let g:lightline = {
+      \ 'colorscheme': 'apprentice',
+      \ }
 
 
 
@@ -231,7 +234,7 @@ map <leader>h :bprevious<cr>
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
-map <leader>tc :tabclose<cr>
+map <leader>tcq :tabclose<cr>
 map <leader>tm :tabmove 
 map <leader>t<leader> :tabnext 
 
