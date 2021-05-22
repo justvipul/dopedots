@@ -15,13 +15,25 @@ call plug#begin('~/.vim/plugged')
     Plug 'kien/rainbow_parentheses.vim'
     Plug 'mhinz/vim-startify'
     Plug 'flazz/vim-colorschemes'
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
+    "Plug 'vim-airline/vim-airline'
+    "Plug 'vim-airline/vim-airline-themes'
     Plug 'vim-utils/vim-man'
     Plug 'sheerun/vim-polyglot'
     Plug 'chun-yang/auto-pairs'
-    Plug 'chrisbra/colorizer'
+    "Plug 'chrisbra/colorizer'
     Plug 'vitalk/vim-simple-todo'
+    Plug 'ajh17/vimcompletesme'
+    Plug 'itchyny/lightline.vim'
+    Plug 'jacoborus/tender.vim'
+    Plug 'lilydjwg/colorizer'
+
+
+
+
+
+
+
+
 
 
 
