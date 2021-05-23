@@ -162,6 +162,8 @@ set ffs=unix,dos,mac
 "let g:airline_theme='base16_ashes'
 let g:lightline = {
       \ 'colorscheme': 'apprentice',
+                \ 'separator': { 'left': "\ue0b4", 'right': "\ue0b6" },
+                \ 'subseparator': { 'left': "\ue0b5", 'right': "\ue0b7" },
       \ }
 
 
@@ -269,7 +271,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 set laststatus=2
 
 " Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
+"set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
