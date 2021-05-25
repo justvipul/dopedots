@@ -1,4 +1,4 @@
-# mxtst-dope-dots
+# mxtest-dope-dots
 
 ![doperice1](.screenshot/1.png)
 ![doperice2](.screenshot/3.png)
