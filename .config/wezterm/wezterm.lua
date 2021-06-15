@@ -4,7 +4,7 @@ local theme = require('theme')
 local configuration = require('configuration')
 
 function font_with_fallback(name, params)
-    local names = {name, "VictorMono Nerd Font Mono ", "Noto Color Emoji" , "JoyPixels"}
+    local names = {name, "VictorMono Nerd Font Mono Bold Oblique", "Noto Color Emoji" , "JoyPixels"}
     return wezterm.font_with_fallback(names, params)
 end
 
@@ -21,7 +21,8 @@ local cfg_misc = {
     font_rules = {
         {
             italic = true,
-            font = font_with_fallback("VictorMono Nerd Font Mono", {italic = true})
+            intensity="Bold",
+            font = font_with_fallback("VictorMono Nerd Font Mono", {bold = true , italic = true})
         }, {
             italic = true,
             intensity = "Bold",
@@ -30,11 +31,11 @@ local cfg_misc = {
         },
         {
             intensity = "Bold",
-            font = font_with_fallback("VictorMono Nerd Font Mono", {bold = true})
+            font = font_with_fallback("VictorMono Nerd Font Mono", {bold = true , italic = true})
         },
-        {intensity = "Half", font = font_with_fallback("VictorMono Nerd Font Mono")}
+        {intensity = "Bold", font = font_with_fallback("VictorMono Nerd Font Mono")}
     },
-    font_size = 11.0,
+    font_size = 12.0,
     font_shaper = "Harfbuzz",
     line_height = 1.0,
     freetype_load_target = "HorizontalLcd",
@@ -50,7 +51,7 @@ local cfg_misc = {
     bold_brightens_ansi_colors = true,
 
     --transparency
-    window_background_opacity = 0.4,
+    window_background_opacity = 0.0,
 
 
     -- Get rid of close prompt
@@ -70,7 +71,7 @@ local cfg_colors = {colors = theme.colors}
 local cfg_tab_bar_style = theme.tab_style
 
 -- Keys
-local cfg_keys = configuration.keys
+--local cfg_keys = configuration.keys
 
 -- Merge everything and return
 local config = mytable.merge_all(cfg_misc, cfg_colors, cfg_tab_bar_style,
