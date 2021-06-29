@@ -1,6 +1,6 @@
 #!/bin/bash
 
-walldir="$HOME/Music"
+walldir="$HOME/Pictures"
 maxpage=5
 tagoptions="#minimalism\n#Cyberpunk 2077\n#fantasy girl\n#digital art\n#anime\n#4K\n#nature"
 if [ -z $1 ]; then

@@ -7,6 +7,8 @@
 
 ```
 mkdir ~/gitall
+mkdir ~/pix
+mkdir ~/pix/wall
 cd ~/gitall
 git clone https://gitlab.com/only_vip/mxtest-dope-dots.git
 ```
