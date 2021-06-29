@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-  termite
+	urxvt
 # program launcher
 super + d
 	.config/polybar/scripts/menu
@@ -23,7 +23,7 @@ super + Escape
 
 #nitrogen wallchange
 super + F2 
-	.config/polybar/scripts/wall_change
+	~/.scripts/wall_change
 
 # quit/restart bspwm
 super + alt + {q,r}
@@ -169,8 +169,7 @@ super+q
  		qutebrowser
 #ranger
 super+r
-		roxterm -e ranger
+		urxvt -e ranger
 #ncmpcpp
 alt+m
-		roxterm -e ncmpcpp
-
+		urxvt -e ncmpcpp

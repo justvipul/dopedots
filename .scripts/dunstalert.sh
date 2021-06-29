@@ -1,2 +1,2 @@
 #!/bin/sh
-paplay "$(find /home/mxtest/.tones/ | shuf | head -n 1)"
+paplay "$(find $HOME/.tones/ | shuf | head -n 1)"

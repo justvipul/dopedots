@@ -47,7 +47,7 @@ bw 0 \
 -fullscreen \
 -columns 7 \
 -show-icons -icon-theme "Papirus" \
--font "Fantasque Sans Mono 10" \
+-font "VictorMono Nerd Font Mono SemiBold Oblique 10" \
 -color-enabled true \
 -terminal "xfce4-terminal" \
 -color-window "$BACKGROUND,$BORDER,$SEPARATOR" \

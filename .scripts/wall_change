@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# nitrogen wall chnage at startup
+# wal -a "40" --backend colorz -i $(find ~/wals/* | shuf | head -n 1)
+nitrogen --set-scaled --random
+dunstify "👀 your wall is 🔥"

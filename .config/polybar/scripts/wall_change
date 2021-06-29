@@ -1,5 +1,0 @@
-#!/bin/bash
-
-# nitrogen wall chnage at startup
-
-nitrogen --set-scaled --random

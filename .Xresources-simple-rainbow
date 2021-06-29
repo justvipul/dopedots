@@ -1,10 +1,10 @@
 ! DO NOT CHANGE THE ORDER
 
 ! URXVT APPEARANCE
-URxvt.font:   xft:VictorMono Nerd Font Mono:pixelsize=15:style=Bold,xft:Noto Color Emoji:pixelsize=11:style=Regular,xft:Symbola:pixelsize=11:style=Regular,xft:FontAwesome:pixelsize=11:style=Regular,xft: Material Design Icons:pixelsize=11:style=Regular,JoyPixels:pixelsize=11:style=Regular
-URxvt.boldFont:  xft:VictorMono Nerd Font Mono:pixelsize=15:style=Bold,xft:Noto Color Emoji:pixelsize=11:style=Regular,xft:Symbola:pixelsize=11:style=Regular,xft:FontAwesome:pixelsize=11:style=Regular,xft: Material Design Icons:pixelsize=11:style=Regular,JoyPixels:pixelsize=11:style=Regular
-URxvt.italicFont:  xft:VictorMono Nerd Font Mono:pixelsize=15:style=Italic,xft:Noto Color Emoji:pixelsize=11:style=Regular,xft:Symbola:pixelsize=11:style=Regular,xft:FontAwesome:pixelsize=11:style=Regular,xft: Material Design Icons:pixelsize=11:style=Regular,JoyPixels:pixelsize=11:style=Regular
-URxvt.boldItalicfont: xft:VictorMono Nerd Font Mono:pixelsize=15:style=Bold Italic,xft:Noto Color Emoji:pixelsize=11:style=Regular,xft:Symbola:pixelsize=11:style=Regular,xft:FontAwesome:pixelsize=11:style=Regular,xft: Material Design Icons:pixelsize=11:style=Regular,JoyPixels:pixelsize=11:style=Regular
+URxvt.font:   xft:VictorMono Nerd Font Mono:pixelsize=14:style=SemiBold,xft:Noto Color Emoji:pixelsize=11:style=Regular,xft:Symbola:pixelsize=11:style=Regular,xft:FontAwesome:pixelsize=11:style=Regular,xft: Material Design Icons:pixelsize=11:style=Regular,JoyPixels:pixelsize=11:style=Regular
+URxvt.boldFont:  xft:VictorMono Nerd Font Mono:pixelsize=14:style=Bold,xft:Noto Color Emoji:pixelsize=11:style=Regular,xft:Symbola:pixelsize=11:style=Regular,xft:FontAwesome:pixelsize=11:style=Regular,xft: Material Design Icons:pixelsize=11:style=Regular,JoyPixels:pixelsize=11:style=Regular
+URxvt.italicFont:  xft:VictorMono Nerd Font Mono:pixelsize=14:style=Italic,xft:Noto Color Emoji:pixelsize=11:style=Regular,xft:Symbola:pixelsize=11:style=Regular,xft:FontAwesome:pixelsize=11:style=Regular,xft: Material Design Icons:pixelsize=11:style=Regular,JoyPixels:pixelsize=11:style=Regular
+URxvt.boldItalicfont: xft:VictorMono Nerd Font Mono:pixelsize=14:style=Bold Italic,xft:Noto Color Emoji:pixelsize=11:style=Regular,xft:Symbola:pixelsize=11:style=Regular,xft:FontAwesome:pixelsize=11:style=Regular,xft: Material Design Icons:pixelsize=11:style=Regular,JoyPixels:pixelsize=11:style=Regular
 URxvt.geometry:                   84x16
 URxvt.internalBorder:             2
 URxvt.cursorBlink:                true

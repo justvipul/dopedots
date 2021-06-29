@@ -3,8 +3,9 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 $HOME/.screenlayout/display.sh
 $HOME/.config/polybar/launch.sh
 picom -b -f  &
-#compton --config ~/.config/compton/compton.conf &
+#compton -b & disown
 nitrogen --set-scaled --random &
+~/.scripts/wall_change &
 #conky -d &
 #lxappearance &
 nm-applet &
@@ -12,8 +13,8 @@ clipit &
 bash -c "sleep 10s;exec /usr/bin/apt-notifier" &
 #usb-unmounter-start &
 #bash -c "sleep 9s;stalonetray -t" &
-#bash -c "sleep 7s;tint2 -c /home/vipul/.config/tint2/tint2rcappsonly.tint2rc" &
-#bash -c "sleep 5s;tint2 -c tint2 -c /home/vipul/.config/tint2/tint2rcsystrayonly.tint2rc" &
+#bash -c "sleep 7s;tint2 -c $HOME/.config/tint2/tint2rcappsonly.tint2rc" &
+#bash -c "sleep 5s;tint2 -c tint2 -c $HOME/.config/tint2/tint2rcsystrayonly.tint2rc" &
 bash -c " pulse-start"
 #swallow
 #pgrep bspswallow || bspswallow &
@@ -22,7 +23,7 @@ bash -c " pulse-start"
 
 bspc monitor -d I II III IV V VI VII VIII
 bspc config border_width         2
-bspc config window_gap					 8
+bspc config window_gap			 8
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
@@ -37,6 +38,7 @@ bspc rule -a Screenkey manage=off
 
 
 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+#/usr/bin/lxpolkit &
 # border colors 
 bspc config focused_border_color "#4B7CFF"
 bspc config normal_border_color "#FF1C83"

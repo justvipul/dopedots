@@ -24,6 +24,6 @@ do
   wget -nc -P $walldir $page
 done
 rm tmp.txt
-notify-send "😊 Download finish ✅"
+dunstify "😊 Download finish ✅"
 sxiv -t $walldir/*
 mv $walldir/* ~/pix/wall/
