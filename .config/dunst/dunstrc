@@ -1,15 +1,15 @@
 [global]
     monitor = 0
     follow = keyboard
-    geometry = "350x5-0+24"
+    geometry = "250x10-50+30"
     indicate_hidden = yes
-    shrink = yes
-    transparency = 20
-    notification_height = 0
+    shrink = no
+    transparency = 00
+    notification_height = 20
     separator_height = 2
-    padding = 0
+    padding = 2
     horizontal_padding = 8
-    frame_width = 3
+    frame_width = 2
     frame_color = "#282828"
 
     # Define a color for the separator.
@@ -24,7 +24,7 @@
     sort = yes
 
     idle_threshold = 120
-    font = VictorMono Nerd Font:style=Bold 9
+    font = VictorMono Nerd Font:style=Bold 15
 
 
     line_height = 0
@@ -84,7 +84,7 @@
     #icon = /path/to/icon
 
 [urgency_normal]
-    background = "#458588"
+    background = "#2948401A"
     foreground = "#ebdbb2"
     timeout = 5
 
