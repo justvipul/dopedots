@@ -199,6 +199,11 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 cargo install bat exa
 ```
+### change crontab entry to have wal run every 10 minutes
+run `crontab -e` enter following command at the end
+```
+*/10 * * * * Display=:0 ~/.local/bin/wal -a "50" backend colorz -i $(find ~/wals/* | shuf | head -n 1)
+```
 
 ### misc. links
 [Bgra-debian](https://github.com/ra-c/libxft-bgra-debian)\
