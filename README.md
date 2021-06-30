@@ -110,7 +110,7 @@ sudo ninja -C build install
 ```
 
 
-## Copy rsfetch and atomicparsley to /usr/bin
+## Copy rsfetch,viman and atomicparsley to /usr/bin
 ```
 sudo cp ~/copytousrbinlocal/* /usr/bin/
 ```
@@ -137,7 +137,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ## Install papirus icon theme
 ### Papirus Installer
 
-### Use the scripts to install the latest version directly from this repo (independently of your distro):
+### Use the scripts to install the latest version directly from their github repo (independently of your distro):
 
 ##### NOTE: Use the same script to update icon themes.
 ### ROOT directory (recommended)
