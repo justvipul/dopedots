@@ -185,7 +185,7 @@ wget -qO- https://git.io/papirus-folders-install | env uninstall=true sh
 cd ~/gitall
 git clone https://github.com/dunst-project/dunst.git
 cd dunst
-sudo aptitude install libnotify-dev libxss-dev libxdg-basedir-dev 
+sudo aptitude install libnotify-dev libxss-dev libxdg-basedir-dev libghc-pango-dev
 make PREFIX=/usr WAYLAND=0
 sudo make install PREFIX=/usr WAYLAND=0
 sudo apt remove xfce4-notifyd
