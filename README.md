@@ -32,7 +32,7 @@ sudo aptitude install vim cmake  bspwm sxhkd lxappearance polybar fzf evince w3m
 
 ### Compton dependencies
 ```
-sudo aptitude install libx11-dev libxcomposite-dev libxdamage-dev libxfixes-dev libxext-dev libxrender-dev libxrandr-dev libxinerama-dev pkg-config make libpcre2-dev libconfig-dev libdrm-dev  libx11-dev libxcomposite-dev libxdamage-dev libxfixes-dev libxext-dev libxrender-dev libxrandr-dev libxinerama-dev pkg-config make libpcre2-dev libconfig-dev libdrm-dev libdbus-1-dev  libgl-dev libpcre++-dev docbook-xml libxslt1-dev xsltproc xmlto asciidoc-base asciidoc-common xsltproc libxcb-image0-dev libxcb-damage0-dev  libpixman-1-dev  dmenu asciidoc
+sudo aptitude install libx11-dev libxcomposite-dev libxdamage-dev libxfixes-dev libxext-dev libxrender-dev libxrandr-dev libxinerama-dev pkg-config make libpcre2-dev libconfig-dev libdrm-dev  libdbus-1-dev  libgl-dev libpcre++-dev docbook-xml libxslt1-dev xsltproc xmlto asciidoc-base asciidoc-common xsltproc libxcb-image0-dev libxcb-damage0-dev libpixman-1-dev asciidoc
 
 ```
 
