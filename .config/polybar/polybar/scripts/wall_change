@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# nitrogen wall chnage at startup
+
+#nitrogen --set-scaled --random
+wal -a "160" --backend colorz -i $(find ~/wals/* | shuf | head -n 1)
+notify-send "your 👀 wall is 🔥"

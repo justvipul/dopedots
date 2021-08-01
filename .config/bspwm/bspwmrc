@@ -20,6 +20,8 @@ bash -c " pulse-start"
 #pgrep bspswallow || bspswallow &
 #sudo pkill mpd
 #mpd
+#ntfd &
+#~/.scripts/conkystart &
 
 bspc monitor -d I II III IV V VI VII VIII
 bspc config border_width         2

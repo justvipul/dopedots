@@ -45,8 +45,7 @@ LIGHT_GREEN="#7cb342"
 -location 1 \
 -columns 2 \
 -show-icons -icon-theme "Papirus" \
--terminal "xfce4-terminal" \
--font "VictorMono Nerd Font SemiBold 14" \
+-font "VictorMono Nerd Font bold oblique 14" \
 -color-enabled true \
 -color-window "$BACKGROUND,$BORDER,$SEPARATOR" \
 -color-normal "$BACKGROUND_ALT,$FOREGROUND,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \

@@ -1,3 +1,4 @@
+
 ;
 ;
 ;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
@@ -49,7 +50,7 @@ dark-light = #272A2B
 active-light = #313435
 
 [bar/base]
-monitor = ${env:MONITOR:}
+monitor = VGA-1
 width = 80%
 height = 18
 ;offset-x = 1%
@@ -74,7 +75,8 @@ module-margin-left = 1
 module-margin-right = 1
 
 
-separator =|
+;separator =|
+separator =
 
 wm-restack = bspwm
 ;wm-restack = i3
@@ -95,14 +97,20 @@ font-0 = VictorMono Nerd Font bold :style=Regular:pixelsize=09;1
 # font-1 = Font Awesome 5 Brands Regular:style=Regular:pixelsize=12;2
 font-1 = unifont:fontformat=truetype:size=14:antialias=false;2
 font-2 = siji:style=Regular:pixelsize=14;2
-font-3 = Font Awesome 5 Free:pixelsize=15;2
-font-4 = Font Awesome 5 Free Solid:pixelsize=18;2
-font-5 = Font Awesome 5 Brands:pixelsize=18;2
-font-6 = Material Design Icons:style=Regular:size=13;3
-font-7 = "Fantasque Sans Mono:pixelsize=10;3"
-font-8 = "Iosevka Nerd Font:pixelsize=13;3"
-font-9= "Noto Color Emoji:fontformat=truetype:scale=10:antialias=false;2"
-;font-9 = "NotoColorEmoji:fontformat=truetype:scale=10:antialias=false;2"
+font-3 = WeatherIcons:size=13;3
+font-4 = MaterialIcons:size=13;5
+font-5 = Font Awesome 5 Free Solid:pixelsize=18;2
+font-6 = "Iosevka Nerd Font:pixelsize=13;3"
+font-7= "Noto Color Emoji:fontformat=truetype:scale=10:antialias=false;2"
+font-8 = "Fantasque Sans Mono:pixelsize=10;3"
+;font-9 = Material Design Icons:style=Regular:size=12;2
+;font-10 = Font Awesome 5 Free:pixelsize=15;2
+;font-11 = "NotoColorEmoji:fontformat=truetype:scale=10:antialias=false;2"
+;font-12 = WeatherIcons:size=9;5
+;font-13 = Font Awesome 5 Brands:pixelsize=18;2
+;font-14 = Material Design Icons:style=Regular:size=12;2
+
+;       ﴔ              ﴔ ﲅ 侮 
 
 
 
@@ -111,12 +119,11 @@ inherit = bar/base
 width = 99%
 offset-x = 7
 foreground = ${colors.foreground}
-modules-left =menu bspwm cpu xwindow
-;modules-center =mpd 
-modules-right = mpd temperature filesystem  pulseaudio  xkeyboard memory date
+modules-left =menu bspwm cpu polywins
+;modules-center =
+modules-right = mpd weather temperature filesystem  pulseaudio  xkeyboard memory date
 tray-position = center
 tray-padding = 1
-
 
 [bar/bar2]
 inherit = bar/base
@@ -139,6 +146,35 @@ modules-right = xwindow
 tray-position = left
 tray-padding = 1
 
+[module/polywins]
+type = custom/script
+exec = ~/.config/polybar/scripts/polywins.sh 2>/dev/null
+format = <label>
+format-background = #2a2e36
+label = %output%
+label-padding = 0
+tail = true
+
+[module/round-left]
+type = custom/text
+content = %{T3}%{T-}
+content-foreground = #2a2e36
+
+[module/round-right]
+type = custom/text
+content = %{T3}%{T-}
+content-foreground = #2a2e36
+
+[module/roundd-left]
+type = custom/text
+content = %{T3}%{T-}
+content-foreground = #a3be8c 
+
+[module/roundd-right]
+type = custom/text
+content = %{T3}%{T-}
+content-foreground = #a3be8c
+
 
 [module/xwindow]
 type = internal/xwindow
@@ -150,7 +186,7 @@ format = <label>
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = "󰌌"
+format-prefix = " "
 format-prefix-foreground = ${colors.color5}
 format-prefix-underline = ${colors.colors10}
 
@@ -168,7 +204,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted =󰋊 %free%
+label-mounted = %free%
 label-mounted-foreground = ${colors.color10}
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.colors10}
@@ -196,22 +232,32 @@ label-empty-foreground = ${colors.color9}
 label-empty-padding = 1
 
 ; Separator in between workspaces
-label-separator =|
-ws-icon-0 = I;󱌃
-ws-icon-1 = II;󰣎
-ws-icon-2 = III;󰲓
-ws-icon-3 = IV;󰥫
-ws-icon-4 = V;󰀴
-ws-icon-5 = VI;󰡗
-ws-icon-6 = VII;󰲓
-ws-icon-7 = VIII;󱌃
+;label-separator =|
+label-separator =
+ws-icon-0 = I; 
+ws-icon-1 = II;
+ws-icon-2 = III;
+ws-icon-3 = IV;ﲅ
+ws-icon-4 = V;
+ws-icon-5 = VI;
+ws-icon-6 = VII;
+ws-icon-7 = VIII;
+;     ﴔ ﲅ  
+;      ﴔ             ﴔ ﲅ 侮            
+
+[module/weather]
+type = custom/script
+exec = busctl --user -j get-property io.ntfd /weather openweathermap.strings RenderedTemplate | jq -r .data
+interval = 60
+label-font = 12
+label-foreground = ${colors.color14}
 
 [module/memory]
 type = custom/script
 exec = free -m | sed -n 's/^Mem:\s\+[0-9]\+\s\+\([0-9]\+\)\s.\+/\1/p'
 format = <label>
  
-label =󰳡 %output%
+label = %output%
 label-foreground = ${colors.color2}
 label-padding = 1
 
@@ -225,7 +271,7 @@ date-alt = " %Y-%m-%d"
 time =%H:%M
 time-alt = %H:%M:%S
 
-format-prefix = 
+format-prefix = 
 format-prefix-foreground = ${colors.color3}
 format-underline = #0a6cf5
 
@@ -235,7 +281,7 @@ label-foreground = ${colors.color9}
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
+format-volume = <label-volume> 
 label-volume =  %percentage%%
 label-volume-foreground = ${colors.color13}
 
@@ -360,9 +406,9 @@ label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.color2}
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
 ramp-foreground = ${colors.color3}
 
 [module/cpu]
@@ -393,7 +439,7 @@ margin-bottom = 0
 
 [module/menu]
 type = custom/text
-content ="󰨑 "
+content ="ﴔ"
 content-foreground = ${colors.color11}
 click-left = ~/.config/polybar/scripts/menu
 click-middle = ~/.config/polybar/scripts/menu_full
