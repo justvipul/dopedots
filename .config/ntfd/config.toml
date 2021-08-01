@@ -7,10 +7,10 @@ enabled = true
 # api_key = "file:~/your_folder/some-key.txt"   # Read from a file
 # api_key = "env:OWM_API_KEY"                   # Read from an environment variable
 # api_key = "PLAINTEXT_VALUE"                   # Read the value directly
-api_key = "036fc682ac3fb1363862cfd211d9a5e4"
+api_key = "add your key here"
 # This is for Montreal, find your city at https://openweathermap.org
 # The id will be the last part of the URL
-city_id = "1261731"
+city_id = "add you city id here"
 # How long weather notifications should stay up (in seconds)
 notification_timeout = 10
 # When notifications are sent, the notification title comes from OpenWeatherMap
