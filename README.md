@@ -206,6 +206,7 @@ run `crontab -e` enter following command at the end
 ```
 ### install ntfd
 >install ntfd then change the `~/.config/polybar/config` module-right to include the weather module. 
+> make a symlink of the tmux config 'ln -s -f ~/.tmux/.tmux.conf ~/.tmux.conf'
 
 ### misc. links
 [Bgra-debian](https://github.com/ra-c/libxft-bgra-debian)\
