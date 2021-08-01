@@ -162,7 +162,7 @@ ${font Roboto-Light:pixelsize=13}${alignr} USER: ${color1}${execi 5000 echo $USE
 ${font Roboto-Light:pixelsize=13}${alignr} DISTRIBUTION: ${color1}${execi 6000 cat /etc/mx-version}${color}
 ${font Roboto-Light:pixelsize=13}${alignr} ARCHITECTURE: ${color1}${machine}${color} ${color1}I${color} KERNEL: ${color1}${kernel}${color}
 ${font Roboto-Light:pixelsize=13}${alignr} ROOT: ${color1}${fs_used /}${color} / ${color1}${fs_size /}${color} ${color1}I${color} HOME: ${color1}${fs_used /home}${color} / ${color1}${fs_size /home}${color}
-${font Roboto-Light:pixelsize=13}${alignr} CPU: ${color1}${cpu cpu0}%${color} ${color1}I${color}RAM: ${color1}${exec 'free -m | grep Mem | awk '{print $3}''}/$memmax ${color}HD: ${color1}${fs_used_perc}%${color}
+${font Roboto-Light:pixelsize=13}${alignr} CPU: ${color1}${cpu cpu0}%${color} ${color1}${color}RAM: ${color1}${exec 'free -m | grep Mem | awk '{print $3}''}/$memmax ${color}HD: ${color1}${fs_used_perc}%${color}
 ${font Roboto-Light:pixelsize=13}${alignr} SWAP: ${color1}${swap} / ${swapmax}${color} ${color1}I${color} SYS TEMP: ${color1}\
  ${exec sensors | grep 'Core 0' | awk '{print $3}'}${color}
 ]];
