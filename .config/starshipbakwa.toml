@@ -1,0 +1,436 @@
+# Don't print a new line at the start of the prompt
+add_newline = false
+
+
+
+format = """\
+        $time\
+        $username\
+        $hostname\
+        $directory\
+        $aws\
+        $gcloud\
+        $singularity\
+        $kubernetes\
+        $docker_context\
+        (↓ Source control - for right side ↓)\
+        $hg_branch\
+        $git_branch\
+        $git_commit\
+        $git_status\
+        $git_state\
+        (↑ Source control - for right side ↑)\
+        (↓ Toolchain version modules ↓)\
+        $crystal\
+        $dart\
+        $dotnet\
+        $elixir\
+        $elm\
+        $erlang\
+        $golang\
+        $java\
+        $julia\
+        $nim\
+        $nodejs\
+        $ocaml\
+        $perl\
+        $php\
+        $purescript\
+        $python\
+        $ruby\
+        $rust\
+        $swift\
+        $terraform\
+        $zig\
+        (↑ Toolchain version modules ↑)\
+        (↓ Package modules ↓)\
+        $helm\
+        $package\
+        $cmake\
+        $conda\
+        (↑ Package modules ↑)\
+        $nix_shell\
+        $memory_usage\
+        $env_var\
+        $custom\
+        (↑ above input line ↑)\
+        $line_break\
+        (↓ on input line ↓)\
+        $battery\
+        $shlvl\
+        $jobs\
+        $cmd_duration\
+        $status\
+        $character\
+    """
+
+# Generic prompt configurations
+[character]
+success_symbol = "[](bold green)[](bold yellow)[](bold red)[](bold purple)"
+error_symbol = "[](bold green)[](bold yellow)[](bold red)[](bold purple)"
+vicmd_symbol = "[](bold green)[](bold yellow)[](bold red)[](bold purple)"
+format = "$symbol "
+
+[line_break]
+disabled = false
+
+
+#[character]                            # The name of the module we are configuring is "character"
+#success_symbol = "[](bold green)[](bold yellow)[](bold red)[](bold purple)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
+
+#error_symbol = "[✗](bold red) "
+# Disable the package module, hiding it from the prompt completely
+#format = "$symbol "
+
+# Module configurations
+
+
+[aws]
+# disabled = true
+symbol = " "
+style = ""
+format = '[$symbol$profile(\($region\))]($style)'
+
+[battery]
+# disabled = true
+full_symbol = ""
+charging_symbol = " "
+discharging_symbol = " "
+unknown_symbol = ""
+empty_symbol = ""
+format = "[$symbol$percentage]($style)"
+[[battery.display]]
+threshold = 10
+style = "bold fg:#EEEEEE"
+[[battery.display]]
+threshold = 20
+style = ""
+
+[cmake]
+# disabled = true
+# symbol = "卑" # alternate
+symbol = "喝"
+style = ""
+format = "[$symbol$version]($style)"
+
+[cmd_duration]
+# disabled = true
+style = ""
+min_time = 2_000
+show_milliseconds = true
+show_notifications = false
+min_time_to_notify = 45_000
+format = "[ 祥$duration]($style)"
+
+[conda]
+# disabled = true
+symbol = " "
+style = ""
+ignore_base = true
+truncation_length = 1
+format = "[(fg:#464347)$symbol$environment]($style)"
+
+[crystal]
+# disabled = true
+symbol = " "
+style = ""
+format = "[$symbol$version(fg:#EEEEEE)]($style)"
+
+[dart]
+# disabled = true
+symbol = " " # original
+# symbol = "﯑ " # clearer
+style = ""
+format = "[$symbol$version]($style)"
+
+[directory]
+style = "italic fg:#EEEEEE"
+read_only = ""
+read_only_style = ""
+truncation_length = 4
+truncate_to_repo = true
+# truncation_symbol = "…"
+# fish_style_pwd_dir_length = 3
+format = "([$read_only]($read_only_style))[$path]($style)"
+
+[directory.substitutions]
+"~/Documents" = ""
+"~/Music" = ""
+"~/Movies" = ""
+"~/Pictures" = ""
+"~/Sources" = ""
+"~" = " "
+"/" = "  "
+
+[docker_context]
+# disabled = true
+symbol = " "
+style = ""
+only_with_files = true
+format = "[$symbol$context]($style)"
+
+[dotnet]
+# disabled = true
+symbol = " "
+style = ""
+heuristic = true
+format = "[$symbol$version( 什$tfm)]($style)"
+
+[elixir]
+# disabled = true
+symbol = " "
+style = ""
+format = '[$symbol$version \(OTP:$otp_version\)]($style)'
+
+[elm]
+# disabled = true
+symbol = " " # original
+# symbol = " " # clearer
+style = ""
+format = "[$symbol$version]($style)"
+
+[env_var]
+disabled = true
+symbol = " "
+style = ""
+variable = "0"
+default = "fish"
+format = "([$symbol$env_value]($style))"
+
+[erlang]
+# disabled = true
+symbol = " "
+style = ""
+format = "[$symbol$version]($style)"
+
+[gcloud]
+# disabled = true
+symbol = "☁️ "
+style = ""
+format = '[$symbol$account(\($region\))]($style)'
+
+[git_branch]
+# disabled = true
+symbol = " "
+# symbol = " " # alternate
+style = ""
+# truncation_length = 4
+# truncation_symbol = ""
+format = "[$symbol$branch]($style)"
+
+[git_commit]
+# disabled = true
+style = ""
+commit_hash_length = 4
+# only_detached = true
+format = "[#$hash]($style)"
+
+[git_state]
+# disabled = true
+style = ""
+rebase = "rebasing"
+merge = "merging"
+revert = "reverting"
+cherry_pick = " picking"
+bisect = "bisecting"
+am = "am'ing"
+am_or_rebase = "am/rebase"
+format = '\([$state($progress_current/$progress_total)]($style)\)'
+
+[git_status]
+# disabled = true
+style = ""
+stashed = " ${count}"
+ahead = "ﲗ ${count}"
+behind = "ﲔ ${count}"
+diverged = "李 ${ahead_count} ${behind_count}"
+conflicted = "${count}"
+deleted = " ${count}"
+renamed = "﫦${count}"
+modified = " 凜${count}"
+staged = "  ${count}"
+untracked = "  ${count}"
+format = "([$stashed$staged$modified$renamed$untracked$deleted$conflicted$ahead_behind]($style))"
+
+[golang]
+# disabled = true
+symbol = " "
+style = ""
+format = "[$symbol$version]($style)"
+
+[helm]
+# disabled = true
+symbol = "ﴱ "
+style = ""
+format = "[$symbol$version]($style)"
+
+[hostname]
+# disabled = true
+style = ""
+# ssh_only = false
+trim_at = "."
+format = "[($style)$hostname]($style)"
+
+[java]
+# disabled = true
+symbol = " "
+style = ""
+format = "[$symbol$version]($style)"
+
+[jobs]
+# disabled = true
+symbol = "  "
+style = "bold fg:#FFA200"
+# threshold = 1
+format = "[$symbol$number]($style)"
+
+[julia]
+# disabled = true
+symbol = " "
+style = ""
+format = "[$symbol$version]($style)"
+
+[kubernetes]
+disabled = false
+symbol = "☸︎"
+style = ""
+format = '[$symbol$context(\($namespace\))]($style)'
+
+[memory_usage]
+# disabled = false
+symbol = " "
+style = ""
+threshold = 75
+format = "([$symbol$ram(:$swap)]($style))"
+
+# Mercurial
+[hg_branch]
+disabled = false
+symbol = " "
+style = ""
+# truncation_length = 8 # default = 2^63 - 1
+# truncation_symbol = "…"
+format = "[$symbol$branch]($style)"
+
+[nim]
+# disabled = true
+symbol = " "
+style = ""
+format = "[$symbol$version]($style)"
+
+[nix_shell]
+# disabled = true
+symbol = " "
+style = ""
+impure_msg = '[\(impure\)]'
+pure_msg = '[\(pure\)]'
+format = '[$symbol$name$state]($style)'
+
+[nodejs]
+# disabled = true
+symbol = " "
+style = ""
+format = "[$symbol$version]($style)"
+
+[ocaml]
+# disabled = true
+symbol = "🐫 "
+style = ""
+format = "[$symbol$version]($style)"
+
+[package]
+# disabled = true
+symbol = " "
+style = ""
+display_private = false
+format = "[$symbol$version]($style)"
+
+[perl]
+# disabled = true
+symbol = "🐪 "
+style = ""
+format = "[$symbol$version]($style)"
+
+[php]
+# disabled = true
+symbol = " "
+style = ""
+format = "[$symbol$version]($style)"
+
+[purescript]
+# disabled = true
+symbol = "<=>"
+style = ""
+format = "[$symbol$version]($style)"
+
+[python]
+# disabled = true
+symbol = " "
+style = ""
+# pyenv_version_name = true
+pyenv_prefix = "pyenv "
+python_binary = "python3"
+format = '[$symbol$pyenv_prefix$version(\($virtualenv\))]($style)'
+
+[ruby]
+# disabled = true
+symbol = " "
+# symbol = " " # alternate
+style = ""
+format = "[$symbol$version]($style)"
+
+[rust]
+# disabled = true
+symbol = " "
+# symbol = " " # alternate
+style = ""
+format = "[$symbol$version(]($style)"
+
+[shlvl]
+# disabled = false
+symbol = ""
+style = "bold fg:#FBDE2D"
+threshold = 2
+format = "[$symbol$shlvl]($style)"
+
+[singularity]
+# disabled = true
+symbol = "S"
+style = ""
+format = '[$symbol\[$env\]]($style)'
+
+[swift]
+# disabled = true
+symbol = "ﯣ "
+style = ""
+format = "[$symbol$version]($style)"
+
+[status]
+# disabled = false
+symbol = ""
+style = ""
+format = "[$symbol$status]($style)"
+
+[terraform]
+disabled = false
+symbol = "行"
+style = ""
+format = '[$symbol\($workspace\)]($style)'
+### uncomment the following, to see the version
+# format = "[$symbol$version($workspace)]($style)"
+
+
+[username]
+ disabled = false
+# show_always = true
+style_root = "bold fg:#FF5511"
+style_user = ""
+format = "[$user]($style)"
+
+[zig]
+# disabled = true
+symbol = "［Z］"
+# symbol = "↯ " # alternate
+style = ""
+format = "[$symbol$version]($style)"
+#EOF.
