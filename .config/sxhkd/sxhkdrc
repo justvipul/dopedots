@@ -4,7 +4,16 @@
 
 # terminal emulator
 super + Return
+	urxvtc
+
+#urxvt client
+super + F3
 	urxvt
+
+#open urxvt client even if daemon is not running
+super+F5
+	~/.scripts/urxvt-cd
+
 # program launcher
 super + d
 	.config/polybar/scripts/menu

@@ -11,12 +11,13 @@
 mkdir ~/gitall
 mkdir ~/pix
 mkdir ~/pix/wall
+mkdir ~/dur
 cd ~/gitall
 git clone https://gitlab.com/only_vip/mxtest-dope-dots.git
 ```
 ## Things to delete from mx after first install
 ```
-sudo aptitude remove vim-tiny vim-common asunder bluetooth clementine gimp gimp-data gimp-python libgimp2.0 simple-scan gscan2pdf hexchat lbreakout2 gnome-mahjongg mc mc-data nomacs nomacs-l10n thunderbird transmission-gtk transmission-common xfburn papirus-icon-theme
+sudo aptitude remove vim-tiny vim-common asunder bluetooth clementine gimp gimp-data gimp-python libgimp2.0 simple-scan gscan2pdf hexchat lbreakout2 gnome-mahjongg mc mc-data nomacs nomacs-l10n thunderbird transmission-gtk transmission-common xfburn
 ```
 ## Things to install later
 ### Fonts
@@ -25,45 +26,134 @@ sudo aptitude install fonts-noto-color-emoji fonts-noto-color-emoji fonts-symbol
 ```
 ### Dependencies and apps
 ```
-sudo aptitude install vim cmake  bspwm sxhkd lxappearance polybar fzf evince w3m w3m-img youtube-dl lolcat arandr nitrogen sxiv mpv x11-utils mpd mpc ncmpcpp pylint dmenu netcat jq ffmpeg caca-utils chafa libsixel1 flameshot libsixel-bin qbittorrent uget qutebrowser rofi rofi-calc network-manager git curl wget tree libreadline-dev xattr zathura zathura-cb zathura-djvu zathura-pdf-poppler zathura-ps python3-setuptools python3-dev python3-pip atool bsdtar rar moc mediainfo exiftool odt2txt rtorrent python3-wheel python3-docopt rxvt-unicode-256color tmux
+sudo aptitude install vim cmake  bspwm sxhkd lxappearance polybar fzf evince w3m w3m-img youtube-dl lolcat arandr nitrogen sxiv mpv x11-utils mpd mpc ncmpcpp pylint dmenu netcat jq ffmpeg caca-utils chafa libsixel1 flameshot libsixel-bin qbittorrent uget qutebrowser rofi rofi-calc network-manager git curl wget tree libreadline-dev xattr zathura zathura-cb zathura-djvu zathura-pdf-poppler zathura-ps python3-setuptools python3-dev python3-pip atool rar moc mediainfo exiftool odt2txt rtorrent python3-wheel python3-docopt rxvt-unicode-256color tmux python3-ueberzug
 
+```
+## setup [MPR](https://mpr.hunterwittenborn.com/packages/mpm)
+>First, add the signing key:
+
+```
+    wget -qO - 'https://proget.hunterwittenborn.com/debian-feeds/makedeb.pub' | gpg --dearmor | sudo tee /usr/share/keyrings/makedeb-archive-keyring.gpg &> /dev/null
+
+```
+>Next, add the repository information to your system:
+
+```
+echo 'deb [signed-by=/usr/share/keyrings/makedeb-archive-keyring.gpg arch=all] https://proget.hunterwittenborn.com/ makedeb main' | sudo tee /etc/apt/sources.list.d/makedeb.list
+
+```
+>Lastly, update the repository cache on your system:
+
+```
+sudo apt update && sudo apt install makedeb-beta
+```
+
+install from mpr
+
+
+
+
+1. compton
+```
+git clone https://mpr.hunterwittenborn.com/compton-tryone-git.git
+cd ~/dur/compton-tryone-git
+makedeb -si
+```
+2. picom
+```
+git clone https://mpr.hunterwittenborn.com/picom-jonaburg-git.git
+cd ~/dur/picom-jonaburg-git
+makedeb -si
+```
+3. fzf-tab-completion
+```
+git clone https://mpr.hunterwittenborn.com/fzf-tab-completion-git.git
+cd ~/dur/fzf-tab-completion-git
+makedeb -si
+```
+4. shell-color-scripts
+```
+git clone https://mpr.hunterwittenborn.com/shell-color-scripts.git
+cd ~/dur/shell-color-scripts
+makedeb -si
+```
+5. nnn
+```
+git clone https://mpr.hunterwittenborn.com/nnn-git.git
+cd ~/dur/nnn-git
+makedeb -si
+```
+6. starship-prompt
+```
+git clone https://mpr.hunterwittenborn.com/starship-bin.git
+cd ~/dur/starship-bin
+makedeb -si
+```
+7. fzf
+```
+git clone https://mpr.hunterwittenborn.com/fzf-git.git
+cd fzf-git
+makedeb -si
+```
+8. dunst
+```
+git clone https://mpr.hunterwittenborn.com/dunst-git.git
+cd ~/dur/dunst-git
+makedeb -si
+```
+9. ytfzf
+```
+git clone https://mpr.hunterwittenborn.com/ytfzf.git
+cd ~/dur/ytfzf
+makedeb -si
+```
+10. bat-cat
+```
+git clone https://mpr.hunterwittenborn.com/bat-cat-bin.git
+cd ~/dur/bat-cat-bin
+makedeb -si
+```
+11. exa
+```
+git clone https://mpr.hunterwittenborn.com/exa-bin.git
+cd ~/dur/exa-bin
+makedeb -si
+```
+12. neofetch
+```
+git clone https://mpr.hunterwittenborn.com/neofetch-git.git
+cd ~/dur/neofetch-git
+makedeb -si
+```
+13. oranchelo icon theme  
+```
+git clone https://mpr.hunterwittenborn.com/oranchelo-icon-theme.git
+cd ~/dur/oranchelo-icon-theme
+makedeb -si
+```    
+14. rl-custom-git
+```
+git clone https://mpr.hunterwittenborn.com/rl-custom-function-git.git
+cd ~/dur/rl-custom-function-git
+makedeb -si
+```
+15. rofi
+```
+git clone https://mpr.hunterwittenborn.com/rofi.git
+cd ~/dur/rofi
+makedeb -si
+```
+16.mpm
+```
+git clone https://mpr.hunterwittenborn.com/mpm.git
+cd mpm
+makedeb -si
 ```
 
 
-### Compton dependencies
-```
-sudo aptitude install libx11-dev libxcomposite-dev libxdamage-dev libxfixes-dev libxext-dev libxrender-dev libxrandr-dev libxinerama-dev pkg-config make libpcre2-dev libconfig-dev libdrm-dev  libdbus-1-dev  libgl-dev libpcre++-dev docbook-xml libxslt1-dev xsltproc xmlto asciidoc-base asciidoc-common xsltproc libxcb-image0-dev libxcb-damage0-dev libpixman-1-dev asciidoc
 
-```
 
-### Picom dependencies
-```
-sudo aptitude install meson libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-xinerama0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl1-mesa-dev  libpcre2-dev  libevdev-dev uthash-dev libev-dev libpcre++-dev  libx11-xcb-dev
-```
 
-### All github links
-```
-cd ~/gitall
-git clone https://github.com/alexanderjeurissen/ranger_devicons
-git clone https://github.com/lincheney/fzf-tab-completion
-git clone https://gitlab.com/dwt1/shell-color-scripts
-git clone https://github.com/ryanoasis/vim-devicons
-git clone https://github.com/tryone144/compton
-git clone https://github.com/jonaburg/picom
-git clone https://github.com/ranger/ranger
-git clone https://github.com/siduck76/st
-git clone https://github.com/jarun/nnn
-```
-
-##### Remove this patch later
-
-```
-https://st.suckless.org/patches/bold-is-not-bright/
-```
-### [starship-prompt.rs](https://starship.rs/)
-
-# Install starship
-`curl -fsSL https://starship.rs/install.sh | bash`
 
 ## Get a nerd font
 [Nerd-fonts](https://www.nerdfonts.com/)
@@ -72,13 +162,6 @@ https://st.suckless.org/patches/bold-is-not-bright/
 [Libreoffice-appimage](https://www.libreoffice.org/download/appimage/)
 
 
-## Install nnn with icon fonts 
-```
-cd nnn 
-make
-sudo make O_NERD=1
-sudo make install install-desktop
-```
 
 ## Sid's st deps
 ```
@@ -88,26 +171,6 @@ sudo aptitude install libxft-dev libx11-dev libharfbuzz-dev libxext-dev libxrend
 
 
 
-## Install shell color scripts
-```
-cd ~/gitall/shell-color-scripts
-rm -rf /opt/shell-color-scripts || return 1
-sudo mkdir -p /opt/shell-color-scripts/colorscripts || return 1
-sudo cp -rf colorscripts/* /opt/shell-color-scripts/colorscripts
-sudo cp colorscript.sh /usr/bin/colorscript
-```
-## Install picom
-```
-cd ~/gitall/picom
-meson --buildtype=release . build
-ninja -C build
-```
-
-### To install the binaries of picom in /usr/local/bin (optional)
-
-```
-sudo ninja -C build install
-```
 
 
 ## Copy rsfetch,viman and atomicparsley to /usr/bin
@@ -124,14 +187,8 @@ fc-cache -fv
 ## Get pywal,colorz,schemer2,ueberzug.
 
 ```
-pip3 install pywal colorz ueberzug
+pip3 install pywal colorz
 ```
-## get updated fzf from github, get tmux from bpo
-```
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
-```
-###### run `~/.fzf/install` as sudo `sudo ~/.fzf/install` to have it detected everywhere in your system
 
 
 ## Install papirus icon theme
@@ -180,24 +237,10 @@ wget -qO- https://git.io/papirus-folders-install | env uninstall=true sh
 
 
 
-## Install dunst
-```
-cd ~/gitall
-git clone https://github.com/dunst-project/dunst.git
-cd dunst
-sudo aptitude install libnotify-dev libxss-dev libxdg-basedir-dev libghc-pango-dev
-make PREFIX=/usr WAYLAND=0
-sudo make install PREFIX=/usr WAYLAND=0
-sudo apt remove xfce4-notifyd
-```
 ## Install rustup
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-```
-#### Install bat,exa from cargo
-```
-cargo install bat exa
 ```
 ### change crontab entry to have wal run every 10 minutes
 run `crontab -e` enter following command at the end
@@ -219,6 +262,18 @@ run `crontab -e` enter following command at the end
 [ytfzf](https://github.com/pystardust/ytfzf)\
 [Suckless-tabbed](https://tools.suckless.org/tabbed/)
 
+### All github links
+```
+cd ~/gitall
+git clone https://github.com/alexanderjeurissen/ranger_devicons
+git clone https://github.com/siduck76/st
+```
+
+##### Remove this patch later
+
+```
+https://st.suckless.org/patches/bold-is-not-bright/
+```
 
 ### ~~termite is deprecated but the install script is still here just for nostalgia~~
 ~~### termite install~~

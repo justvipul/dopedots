@@ -183,7 +183,7 @@ alias la="exa -lgha --group-directories-first --icons"
 set -o vi
 
 
-source ~/gitall/fzf-tab-completion/bash/fzf-bash-completion.sh
+source /usr/share/fzf-tab-completion/bash/fzf-bash-completion.sh
 bind -x '"\t": fzf_bash_completion'
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/.local/bin/
@@ -196,6 +196,7 @@ export NNN_OPENER=/home/mxtest/.config/nnn/plugins/nuke
 export NNN_FIFO=/tmp/nnn.fifo
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 colorscript random
-. "$HOME/.cargo/env"
+#. "$HOME/.cargo/env"
 HISTSIZE=50000
 HISTFILESIZE=50000
+export TERM=xterm-256color
