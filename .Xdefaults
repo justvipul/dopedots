@@ -22,9 +22,10 @@ URxvt.background:                 rgba:0000/0000/0000/9999
 !URxvt.tintcolor:                 #000000
 !URxvt.blurRadius:                12
 !URxvt.transparent:               true
-URxvt.iso14755:                   false
-!URxvt.termName:                   urxvt 
+URxvt.iso14755:                   true
 !URxvt.iconFile:                  ~/.icons/gladient/term.png
+!URxvt.termName:                   rxvt-unicode-256color
+URxvt.termName:                   rxvt-unicode
 ! Uncomment if to much font spacing
 !URxvt.letterSpace: -1
 
