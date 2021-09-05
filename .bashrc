@@ -127,7 +127,7 @@ esac
 
 eval "$(starship init bash)"
 #source $HOME/.config/colorscripts/panes
-alias rsfetch='rsfetch -PdbcklrstuU@w -L uzi.txt | lolcat'
+alias rsfetch='rsfetch -PdbcklrstuU@w -L ~/.uzi.txt | lolcat'
 alias duf='duf | lolcat'
 alias cat="bat"
 alias nnn="nnn -Ddc"
@@ -195,8 +195,7 @@ export NNN_PLUG='f:finder;o:fzopen;p:preview-tabbed;v:vidthumb;n:nuke;'
 export NNN_OPENER=/home/mxtest/.config/nnn/plugins/nuke
 export NNN_FIFO=/tmp/nnn.fifo
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-colorscript random
+#colorscript random
 #. "$HOME/.cargo/env"
 HISTSIZE=50000
 HISTFILESIZE=50000
-export TERM=xterm-256color

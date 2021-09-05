@@ -15,6 +15,7 @@ mkdir ~/dur
 cd ~/gitall
 git clone https://gitlab.com/only_vip/mxtest-dope-dots.git
 ```
+#### copy all the contents of mxtest-dope-dots to ~ excluding README, .git and license.
 ## Things to delete from mx after first install
 ```
 sudo aptitude remove vim-tiny vim-common asunder bluetooth clementine gimp gimp-data gimp-python libgimp2.0 simple-scan gscan2pdf hexchat lbreakout2 gnome-mahjongg mc mc-data nomacs nomacs-l10n thunderbird transmission-gtk transmission-common xfburn
@@ -26,8 +27,12 @@ sudo aptitude install fonts-noto-color-emoji fonts-noto-color-emoji fonts-symbol
 ```
 ### Dependencies and apps
 ```
-sudo aptitude install vim cmake  bspwm sxhkd lxappearance polybar fzf evince w3m w3m-img youtube-dl lolcat arandr nitrogen sxiv mpv x11-utils mpd mpc ncmpcpp pylint dmenu netcat jq ffmpeg caca-utils chafa libsixel1 flameshot libsixel-bin qbittorrent uget qutebrowser rofi rofi-calc network-manager git curl wget tree libreadline-dev xattr zathura zathura-cb zathura-djvu zathura-pdf-poppler zathura-ps python3-setuptools python3-dev python3-pip atool rar moc mediainfo exiftool odt2txt rtorrent python3-wheel python3-docopt rxvt-unicode-256color tmux python3-ueberzug
+sudo aptitude install vim cmake  bspwm sxhkd lxappearance polybar fzf evince w3m w3m-img youtube-dl lolcat arandr nitrogen sxiv mpv x11-utils mpd mpc ncmpcpp pylint dmenu netcat jq ffmpeg caca-utils chafa libsixel1 flameshot libsixel-bin qbittorrent uget qutebrowser rofi rofi-calc network-manager git curl wget tree libreadline-dev xattr zathura zathura-cb zathura-djvu zathura-pdf-poppler zathura-ps python3-setuptools python3-dev python3-pip atool rar moc mediainfo exiftool odt2txt rtorrent python3-wheel python3-docopt rxvt-unicode-256color tmux python3-ueberzug 
 
+```
+#### for bullseye
+```
+sudo aptitude install roxterm atomicparsley ncat
 ```
 ## setup [MPR](https://mpr.hunterwittenborn.com/packages/mpm)
 >First, add the signing key:
@@ -50,110 +55,25 @@ sudo apt update && sudo apt install makedeb-beta
 
 install from mpr
 
-
-
-
-1. compton
+1. tap
 ```
-git clone https://mpr.hunterwittenborn.com/compton-tryone-git.git
-cd ~/dur/compton-tryone-git
-makedeb -si
-```
-2. picom
-```
-git clone https://mpr.hunterwittenborn.com/picom-jonaburg-git.git
-cd ~/dur/picom-jonaburg-git
-makedeb -si
-```
-3. fzf-tab-completion
-```
-git clone https://mpr.hunterwittenborn.com/fzf-tab-completion-git.git
-cd ~/dur/fzf-tab-completion-git
-makedeb -si
-```
-4. shell-color-scripts
-```
-git clone https://mpr.hunterwittenborn.com/shell-color-scripts.git
-cd ~/dur/shell-color-scripts
-makedeb -si
-```
-5. nnn
-```
-git clone https://mpr.hunterwittenborn.com/nnn-git.git
-cd ~/dur/nnn-git
-makedeb -si
-```
-6. starship-prompt
-```
-git clone https://mpr.hunterwittenborn.com/starship-bin.git
-cd ~/dur/starship-bin
-makedeb -si
-```
-7. fzf
-```
-git clone https://mpr.hunterwittenborn.com/fzf-git.git
-cd fzf-git
-makedeb -si
-```
-8. dunst
-```
-git clone https://mpr.hunterwittenborn.com/dunst-git.git
-cd ~/dur/dunst-git
-makedeb -si
-```
-9. ytfzf
-```
-git clone https://mpr.hunterwittenborn.com/ytfzf.git
-cd ~/dur/ytfzf
-makedeb -si
-```
-10. bat-cat
-```
-git clone https://mpr.hunterwittenborn.com/bat-cat-bin.git
-cd ~/dur/bat-cat-bin
-makedeb -si
-```
-11. exa
-```
-git clone https://mpr.hunterwittenborn.com/exa-bin.git
-cd ~/dur/exa-bin
-makedeb -si
-```
-12. neofetch
-```
-git clone https://mpr.hunterwittenborn.com/neofetch-git.git
-cd ~/dur/neofetch-git
-makedeb -si
-```
-13. oranchelo icon theme  
-```
-git clone https://mpr.hunterwittenborn.com/oranchelo-icon-theme.git
-cd ~/dur/oranchelo-icon-theme
-makedeb -si
-```    
-14. rl-custom-git
-```
-git clone https://mpr.hunterwittenborn.com/rl-custom-function-git.git
-cd ~/dur/rl-custom-function-git
-makedeb -si
-```
-15. rofi
-```
-git clone https://mpr.hunterwittenborn.com/rofi.git
-cd ~/dur/rofi
-makedeb -si
-```
-16.mpm
-```
-git clone https://mpr.hunterwittenborn.com/mpm.git
-cd mpm
+git clone https://mpr.hunterwittenborn.com/tap.git
+cd tap
 makedeb -si
 ```
 
-
-
-
-
+### Later on use tap to install from MPR.
+```
+tap install bat-cat-bin	nerd-fonts-jetbrains-mono compton-tryone-git exa-bin jgmenu-git lite-xl neofetch-git neovim-git ttf-migu nerd-fonts-inconsolata nnn-git oranchelo-icon-theme picom-git reproc rl-custom-function-git rofi rxvt-unicode-256color shell-color-scripts starship-bin ungoogled-chromium-linchrome ytfzf	
+```
+### These need some Dependencies that we downloaded above.
+```
+tap install fzf fzf-tab-completion-git planner dunst-git nerd-fonts-ricty st-siduck76-git chadwm-git elementary-icon elementary-stylesheet picom-jonaburg-git	
+```
+### misc stuff you can get from MPR
+```
+tap install disfetch pfetch glow-bin micro-git youtube-dl ppfetch-git yafetch-git
+```
 
 ## Get a nerd font
 [Nerd-fonts](https://www.nerdfonts.com/)
@@ -162,18 +82,7 @@ makedeb -si
 [Libreoffice-appimage](https://www.libreoffice.org/download/appimage/)
 
 
-
-## Sid's st deps
-```
-sudo aptitude install libxft-dev libx11-dev libharfbuzz-dev libxext-dev libxrender-dev libxinerama-dev
-
-```
-
-
-
-
-
-## Copy rsfetch,viman and atomicparsley to /usr/bin
+## Copy rsfetch,viman to /usr/bin
 ```
 sudo cp ~/copytousrbinlocal/* /usr/bin/
 ```
@@ -234,21 +143,14 @@ wget -qO- https://git.io/papirus-folders-install | env PREFIX=/usr/local sh
 wget -qO- https://git.io/papirus-folders-install | env uninstall=true sh
 ```
 
-
-
-
-## Install rustup
-```
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-```
 ### change crontab entry to have wal run every 10 minutes
 run `crontab -e` enter following command at the end
 ```
 */10 * * * * DISPLAY=:0 ~/.local/bin/wal -a "50" backend colorz -i $(find ~/wals/* | shuf | head -n 1)
 ```
 ### install ntfd
->install ntfd then change the `~/.config/polybar/config` module-right to include the weather module. 
+
+>install [ntfd](https://github.com/kamek-pf/ntfd) then change the `~/.config/polybar/config` module-right to include the weather module. 
 ### make tmux symlink
 > make a symlink of the tmux config    `ln -s -f ~/.tmux/.tmux.conf ~/.tmux.conf`
 
@@ -262,18 +164,6 @@ run `crontab -e` enter following command at the end
 [ytfzf](https://github.com/pystardust/ytfzf)\
 [Suckless-tabbed](https://tools.suckless.org/tabbed/)
 
-### All github links
-```
-cd ~/gitall
-git clone https://github.com/alexanderjeurissen/ranger_devicons
-git clone https://github.com/siduck76/st
-```
-
-##### Remove this patch later
-
-```
-https://st.suckless.org/patches/bold-is-not-bright/
-```
 
 ### ~~termite is deprecated but the install script is still here just for nostalgia~~
 ~~### termite install~~
@@ -303,7 +193,7 @@ make
 sudo make install
 
 cd ~/git-src/vte-ng
-sudo make uninstall~~
+sudo make uninstall
 
 ~~for saner working of termite~~
 

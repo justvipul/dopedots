@@ -2,7 +2,7 @@
 
 walldir="$HOME/Pictures"
 maxpage=5
-tagoptions="#minimalism\n#Cyberpunk 2077\n#fantasy girl\n#digital art\n#anime\n#4K\n#nature"
+tagoptions="#minimalism\n#Cyberpunk 2077\n#digital art\n#anime\n#4K\n#nature\n#top view\n#rick and morty\n#justin maller"
 if [ -z $1 ]; then
   query=$(echo -e $tagoptions | dmenu -p "Search Wallhaven: " -i)  
 else
@@ -24,6 +24,6 @@ do
   wget -nc -P $walldir $page
 done
 rm tmp.txt
-dunstify "😊 Download finish ✅"
+notify-send "😊 Download finish ✅"
 sxiv -t $walldir/*
 mv $walldir/* ~/pix/wall/
