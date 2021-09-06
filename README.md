@@ -68,7 +68,7 @@ tap install bat-cat-bin	nerd-fonts-jetbrains-mono compton-tryone-git exa-bin jgm
 ```
 ### These need some Dependencies that we downloaded above.
 ```
-tap install fzf fzf-tab-completion-git planner dunst-git nerd-fonts-ricty st-siduck76-git chadwm-git elementary-icon elementary-stylesheet picom-jonaburg-git lite-xl	
+tap install fzf-git fzf-tab-completion-git planner dunst-git nerd-fonts-ricty st-siduck76-git chadwm-git elementary-icons elementary-stylesheet picom-jonaburg-git lite-xl	
 ```
 ### misc stuff you can get from MPR
 ```
