@@ -64,11 +64,11 @@ makedeb -si
 
 ### Later on use tap to install from MPR.
 ```
-tap install bat-cat-bin	nerd-fonts-jetbrains-mono compton-tryone-git exa-bin jgmenu-git lite-xl neofetch-git neovim-git ttf-migu nerd-fonts-inconsolata nnn-git oranchelo-icon-theme picom-git reproc rl-custom-function-git rofi rxvt-unicode-256color shell-color-scripts starship-bin ungoogled-chromium-linchrome ytfzf	
+tap install bat-cat-bin	nerd-fonts-jetbrains-mono compton-tryone-git exa-bin jgmenu-git  neofetch-git neovim-git ttf-migu nerd-fonts-inconsolata nnn-git oranchelo-icon-theme picom-git reproc rl-custom-function-git rofi rxvt-unicode-256color shell-color-scripts starship-bin ungoogled-chromium-linchrome ytfzf	
 ```
 ### These need some Dependencies that we downloaded above.
 ```
-tap install fzf fzf-tab-completion-git planner dunst-git nerd-fonts-ricty st-siduck76-git chadwm-git elementary-icon elementary-stylesheet picom-jonaburg-git	
+tap install fzf fzf-tab-completion-git planner dunst-git nerd-fonts-ricty st-siduck76-git chadwm-git elementary-icon elementary-stylesheet picom-jonaburg-git lite-xl	
 ```
 ### misc stuff you can get from MPR
 ```
