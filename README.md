@@ -85,9 +85,9 @@ tap install disfetch pfetch glow-bin micro-git youtube-dl ppfetch-git yafetch-gi
 [Libreoffice-appimage](https://www.libreoffice.org/download/appimage/)
 
 
-## Copy rsfetch,viman to /usr/bin
+## Copy rsfetch,viman to /usr/local/bin
 ```
-sudo cp ~/copytousrbinlocal/* /usr/bin/
+sudo cp ~/copytousrbinlocal/* /usr/local/bin/
 ```
 
 ### Reload font cache after copying the fonts folder to ~/.fonts/*
