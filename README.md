@@ -68,8 +68,10 @@ tap install bat-cat-bin	nerd-fonts-jetbrains-mono  exa-bin jgmenu-git  neofetch-
 ```
 ### These need some Dependencies that we downloaded above.
 ```
-tap install fzf-git fzf-tab-completion-git planner dunst-git nerd-fonts-ricty st-siduck76-git chadwm-git elementary-icons elementary-stylesheet lite-xl	
+tap install fzf-tab-completion-git dunst-git   chadwm-git elementary-icons elementary-stylesheet lite-xl	
 ```
+`tap install st-siduck76-git`
+
 ### misc stuff you can get from MPR
 ```
 tap install disfetch pfetch glow-bin micro-git youtube-dl ppfetch-git yafetch-git
@@ -81,6 +83,20 @@ tap install disfetch pfetch glow-bin micro-git youtube-dl ppfetch-git yafetch-gi
 ## Get a nerd font
 [Nerd-fonts](https://www.nerdfonts.com/)
 
+### these packages wont work with tap so install them manually for now.
+```
+mkdir ~/dur
+cd ~/dur
+git clone https://mpr.hunterwittenborn.com/fzf-git.git
+git clone https://mpr.hunterwittenborn.com/planner.git
+git clone https://mpr.hunterwittenborn.com/nerd-fonts-ricty.git
+cd ~/dur/fzf-git
+makedeb -si
+cd ~/dur/planner
+makedeb -si
+cd ~/nerd-fonts-ricty
+makedeb -si
+```
 ### libreoffice appimage
 [Libreoffice-appimage](https://www.libreoffice.org/download/appimage/)
 
