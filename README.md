@@ -112,16 +112,10 @@ $ rm -rf ~/.cache/nvim
 ### libreoffice appimage
 [Libreoffice-appimage](https://www.libreoffice.org/download/appimage/)
 
-
-## Copy rsfetch,viman to /usr/local/bin
-```
-sudo cp ~/copytousrbinlocal/* /usr/local/bin/
-```
-
 ### Reload font cache after copying the fonts folder to ~/.fonts/*
 
 ```
-fc-cache -fv
+fc-cache -frv
 ```
 
 ## Get pywal,colorz,schemer2,ueberzug.
@@ -185,6 +179,8 @@ run `crontab -e` enter following command at the end
 ### make tmux symlink
 > make a symlink of the tmux config    `ln -s -f ~/.tmux/.tmux.conf ~/.tmux.conf`
 
+### NOTE: Change monitor in .config/polybar/config file to your monitor name. find it by running `xrandr` in a terminal. otherwise polybar wont work
+
 ### misc. links
 [Bgra-debian](https://github.com/ra-c/libxft-bgra-debian)\
 [nnn-livepreview](https://github.com/jarun/nnn/wiki/Live-previews)\
@@ -194,7 +190,7 @@ run `crontab -e` enter following command at the end
 [vimwiki](https://cristianpb.github.io/vimwiki/st/)\
 [ytfzf](https://github.com/pystardust/ytfzf)\
 [Suckless-tabbed](https://tools.suckless.org/tabbed/)
-
+[Rsfetch](https://github.com/Phate6660/rsfetch)
 
 ### ~~termite is deprecated but the install script is still here just for nostalgia~~
 ~~### termite install~~
