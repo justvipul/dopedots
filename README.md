@@ -64,17 +64,20 @@ makedeb -si
 
 ### Later on use tap to install from MPR.
 ```
-tap install bat-cat-bin	nerd-fonts-jetbrains-mono compton-tryone-git exa-bin jgmenu-git  neofetch-git neovim-git ttf-migu nerd-fonts-inconsolata nnn-git oranchelo-icon-theme picom-git reproc rl-custom-function-git rofi rxvt-unicode-256color shell-color-scripts starship-bin ungoogled-chromium-linchrome ytfzf	
+tap install bat-cat-bin	nerd-fonts-jetbrains-mono  exa-bin jgmenu-git  neofetch-git neovim-git ttf-migu nerd-fonts-inconsolata nnn-git oranchelo-icon-theme picom-git reproc rl-custom-function-git rofi rxvt-unicode-256color shell-color-scripts starship-bin ungoogled-chromium-linchrome ytfzf	
 ```
 ### These need some Dependencies that we downloaded above.
 ```
-tap install fzf-git fzf-tab-completion-git planner dunst-git nerd-fonts-ricty st-siduck76-git chadwm-git elementary-icons elementary-stylesheet picom-jonaburg-git lite-xl	
+tap install fzf-git fzf-tab-completion-git planner dunst-git nerd-fonts-ricty st-siduck76-git chadwm-git elementary-icons elementary-stylesheet lite-xl	
 ```
 ### misc stuff you can get from MPR
 ```
 tap install disfetch pfetch glow-bin micro-git youtube-dl ppfetch-git yafetch-git
 ```
-
+### install compton or picom any one
+>`tap install compton-tryone-git` or 
+>`tap instal picom-git`or
+>`tap install picom-jonaburg-git`
 ## Get a nerd font
 [Nerd-fonts](https://www.nerdfonts.com/)
 
