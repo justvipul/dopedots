@@ -64,17 +64,17 @@ makedeb -si
 
 ### Later on use tap to install from MPR.
 ```
-tap install bat-cat-bin	nerd-fonts-jetbrains-mono  exa-bin jgmenu-git  neofetch-git neovim-git ttf-migu nerd-fonts-inconsolata nnn-git oranchelo-icon-theme picom-git reproc rl-custom-function-git rofi rxvt-unicode-256color shell-color-scripts starship-bin ungoogled-chromium-linchrome ytfzf	
+tap install bat-cat-bin	nerd-fonts-jetbrains-mono  exa-bin jgmenu-git  neofetch-git neovim-git ttf-migu nerd-fonts-inconsolata nnn-git oranchelo-icon-theme picom-git reproc rl-custom-function-git rofi rxvt-unicode-256color-unicode3 shell-color-scripts starship-bin ungoogled-chromium-linchrome urxvt-config-git ytfzf	
 ```
 ### These need some Dependencies that we downloaded above.
 ```
-tap install fzf-tab-completion-git dunst-git   chadwm-git elementary-icons elementary-stylesheet lite-xl	
+tap install fzf-tab-completion-git dunst-git chadwm-git elementary-icons elementary-stylesheet lite-xl ntfd 
 ```
 `tap install st-siduck76-git`
 
 ### misc stuff you can get from MPR
 ```
-tap install disfetch pfetch glow-bin micro-git youtube-dl ppfetch-git yafetch-git
+tap install disfetch pfetch glow-bin micro-git youtube-dl ppfetch-git yafetch-git xfwm-effects
 ```
 ### install compton or picom any one
 >`tap install compton-tryone-git` or 
@@ -175,7 +175,7 @@ run `crontab -e` enter following command at the end
 ```
 ### install ntfd
 
->install [ntfd](https://github.com/kamek-pf/ntfd) then change the `~/.config/polybar/config` module-right to include the weather module. 
+>change the `~/.config/polybar/config` module-right to include the weather module. 
 ### make tmux symlink
 > make a symlink of the tmux config    `ln -s -f ~/.tmux/.tmux.conf ~/.tmux.conf`
 
