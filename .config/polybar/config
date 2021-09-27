@@ -364,12 +364,12 @@ format-online =  <icon-prev> <icon-stop> <icon-play> <icon-next>
 
 
 
-icon-prev =倫
-icon-stop =
-icon-play =喇
-icon-pause =
-toggle=
-icon-next =淪
+icon-prev =%{A1:~/.scripts/polybar-mpd-art-prev.sh:}倫%{A}
+icon-stop =%{A1:~/.scripts/polybar-mpd-art-stop.sh:}%{A}
+icon-play =%{A1:~/.scripts/polybar-mpd-art-play.sh:}喇%{A}
+icon-next =%{A1:~/.scripts/polybar-mpd-art-next.sh:}淪%{A}
+;toggle=
+;icon-next =淪
 
 label-song = %artist% - %title%
 
