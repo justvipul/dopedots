@@ -20,6 +20,7 @@ nitrogen --set-scaled --random &
 ntfd &
 ~/.scripts/conkystart &
 urxvtd -f -o &
+mp-daemon &
 
 bspc monitor -d I II III IV V VI VII VIII
 bspc config border_width         2

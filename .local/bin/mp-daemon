@@ -1,0 +1,18 @@
+#!/bin/bash
+
+while true
+do
+    mpc idle player
+
+
+    MUSIC=$(mpc current -f "%artist%[ (%album%)] \n %title%")
+    MUSIC2=$( mpc | sed -n '2p' | awk '{print $2}')
+
+    ~/.scripts/art.sh
+    
+    ART="/tmp/OTHER.jpg"
+    
+    convert -resize 194x194 "$ART" /tmp/cover.jpg
+
+    dunstify -t 8000 -a MPD -r 1337 -i "/tmp/cover.jpg" "Now playing" "$MUSIC $MUSIC2"
+done

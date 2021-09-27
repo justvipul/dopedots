@@ -364,10 +364,10 @@ format-online =  <icon-prev> <icon-stop> <icon-play> <icon-next>
 
 
 
-icon-prev =%{A1:~/.scripts/polybar-mpd-art-prev.sh:}倫%{A}
-icon-stop =%{A1:~/.scripts/polybar-mpd-art-stop.sh:}%{A}
-icon-play =%{A1:~/.scripts/polybar-mpd-art-play.sh:}喇%{A}
-icon-next =%{A1:~/.scripts/polybar-mpd-art-next.sh:}淪%{A}
+icon-prev =倫
+icon-stop =
+icon-play =喇
+icon-next =淪
 ;toggle=
 ;icon-next =淪
 
