@@ -1,6 +1,17 @@
 #!/bin/bash
 
 # nitrogen wall change at startup
-# ~/.local/bin/wal -a "60" --backend colorz -i $(find ~/wals/* | shuf | head -n 1)
-nitrogen --set-scaled --random
-notify-send "👀 your wall is 🔥"
+ nitrogen --set-scaled --random
+
+
+ ############### uncomment for dunstifyshowing wall in the notifcations
+ #START
+# WALLNAME=$(find ~/wals/* | shuf | head -n 1)
+# 
+# ~/.local/bin/wal -a "70" --backend colorz -i $WALLNAME
+# 
+# convert -resize 224x194 "$WALLNAME" /tmp/WALL.jpg
+dunstify -i "/tmp/WALL.jpg" "👀 your wall is 🔥"
+#END
+
+dunstify "👀 your wall is 🔥"
