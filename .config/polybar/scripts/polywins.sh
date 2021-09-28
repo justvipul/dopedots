@@ -14,7 +14,7 @@ inactive_underline=
 separator=" "
 show="icon" # options: window_title, window_class, window_classname, icon
 forbidden_classes="Polybar Conky Gmrun"
-empty_desktop_message=""
+empty_desktop_message=""
 
 char_limit=20
 max_windows=15
@@ -179,9 +179,12 @@ generate_window_list() {
                 case "$cls" in
                     wezfurlong) w_name='' ;;
                     URxvt) w_name='' ;;
+                    Xfce4-terminal) w_name='' ;;
+                    Roxterm) w_name='' ;;
                     Chromium-browser) w_name='' ;;
                     TelegramDesktop) w_name=' ' ;;
                     Firefox) w_name='🦊' ;;
+                    Chromium-devel) w_name='' ;;
                     qBittorrent) w_name='蘆' ;;
                     Pcmanfm) w_name='📁' ;;
                     Thunar) w_name='📁' ;;
