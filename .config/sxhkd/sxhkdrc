@@ -158,6 +158,27 @@ XF86MonBrightnessDown
 				xbacklight -dec 5
 XF86MonBrightnessup
 				xbacklight -inc 5
+
+# song control for mpd via mpc.
+#play next son
+XF86AudioNext
+          mpc next
+
+# play prev song
+XF86AudioPrev
+          mpc prev
+
+# stop the song playing
+XF86AudioStop
+          mpc stop
+
+# toggle pause and play.
+XF86AudioPlay
+          mpc toggle
+
+# open ncmpcpp in urxvt
+XF86Tools
+          urxvtc -e ncmpcpp
 				
 #screenshot
 F12
