@@ -171,7 +171,7 @@ wget -qO- https://git.io/papirus-folders-install | env uninstall=true sh
 ### change crontab entry to have wal run every 10 minutes
 run `crontab -e` enter following command at the end
 ```
-*/10 * * * * DISPLAY=:0 ~/.local/bin/wal -a "50" backend colorz -i $(find ~/wals/* | shuf | head -n 1)
+*/10 * * * * DISPLAY=:0 ~/.local/bin/wal -a "50" --backend colorz -i $(find ~/wals/* | shuf | head -n 1)
 ```
 ### install ntfd
 
