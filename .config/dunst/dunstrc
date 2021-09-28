@@ -1,15 +1,15 @@
 [global]
     monitor = 0
     follow = keyboard
-    geometry = "250x10-50+30"
+    geometry = "250x80-20+30"
     indicate_hidden = yes
     shrink = no
     transparency = 00
     notification_height = 20
-    separator_height = 2
-    padding = 2
+    separator_height = 5
+    padding = 0
     horizontal_padding = 8
-    frame_width = 2
+    frame_width = 0
     frame_color = "#282828"
 
     # Define a color for the separator.
@@ -18,13 +18,13 @@
     #  * foreground: use the same color as the foreground;
     #  * frame: use the same color as the frame;
     #  * anything else will be interpreted as a X color.
-    separator_color = frame
+    separator_color = foreground
 
     # Sort messages by urgency.
     sort = yes
 
     idle_threshold = 120
-    font = VictorMono Nerd Font:style=Bold 15
+    font = VictorMono Nerd Font:style=Bold 13
 
 
     line_height = 0
@@ -40,7 +40,7 @@
     #   %n  progress value if set without any extra characters
     #   %%  Literal %
     # Markup is allowed
-    format = "<b>%s</b>\n%b"
+    format = "<span size='x-large' font_desc='VictorMono 11' weight='bold' foreground='#a7c080'>%s</span>\n\n%b"
 
     alignment = left
     show_age_threshold = 60
@@ -50,13 +50,13 @@
     stack_duplicates = true
     hide_duplicate_count = true
     show_indicators = yes
-    icon_position = left
-    max_icon_size = 40
-    #icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/:/usr/share/icons/Adwaita/256x256/status/
+    icon_position = top
+    max_icon_size = 500
+    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/:/usr/share/icons/Adwaita/256x256/status/:/tmp/
     sticky_history = yes
     history_length = 20
     dmenu = /usr/bin/dmenu -p dunst:
-    browser = /usr/bin/firefox -new-tab
+    browser = /usr/bin/ungoogled-chromium  -new-tab
 
     # Always run rule-defined scripts, even if the notification is suppressed
     always_run_script = true
