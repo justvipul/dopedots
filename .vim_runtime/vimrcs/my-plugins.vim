@@ -1,3 +1,4 @@
+
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
@@ -26,18 +27,18 @@ call plug#begin('~/.vim/plugged')
     Plug 'itchyny/lightline.vim'
     Plug 'jacoborus/tender.vim'
     Plug 'lilydjwg/colorizer'
-
-
-
-
-
-
-
-
-
-
-
+    Plug 'tpope/vim-fugitive'
+    Plug 'tpope/vim-surround'
+    Plug 'airblade/vim-gitgutter'
+    Plug 'tpope/vim-markdown'
+    Plug 'plasticboy/vim-markdown'
+    Plug 'suan/vim-instant-markdown'
+    Plug 'tpope/vim-vinegar'
+    Plug 'sainnhe/everforest'
+    Plug 'mcchrish/nnn.vim'
 
 
 " Initialize plugin system
 call plug#end()
+
+colorscheme monokai-chris

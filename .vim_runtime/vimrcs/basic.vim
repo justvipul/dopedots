@@ -1,4 +1,3 @@
-
 " Sections:
 "    -> General
 "    -> VIM user interface
@@ -108,14 +107,9 @@ set novisualbell
 set t_vb=
 set tm=500
 
-" Properly disable sound on errors on MacVim
-if has("gui_macvim")
-    autocmd GUIEnter * set vb t_vb=
-endif
-
 
 " Add a bit extra margin to the left
-set foldcolumn=1
+"set foldcolumn=1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -150,11 +144,55 @@ set encoding=utf8
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 "let g:airline_theme='base16_ashes'
+"let g:airline_powerline_fonts = 1
+
+
+	"g:lightline.colorscheme			*g:lightline.colorscheme*
+		"The colorscheme for lightline.vim.
+		"Currently, wombat, solarized, powerline, powerlineish,
+		"jellybeans, molokai, seoul256, darcula,
+		"selenized_dark, selenized_black, selenized_light, selenized_white,
+		"Tomorrow, Tomorrow_Night, Tomorrow_Night_Blue,
+		"Tomorrow_Night_Bright, Tomorrow_Night_Eighties, PaperColor,
+		"landscape, one, materia, material, OldHope, nord, deus,
+		"simpleblack, srcery_drk, ayu_mirage, ayu_light, ayu_dark,
+		"apprentice and 16color are available.
+		"The default value is:
+"
+		"let g:lightline.colorscheme = 'default'
+"
+		"Note that the default colorscheme is exactly the same as the
+		"powerline theme.
+"let g:lightline = {
+      "\ 'colorscheme': 'jellybeans',
+                "\ 'separator': { 'left': "\ue0b4", 'right': "\ue0b6" },
+                "\ 'subseparator': { 'left': "\ue0b5", 'right': "\ue0b7" },
+      "\ }
+
+
+
 let g:lightline = {
-      \ 'colorscheme': 'apprentice',
+  \   'colorscheme': 'jellybeans',
                 \ 'separator': { 'left': "\ue0b4", 'right': "\ue0b6" },
                 \ 'subseparator': { 'left': "\ue0b5", 'right': "\ue0b7" },
-      \ }
+  \   'active': {
+  \     'left':[ [ 'mode', 'paste' ],
+  \              [ 'gitbranch', 'readonly', 'filename', 'modified' ]
+  \     ]
+  \   },
+	\   'component': {
+	\     'lineinfo': ' %3l:%-2v',
+	\   },
+  \   'component_function': {
+  \     'gitbranch': 'fugitive#head',
+  \   }
+  \ }
+"let g:lightline.separator = {
+	"\   'left': '', 'right': ''
+  "\}
+"let g:lightline.subseparator = {
+	"\   'left': '', 'right': ''
+
 
 
 
@@ -382,3 +420,15 @@ set nocompatible
 filetype plugin on
 syntax on
 set nu
+set relativenumber
+nnoremap <S-n> :NERDTreeToggle<CR>
+nnoremap <S-f> :NERDTreeFind<CR>
+
+" let terminal resize scale the internal windows
+autocmd VimResized * :wincmd =
+
+"Use arrow keys to resize windows
+noremap <S-j>    <C-W>+
+noremap <S-k>  <C-W>-
+noremap <S-h>  3<C-W><
+noremap <S-l> 3<C-W>>
