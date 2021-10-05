@@ -11,7 +11,7 @@
 # ~/.local/bin/wal -a "70" --backend colorz -i $WALLNAME
 # 
 # convert -resize 224x194 "$WALLNAME" /tmp/WALL.jpg
-dunstify -i "/tmp/WALL.jpg" "👀 your wall is 🔥"
+#dunstify -i "/tmp/WALL.jpg" "👀 your wall is 🔥"
 #END
 
 dunstify "👀 your wall is 🔥"
