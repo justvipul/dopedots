@@ -34,7 +34,7 @@ LIGHT_BLUE="#039be5"
 LIGHT_GREEN="#7cb342"
 
 # Launch Rofi # #-no-lazy-grab
-  rofi -modi drun,run,calc,window,windowcd,keys -show drun -show-icons -sidebar-mode \
+  rofi -modi drun,run,window,windowcd,keys -show drun -show-icons -sidebar-mode \
 -hide-scrollbar true \
 -bw 0 \
 -lines 10 \

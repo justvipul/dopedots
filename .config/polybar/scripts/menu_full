@@ -34,7 +34,7 @@ LIGHT_BLUE="#039be5"
 LIGHT_GREEN="#7cb342"
 
 # Launch Rofi
-  rofi -modi run,drun,calc,windowcd,window,keys -show drun -show-icons -sidebar-mode \
+  rofi -modi run,drun,windowcd,window,keys -show drun -show-icons -sidebar-mode \
 -display-drun "Applications :" -drun-display-format "{name}" \
 -hide-scrollbar true \
 bw 0 \
