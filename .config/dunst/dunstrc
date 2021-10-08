@@ -94,9 +94,9 @@
     frame_color = "#fabd2f"
     timeout = 0
 
-[play_sound]
-    summary= "*"
-    script = /home/mxtest/.scripts/dunstalert.sh
+#[play_sound]
+    #summary= "*"
+    #script = $HOME/.scripts/dunstalert.sh
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
