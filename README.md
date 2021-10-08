@@ -8,11 +8,11 @@
 
 ## Initial step
 ```
-mkdir ~/gitall
-mkdir ~/pix
-mkdir ~/pix/wall
-mkdir ~/dur
-cd ~/gitall
+mkdir ~/.gitall
+mkdir ~/.pix
+mkdir ~/.pix/wall
+mkdir ~/.mpr
+cd ~/.gitall
 git clone https://gitlab.com/only_vip/mxtest-dope-dots.git
 ```
 #### copy all the contents of mxtest-dope-dots to ~ excluding README, .git and license.
@@ -27,12 +27,12 @@ sudo aptitude install fonts-noto-color-emoji fonts-noto-color-emoji fonts-symbol
 ```
 ### Dependencies and apps
 ```
-sudo aptitude install vim cmake  bspwm sxhkd lxappearance polybar fzf evince w3m w3m-img youtube-dl lolcat arandr nitrogen sxiv mpv x11-utils mpd mpc ncmpcpp pylint dmenu netcat jq ffmpeg caca-utils chafa libsixel1 flameshot libsixel-bin qbittorrent uget qutebrowser rofi rofi-calc network-manager git curl wget tree libreadline-dev xattr zathura zathura-cb zathura-djvu zathura-pdf-poppler zathura-ps python3-setuptools python3-dev python3-pip atool rar moc mediainfo exiftool odt2txt rtorrent python3-wheel python3-docopt rxvt-unicode-256color tmux python3-ueberzug ripgrep fd-find eyed3 python3-pylast
+sudo aptitude install vim cmake  bspwm sxhkd lxappearance polybar fzf evince w3m w3m-img youtube-dl lolcat arandr nitrogen sxiv mpv x11-utils mpd mpc ncmpcpp pylint dmenu netcat jq ffmpeg caca-utils chafa libsixel1 flameshot libsixel-bin qbittorrent uget qutebrowser rofi rofi-calc network-manager git curl wget tree libreadline-dev xattr zathura zathura-cb zathura-djvu zathura-pdf-poppler zathura-ps python3-setuptools python3-dev python3-pip atool rar moc mediainfo exiftool odt2txt rtorrent python3-wheel python3-docopt rxvt-unicode-256color tmux python3-ueberzug ripgrep fd-find eyed3 python3-pylast lxpolkit
 
 ```
 #### for bullseye
 ```
-sudo aptitude install roxterm atomicparsley ncat eyed3
+sudo aptitude install roxterm atomicparsley ncat
 ```
 ## setup [MPR](https://mpr.hunterwittenborn.com/packages/mpm)
 >First, add the signing key:
@@ -57,6 +57,7 @@ install from mpr
 
 1. tap
 ```
+cd ~/.gitall
 git clone https://mpr.hunterwittenborn.com/tap.git
 cd tap
 makedeb -si
@@ -64,17 +65,16 @@ makedeb -si
 
 ### Later on use tap to install from MPR.
 ```
-tap install bat-cat-bin	nerd-fonts-jetbrains-mono  exa-bin jgmenu-git  neofetch-git neovim-git ttf-migu nerd-fonts-inconsolata nnn-git oranchelo-icon-theme picom-git reproc rl-custom-function-git rofi rxvt-unicode-256color-unicode3 shell-color-scripts starship-bin ungoogled-chromium-linchrome urxvt-config-git ytfzf	
+tap install bat-cat-bin cbonsai-git compton-tryone-git dunst-bin exa-bin foot-bin glow-bin reproc meson neofetch-git neovim-git nerd-fonts-victor-mono ntfd rl-custom-function-git rofi rxvt-unicode-256color shell-color-scripts siji-git  starship-bin nerd-fonts-jetbrains-mono ttf-weather-icons-bin ungoogled-chromium-linchome-bin xfwm-effects yt-dlp-bin ytfzf zentile-bin 
 ```
 ### These need some Dependencies that we downloaded above.
 ```
-tap install fzf-tab-completion-git dunst-git chadwm-git elementary-icons elementary-stylesheet lite-xl ntfd 
+tap install fzf-tab-completion-git st-siduck76-git lite-xl nnn-git polybar urxvt-config-git
 ```
-`tap install st-siduck76-git`
 
 ### misc stuff you can get from MPR
 ```
-tap install disfetch pfetch glow-bin micro-git youtube-dl ppfetch-git yafetch-git xfwm-effects
+tap install mangohud chadwm-git pokemonsay-newgenerations-git micro-git 
 ```
 ### install compton or picom any one
 >`tap install compton-tryone-git` or 
@@ -85,16 +85,16 @@ tap install disfetch pfetch glow-bin micro-git youtube-dl ppfetch-git yafetch-gi
 
 ### these packages wont work with tap so install them manually for now.
 ```
-mkdir ~/dur
-cd ~/dur
+mkdir ~/.mpr
+cd ~/.mpr
 git clone https://mpr.hunterwittenborn.com/fzf-git.git
 git clone https://mpr.hunterwittenborn.com/planner.git
 git clone https://mpr.hunterwittenborn.com/nerd-fonts-ricty.git
-cd ~/dur/fzf-git
+cd ~/.mpr/fzf-git
 makedeb -si
-cd ~/dur/planner
+cd ~/.mpr/planner
 makedeb -si
-cd ~/nerd-fonts-ricty
+cd ~/.mpr/nerd-fonts-ricty
 makedeb -si
 ```
 ### get [NVCHAD](https://nvchad.netlify.app/)
@@ -115,7 +115,7 @@ $ rm -rf ~/.cache/nvim
 ### Reload font cache after copying the fonts folder to ~/.fonts/*
 
 ```
-fc-cache -frv
+fc-cache -fv
 ```
 
 ## Get pywal,colorz,schemer2,ueberzug.
@@ -171,7 +171,7 @@ wget -qO- https://git.io/papirus-folders-install | env uninstall=true sh
 ### change crontab entry to have wal run every 10 minutes
 run `crontab -e` enter following command at the end
 ```
-*/10 * * * * DISPLAY=:0 ~/.local/bin/wal -a "50" --backend colorz -i $(find ~/wals/* | shuf | head -n 1)
+*/30 * * * * DISPLAY=:0 ~/.local/bin/wal -a "50" --backend colorz -i $(find ~/.wals/* | shuf | head -n 1)
 ```
 ### install ntfd
 

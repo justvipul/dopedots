@@ -38,8 +38,8 @@ bspc rule -a spotify desktop='^V'
 bspc rule -a Screenkey manage=off
 
 
-/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
-#/usr/bin/lxpolkit &
+#/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+/usr/bin/lxpolkit &
 # border colors 
 bspc config focused_border_color "#4B7CFF"
 bspc config normal_border_color "#FF1C83"

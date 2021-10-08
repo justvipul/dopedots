@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # nitrogen wall change at startup
- nitrogen --set-scaled --random
+nitrogen --set-scaled --random
+dunstify "👀 your wall is 🔥"
 
 
  ############### uncomment for dunstifyshowing wall in the notifcations
@@ -14,4 +15,3 @@
 #dunstify -i "/tmp/WALL.jpg" "👀 your wall is 🔥"
 #END
 
-dunstify "👀 your wall is 🔥"

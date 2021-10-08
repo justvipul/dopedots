@@ -180,7 +180,7 @@ alias aptser="aptitude search"
 alias pixterm300="pixterm -tc 330 -tr 330 -s 2"
 alias ls="exa -lgh --group-directories-first --icons"
 alias la="exa -lgha --group-directories-first --icons"
-set -o vi
+#set -o vi
 
 
 source /usr/share/fzf-tab-completion/bash/fzf-bash-completion.sh
@@ -195,7 +195,7 @@ export NNN_PLUG='f:finder;o:fzopen;p:preview-tabbed;v:vidthumb;n:nuke;'
 export NNN_OPENER=/home/mxtest/.config/nnn/plugins/nuke
 export NNN_FIFO=/tmp/nnn.fifo
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-#colorscript random
+colorscript random
 #. "$HOME/.cargo/env"
 HISTSIZE=50000
 HISTFILESIZE=50000
