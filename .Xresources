@@ -1,10 +1,10 @@
 ! DO NOT CHANGE THE ORDER
 
 ! URXVT APPEARANCE
-URxvt.font:   xft:VictorMono Nerd Font Mono:pixelsize=14:style=SemiBold,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular
-URxvt.boldFont:  xft:VictorMono Nerd Font Mono:pixelsize=14:style=Bold,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular
-URxvt.italicFont:  xft:VictorMono Nerd Font Mono:pixelsize=14:style=Italic,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular
-URxvt.boldItalicfont: xft:VictorMono Nerd Font Mono:pixelsize=14:style=Bold Italic,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular
+URxvt.font:   xft:VictorMono Nerd Font Mono:pixelsize=16:style=SemiBold,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular,xft: Weather Icons:style=Regular
+URxvt.boldFont:  xft:VictorMono Nerd Font Mono:pixelsize=16:style=Bold,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular,xft: Weather Icons:style=Regular
+URxvt.italicFont:  xft:VictorMono Nerd Font Mono:pixelsize=16:style=Italic,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular,xft: Weather Icons:style=Regular
+URxvt.boldItalicfont: xft:VictorMono Nerd Font Mono:pixelsize=16:style=Bold Italic,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular,xft: Weather Icons:style=Regular
 URxvt.geometry:                   84x16
 URxvt.internalBorder:             2
 URxvt.cursorBlink:                true

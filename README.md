@@ -27,7 +27,7 @@ sudo aptitude install fonts-noto-color-emoji fonts-noto-color-emoji fonts-symbol
 ```
 ### Dependencies and apps
 ```
-sudo aptitude install vim cmake  bspwm sxhkd lxappearance polybar fzf w3m w3m-img youtube-dl lolcat arandr nitrogen sxiv mpv x11-utils mpd mpc ncmpcpp pylint dmenu netcat jq ffmpeg caca-utils chafa libsixel1 flameshot libsixel-bin qbittorrent uget rofi network-manager git curl wget tree libreadline-dev xattr zathura zathura-cb zathura-djvu zathura-pdf-poppler zathura-ps python3-setuptools python3-dev python3-pip atool rar moc mediainfo exiftool odt2txt rtorrent python3-wheel python3-docopt rxvt-unicode-256color tmux python3-ueberzug ripgrep fd-find eyed3 python3-pylast lxpolkit
+sudo aptitude install vim cmake  bspwm sxhkd lxappearance polybar fzf w3m w3m-img youtube-dl lolcat arandr nitrogen sxiv mpv x11-utils mpd mpc ncmpcpp pylint dmenu netcat jq ffmpeg caca-utils chafa libsixel1 flameshot libsixel-bin qbittorrent uget rofi network-manager git curl wget tree libreadline-dev xattr zathura zathura-cb zathura-djvu zathura-pdf-poppler zathura-ps python3-setuptools python3-dev python3-pip atool rar moc mediainfo exiftool odt2txt rtorrent python3-wheel python3-docopt rxvt-unicode-256color tmux python3-ueberzug ripgrep fd-find eyed3 python3-pylast lxpolkit dvisvgm
 
 ```
 #### for bullseye
@@ -62,11 +62,12 @@ git clone https://mpr.hunterwittenborn.com/tap.git
 cd tap
 makedeb -si
 ```
-
+#### optional prebuilt-mpr similar to chaotic aur for mpr
+```
 wget -qO - 'https://mpr.craftcat.dev/pubkey.gpg' | gpg --dearmor | sudo tee /usr/tap ins/keyrings/prebuiltmpr.gpg &> /dev/null
 
 echo 'deb [signed-by=/usr/share/keyrings/prebuiltmpr.gpg] https://mpr.craftcat.dev/ bullseye main' | sudo tee /etc/apt/sources.list.d/prebuiltmpr.list
-
+```
 
 ### Later on use tap to install from MPR.
 ```
@@ -185,6 +186,7 @@ run `crontab -e` enter following command at the end
 > make a symlink of the tmux config    `ln -s -f ~/.tmux/.tmux.conf ~/.tmux.conf`
 
 ### NOTE: Change monitor in .config/polybar/config file to your monitor name. find it by running `xrandr` in a terminal. otherwise polybar wont work
+### NOTE: if urxvt is built with 256color enabled then chnage xresources file as well.
 
 ### misc. links
 [Bgra-debian](https://github.com/ra-c/libxft-bgra-debian)\

@@ -130,7 +130,7 @@ eval "$(starship init bash)"
 alias rsfetch='rsfetch -PdbcklrstuU@w -L ~/.uzi.txt | lolcat'
 alias duf='duf | lolcat'
 alias cat="bat"
-alias nnn="nnn -Ddc"
+alias nnn="nnn -Ddca"
 
 ### ARCHIVE EXTRACTION
 # usage: ex <file>
@@ -160,17 +160,29 @@ ex ()
 }
 
 # youtube-dl
-alias yta-aac="youtube-dl --extract-audio --audio-format aac "
-alias yta-best="youtube-dl --extract-audio --audio-format best "
-alias yta-flac="youtube-dl --extract-audio --audio-format flac "
-alias yta-m4a="youtube-dl --extract-audio --audio-format m4a "
-alias yta-mp3="youtube-dl --extract-audio --audio-format mp3 "
-alias yta-opus="youtube-dl --extract-audio --audio-format opus "
-alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
-alias yta-wav="youtube-dl --extract-audio --audio-format wav "
-alias ytv-best="youtube-dl -f bestvideo+bestaudio "
-alias yt-audio-and-art="youtube-dl --extract-audio --add-metadata --xattrs --embed-thumbnail --audio-quality 0 --audio-format mp3"
-alias yt-video-and-art="youtube-dl --merge-output-format mp4 -f "bestvideo+bestaudio[ext=m4a]/best" --embed-thumbnail --add-metadata"
+#alias yta-aac="youtube-dl --extract-audio --audio-format aac "
+#alias yta-best="youtube-dl --extract-audio --audio-format best "
+#alias yta-flac="youtube-dl --extract-audio --audio-format flac "
+#alias yta-m4a="youtube-dl --extract-audio --audio-format m4a "
+#alias yta-mp3="youtube-dl --extract-audio --audio-format mp3 "
+#alias yta-opus="youtube-dl --extract-audio --audio-format opus "
+#alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
+#alias yta-wav="youtube-dl --extract-audio --audio-format wav "
+#alias ytv-best="youtube-dl -f bestvideo+bestaudio "
+#alias yt-audio-and-art="youtube-dl --extract-audio --add-metadata --xattrs --embed-thumbnail --audio-quality 0 --audio-format mp3"
+#alias yt-video-and-art="youtube-dl --merge-output-format mp4 -f "bestvideo+bestaudio[ext=m4a]/best" --embed-thumbnail --add-metadata"
+
+alias yta-aac="yt-dlp --extract-audio --audio-format aac "
+alias yta-best="yt-dlp --extract-audio --audio-format best "
+alias yta-flac="yt-dlp --extract-audio --audio-format flac "
+alias yta-m4a="yt-dlp --extract-audio --audio-format m4a "
+alias yta-mp3="yt-dlp --extract-audio --audio-format mp3 "
+alias yta-opus="yt-dlp --extract-audio --audio-format opus "
+alias yta-vorbis="yt-dlp --extract-audio --audio-format vorbis "
+alias yta-wav="yt-dlp --extract-audio --audio-format wav "
+alias ytv-best="yt-dlp -f bestvideo+bestaudio "
+alias yt-audio-and-art="yt-dlp --extract-audio --add-metadata --xattrs --embed-thumbnail --audio-quality 0 --audio-format mp3"
+alias yt-video-and-art="yt-dlp --merge-output-format mp4 -f "bestvideo+bestaudio[ext=m4a]/best" --embed-thumbnail --add-metadata"
 
 # termbin
 alias tb="~/.scripts/termbin"
@@ -192,7 +204,7 @@ export PATH=$PATH:$HOME/.local/bin/
 ##nnn plugins
 #######
 export NNN_PLUG='f:finder;o:fzopen;p:preview-tabbed;v:vidthumb;n:nuke;'
-export NNN_OPENER=/home/mxtest/.config/nnn/plugins/nuke
+export NNN_OPENER=$HOME/.config/nnn/plugins/nuke
 export NNN_FIFO=/tmp/nnn.fifo
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 colorscript random

@@ -21,6 +21,9 @@ super+F4
 #open roxterm
 super+F6
         roxterm
+#open roxterm
+super+F7
+        st
 
 # program launcher
 super + d
@@ -50,6 +53,10 @@ super + alt + {q,r}
 super + {_,shift + }w
 	bspc node -{c,k}
 
+# close and kill        
+super + alt + e
+        emacsclient -nc
+	
 # alternate between the tiled and monocle layout
 super + m
 	bspc desktop -l next
@@ -146,40 +153,49 @@ super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 	
 # volume control
-XF86AudioLowerVolume
+#XF86AudioLowerVolume
+				#amixer set Master 5%-
+#XF86AudioRaiseVolume
+				#amixer set Master 5%+
+#XF86AudioMute
+				#amixer set Master toggle
+
+
+#XF86AudioLowerVolume
+Menu + F9
 				amixer set Master 5%-
-XF86AudioRaiseVolume
+
+#XF86AudioRaiseVolume
+Menu + F10
 				amixer set Master 5%+
+
+#XF86AudioMute
 XF86AudioMute
 				amixer set Master toggle
 				
 # brightness control
 XF86MonBrightnessDown
 				xbacklight -dec 5
+
+# brightness control
 XF86MonBrightnessup
 				xbacklight -inc 5
 
 # song control for mpd via mpc.
 #play next son
-XF86AudioNext
-          mpc next
+Menu + F8
+          mpc next && ~/.scripts/art.sh
 
 # play prev song
-XF86AudioPrev
-          mpc prev
+Menu + F7
+          mpc prev && ~/.scripts/art.sh
 
 # stop the song playing
-XF86AudioStop
-          mpc stop
-
-# toggle pause and play.
-XF86AudioPlay
+Menu + F6
           mpc toggle
 
-# open ncmpcpp in urxvt
-XF86Tools
-          urxvtc -e ncmpcpp
-				
+# toggle pause and play.
+
 #screenshot
 F12
 				flameshot gui
@@ -190,24 +206,27 @@ super + button{4,5}
 ctrl+F2
 		~/.config/sxhkd/show_help.sh
 #emoji
-alt+e
+alt+E
 		~/.scripts/emoji.sh
 #curl
-alt+r
+alt+R
 		~/.scripts/curl0x0
 #walldown
-alt+w
+alt+W
 		~/.scripts/walldown
 
 #alias list in rofi
-alt+z
+alt+Z
 		~/.scripts/aliasrofi
 #qutebrowser
-super+q
+super+Q
  		qutebrowser
 #ranger
-super+r
+super+R
 		urxvt -e ranger
+#nnn
+super+N
+		urxvt -e nnn -Ddca
 #ncmpcpp
-alt+m
-		urxvt -e ncmpcpp
+alt+M
+		urxvt -e ~/.config/ncmpcpp/ncmpcpp-ueberzug/ncmpcpp-ueberzug

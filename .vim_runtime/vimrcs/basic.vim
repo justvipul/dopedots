@@ -432,3 +432,9 @@ noremap <S-j>    <C-W>+
 noremap <S-k>  <C-W>-
 noremap <S-h>  3<C-W><
 noremap <S-l> 3<C-W>>
+set nostartofline
+"-----LATEX------------
+
+map <Leader>z :! xelatex %<CR><CR>
+map <Leader>c :! xelatex %<CR><CR>:! bibtex %:r<CR><CR>:! xelatex %<CR><CR>:! xelatex %<CR><CR>
+map <Leader>b :! zathura $(echo % \| sed 's:tex$:pdf:') &> /dev/null & disown<CR><CR>
