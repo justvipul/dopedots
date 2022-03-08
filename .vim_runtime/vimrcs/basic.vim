@@ -49,8 +49,8 @@ command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 set so=7
 
 " Avoid garbled characters in Chinese language windows OS
-let $LANG='en' 
-set langmenu=en
+"let $LANG='en' 
+"set langmenu=en
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
 
@@ -421,8 +421,8 @@ filetype plugin on
 syntax on
 set nu
 set relativenumber
-nnoremap <S-n> :NERDTreeToggle<CR>
-nnoremap <S-f> :NERDTreeFind<CR>
+nnoremap <S-n> :NnnExplorer<CR>
+nnoremap <S-f> :NnnPicker<CR>
 
 " let terminal resize scale the internal windows
 autocmd VimResized * :wincmd =
@@ -433,6 +433,32 @@ noremap <S-k>  <C-W>-
 noremap <S-h>  3<C-W><
 noremap <S-l> 3<C-W>>
 set nostartofline
+
+"-------------------------------
+""-----------------nnn---------------
+"-------------------------------
+""
+let g:nnn#command = 'nnn -Ddca'
+let g:nnn#layout = { 'window': { 'width': 0.9, 'height': 0.7, 'highlight': 'Comment', 'border':'rounded' } }
+
+"Function to open nnn files in desired windows splits
+                  function! CopyLinestoRegister(lines)
+                    let joined_lines = join(a:lines, "\n")
+                    if len(a:lines) > 1
+                      let joined_lines .= "\n"
+                    endif
+                    echom joined_lines
+                    let @+ = joined_lines
+                  endfunction
+                  let g:nnn#action = {
+                        \ '<c-t>': 'tab split',
+                        \ '<c-x>': 'split',
+                        \ '<c-v>': 'vsplit',
+                        \ '<c-o>': function('CopyLinestoRegister') }
+
+    "For example, when inside an n³ window, pressing <C-t> will open the selected file in a tab, instead of the current window. 
+                  "<C-x> will open in a split an so on. Meanwhile for
+                  "multi selected files will be loaded in the buffer list.
 "-----LATEX------------
 
 map <Leader>z :! xelatex %<CR><CR>

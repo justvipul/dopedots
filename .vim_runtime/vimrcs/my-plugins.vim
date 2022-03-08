@@ -11,7 +11,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'fatih/vim-go', { 'tag': '*' }
     "add icons
     Plug 'ryanoasis/vim-devicons'
-    Plug 'francoiscabrol/ranger.vim'
+    "Plug 'francoiscabrol/ranger.vim'
     Plug 'vimwiki/vimwiki'
     Plug 'kien/rainbow_parentheses.vim'
     Plug 'mhinz/vim-startify'
