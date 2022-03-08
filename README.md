@@ -18,7 +18,7 @@ git clone https://gitlab.com/only_vip/mxtest-dope-dots.git
 #### copy all the contents of mxtest-dope-dots to ~ excluding README, .git and license.
 ## Things to delete from mx after first install
 ```
-sudo aptitude remove vim-tiny vim-common asunder bluetooth clementine gimp gimp-data gimp-python libgimp2.0 simple-scan gscan2pdf hexchat lbreakout2 gnome-mahjongg mc mc-data nomacs nomacs-l10n thunderbird transmission-gtk transmission-common xfburn
+sudo aptitude remove vim-tiny vim-common asunder bluetooth clementine simple-scan gscan2pdf hexchat lbreakout2 gnome-mahjongg mc mc-data nomacs nomacs-l10n thunderbird transmission-gtk transmission-common xfburn
 ```
 ## Things to install later
 ### Fonts
@@ -27,12 +27,8 @@ sudo aptitude install fonts-noto-color-emoji fonts-noto-color-emoji fonts-symbol
 ```
 ### Dependencies and apps
 ```
-sudo aptitude install vim cmake  bspwm sxhkd lxappearance polybar fzf w3m w3m-img youtube-dl lolcat arandr nitrogen sxiv mpv x11-utils mpd mpc ncmpcpp pylint dmenu netcat jq ffmpeg caca-utils chafa libsixel1 flameshot libsixel-bin qbittorrent uget rofi network-manager git curl wget tree libreadline-dev xattr zathura zathura-cb zathura-djvu zathura-pdf-poppler zathura-ps python3-setuptools python3-dev python3-pip atool rar moc mediainfo exiftool odt2txt rtorrent python3-wheel python3-docopt rxvt-unicode-256color tmux python3-ueberzug ripgrep fd-find eyed3 python3-pylast lxpolkit dvisvgm
+sudo aptitude install vim cmake lxappearance fzf w3m w3m-img lolcat arandr nitrogen sxiv mpv x11-utils mpd mpc ncmpcpp pylint dmenu netcat jq ffmpeg caca-utils chafa libsixel1 flameshot libsixel-bin qbittorrent uget network-manager git curl wget tree libreadline-dev xattr zathura zathura-cb zathura-djvu zathura-pdf-poppler zathura-ps python3-setuptools python3-dev python3-pip atool rar moc mediainfo exiftool odt2txt rtorrent python3-wheel python3-docopt tmux python3-ueberzug ripgrep fd-find eyed3 python3-pylast lxpolkit dvisvgm roxterm atomicparsley ncat
 
-```
-#### for bullseye
-```
-sudo aptitude install roxterm atomicparsley ncat
 ```
 ## setup [MPR](https://mpr.hunterwittenborn.com/packages/mpm)
 >First, add the signing key:
@@ -55,12 +51,13 @@ sudo apt update && sudo apt install makedeb-beta
 
 install from mpr
 
-1. tap
+1. una
 ```
 cd ~/.gitall
-git clone https://mpr.hunterwittenborn.com/tap.git
-cd tap
+git clone https://mpr.hunterwittenborn.com/una-bin.git
+cd una-bin
 makedeb -si
+una update
 ```
 #### optional prebuilt-mpr similar to chaotic aur for mpr
 ```
@@ -71,38 +68,23 @@ echo 'deb [signed-by=/usr/share/keyrings/prebuiltmpr.gpg] https://mpr.craftcat.d
 
 ### Later on use tap to install from MPR.
 ```
-tap install compton-tryone-git dunst-bin foot-bin reproc meson neofetch-git neovim-git nerd-fonts-victor-mono ntfd rl-custom-function-git rofi rxvt-unicode-256color shell-color-scripts nerd-fonts-jetbrains-mono ttf-weather-icons-bin ungoogled-chromium-linchome-bin yt-dlp-bin ytfzf 
+una install bat-cat-bin exa-bin picom-git dunst foot-bin neofetch-git neovim-git nerd-fonts-victor-mono ntfd rofi rxvt-unicode-256color shell-color-scripts nerd-fonts-jetbrains-mono ttf-weather-icons-bin ungoogled-chromium-linchome-bin yt-dlp-bin ytfzf polybar bspwm-git bsptab-git sxhkd-git lemonbar-xft-git starship-bin
 ```
-### These need some Dependencies that we downloaded above.
-```
-tap install fzf-tab-completion-git st-siduck76-git lite-xl nnn-git polybar urxvt-config-git
-```
-
 ### misc stuff you can get from MPR
 ```
-tap install mangohud chadwm-git pokemonsay-newgenerations-git micro-git 
+una install fzf-tab-completion-git st-siduck76-git lite-xl nnn-git polybar urxvt-config-git compix-git koreader-bin epy-git castero-git i3-gaps-git awesome-git projectlibre-bin siji-git cbonsai-git zentile-bin mangohud chadwm-git pokemonsay-newgenerations-git micro-git ntfd xfwm-effects nerd-fonts-ricty nnn-git musikcube-bin rum-bin 
+```
+
+```
 ```
 ### install compton or picom any one
->`tap install compton-tryone-git` or 
->`tap instal picom-git`or
->`tap install picom-jonaburg-git`
+>`una install compton-tryone-git` or 
+>`una instal picom-git`or
+>`una install picom-jonaburg-git`
+>`una install compix-git`
 ## Get a nerd font
 [Nerd-fonts](https://www.nerdfonts.com/)
 
-### these packages wont work with tap so install them manually for now.
-```
-mkdir ~/.mpr
-cd ~/.mpr
-git clone https://mpr.hunterwittenborn.com/fzf-git.git
-git clone https://mpr.hunterwittenborn.com/planner.git
-git clone https://mpr.hunterwittenborn.com/nerd-fonts-ricty.git
-cd ~/.mpr/fzf-git
-makedeb -si
-cd ~/.mpr/planner
-makedeb -si
-cd ~/.mpr/nerd-fonts-ricty
-makedeb -si
-```
 ### get [NVCHAD](https://nvchad.netlify.app/)
 ```
 mv ~/.config/nvim ~/.config/NVIM.BAK
@@ -118,16 +100,16 @@ rm -rf ~/.cache/nvim
 ### libreoffice appimage
 [Libreoffice-appimage](https://www.libreoffice.org/download/appimage/)
 
-### Reload font cache after copying the fonts folder to ~/.fonts/*
-
-```
-fc-cache -fv
-```
 
 ## Get pywal,colorz,schemer2,ueberzug.
 
 ```
 pip3 install pywal colorz
+```
+### Reload font cache after copying the fonts folder to ~/.fonts/*
+
+```
+fc-cache -frv
 ```
 
 
@@ -186,7 +168,7 @@ run `crontab -e` enter following command at the end
 > make a symlink of the tmux config    `ln -s -f ~/.tmux/.tmux.conf ~/.tmux.conf`
 
 ### NOTE: Change monitor in .config/polybar/config file to your monitor name. find it by running `xrandr` in a terminal. otherwise polybar wont work
-### NOTE: if urxvt is built with 256color enabled then chnage xresources file as well.
+### NOTE: if urxvt is built with 256color enabled then change xresources file as well.
 
 ### misc. links
 [Bgra-debian](https://github.com/ra-c/libxft-bgra-debian)\
