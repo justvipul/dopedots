@@ -1,12 +1,10 @@
-! DO NOT CHANGE THE ORDER
-
 ! URXVT APPEARANCE
-URxvt.font:   xft:VictorMono Nerd Font Mono:pixelsize=16:style=SemiBold,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular,xft: Weather Icons:style=Regular
-URxvt.boldFont:  xft:VictorMono Nerd Font Mono:pixelsize=16:style=Bold,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular,xft: Weather Icons:style=Regular
-URxvt.italicFont:  xft:VictorMono Nerd Font Mono:pixelsize=16:style=Italic,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular,xft: Weather Icons:style=Regular
-URxvt.boldItalicfont: xft:VictorMono Nerd Font Mono:pixelsize=16:style=Bold Italic,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular,xft: Weather Icons:style=Regular
+URxvt.font:   xft:VictorMono Nerd Font Mono:pixelsize=15:style=SemiBold,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular,xft: Weather Icons:style=Regular
+URxvt.boldFont:  xft:VictorMono Nerd Font Mono:pixelsize=15:style=Bold,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular,xft: Weather Icons:style=Regular
+URxvt.italicFont:  xft:VictorMono Nerd Font Mono:pixelsize=15:style=Italic,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular,xft: Weather Icons:style=Regular
+URxvt.boldItalicfont: xft:VictorMono Nerd Font Mono:pixelsize=15:style=Bold Italic,xft:Noto Color Emoji:style=Regular,xft:Symbola:style=Regular,xft:FontAwesome:style=Regular,xft: Material Design Icons:style=Regular,JoyPixels:style=Regular,xft: Weather Icons:style=Regular
 URxvt.geometry:                   84x16
-URxvt.internalBorder:             2
+URxvt.internalBorder:             5
 URxvt.cursorBlink:                true
 URxvt.cursorUnderline:            true
 URxvt.saveline:                   32768
@@ -14,27 +12,31 @@ URxvt.scrollBar:                  true
 URxvt.scrollBar_right:            true
 URxvt.scrollBar_floating:         false
 URxvt.scrollstyle:                plain
-URxvt.urgentOnBell:               false
+URxvt.urgentOnBell:               true
 URxvt.shading:                    199
-Urxvt.background:                [80]#373E4D
+Urxvt.background:                [80]#fce333
+!Urxvt.background:                 #f
 URxvt.depth:                      32
-URxvt.background:                 rgba:0000/0000/0000/9999
+#URxvt.background:                 rgba:0000/0000/0000/9999
 !URxvt.tintcolor:                 #000000
 !URxvt.blurRadius:                12
 !URxvt.transparent:               false
-URxvt.iso14755:                   true
-URxvt.iconFile:                   $HOME/.icons/gladient/term.png
-!URxvt.termName:                   rxvt-unicode-256color
-URxvt.termName:                   rxvt-unicode
+URxvt.iso14755:                   false
+!URxvt.iconFile:                   $HOME/.icons/gladient/term.png
+URxvt.iconFile:                   /usr/share/icons/Tango/scalable/apps/terminal.svg
+URxvt.termName:                   rxvt-unicode-256color
+!URxvt.termName:                   rxvt-unicode
 ! Uncomment if to much font spacing
 !URxvt.letterSpace: -1
 
 ! URXVT EXTENSIONS
-URxvt.perl-ext-common:            default,clipboard,url-select,tabbedex,man
+URxvt.perl-ext-common:            default,clipboard,url-select,tabbedex,man,digital-clock
+!URxvt.kuake.hotkey:               F12
+
 
 ! TABBEDEX
 URxvt.tabbedex.no-tabbedex-keys:  yes
-URxvt.tabbedex.new-button:        false
+URxvt.tabbedex.new-button:        true
 URXvt.tabbedex.reopen-on-close:   yes
 URxvt.tabbedex.autohide:          yes
 URxvt.tabbedex.tabbar-fg:         5
@@ -71,69 +73,18 @@ URxvt.keysym.M-j:                 perl:clipboard:paste
 ! URL
 URxvt.keysym.M-u:                 perl:url-select:select_next
 URvxt.url-select.button:          2
-URxvt.url-select.launcher:        firefox-bin
+URxvt.url-select.launcher:        xdg-open
 URxvt.url-select.underline:       true
 
 !man2pdf
 URxvt.keysym.Control-Shift-X    : perl:man:topdf
+! 3 is the "right" mouse click button
 
-! COLOR SCHEME
-! black > red > green > yellow > blue > magenta > cyan > white
-!*#define black0                    #373E4D
-!*#define black1                    #3B4252
-!*#define black2                    #434C5E
-!*#define black3                    #4C566A
-!*#define red0                      #FA5AA4
-!*#define red1                      #FA74B2
-!*#define green0                    #2BE491
-!*#define green1                    #44EB9F
-!*#define yellow0                   #FA946E
-!*#define yellow1                   #FAA687
-!*#define blue0                     #63C5EA
-!*#define blue1                     #7ACBEA
-!*#define magenta0                  #CF8EF4
-!*#define magenta1                  #D8A6F4
-!*#define cyan0                     #89CCF7
-!*#define cyan1                     #A1D5F7
-!*#define white0                    #F9F9F9
-!*#define white1                    #F7F7F7
-!*#define white2                    #F4F4F4
-!*
-!**.color1:                         red0
-!**.color2:                         green0
-!**.color3:                         yellow0
-!**.color4:                         blue0
-!**.color5:                         magenta0
-!**.color6:                         cyan0
-!*
-!**.color9:                         red1
-!**.color10:                        green1
-!**.color11:                        yellow1
-!**.color12:                        blue1
-!**.color13:                        magenta1
-!**.color14:                        cyan1
-!*
-!*! FOR REVERSING ONLY (INVERT BG/FG)
-!**.foreground:                     white0
-!**.background:                     black0
-!**.cursorColor:                    white0
-!*
-!**.color0:                         black2
-!**.color7:                         white1
-!*
-!**.color8:                         black3
-!**.color15:                        white2
-
-!*.foreground:                     black0
-!*.background:                     white0
-!*.cursorColor:                    black0
-
-!*.color0:                         white1
-!*.color7:                         black2
-
-!*.color8:                         white2
-!*.color15:                        black3
-!#include       ".Xresources-themes/arcadia.Xresources"
+! Mark the man page name with
+! your left mouse button and right click
+! to start the conversion process
+#include         ".Xresources-themes/wal-colors.Xresources"
+!#include        ".Xresources-themes/arcadia.Xresources"
 !#include       ".Xresources-themes/arcadia_Midnight.Xresources"
 !#include       ".Xresources-themes/arcadia_Pitch.Xresources"
 !#include       ".Xresources-themes/arcadia_Sunset.Xresources"
@@ -142,6 +93,7 @@ URxvt.keysym.Control-Shift-X    : perl:man:topdf
 !#include       ".Xresources-themes/base16-3024.Xresources"
 !#include       ".Xresources-themes/base16-apathy-256.Xresources"
 !#include       ".Xresources-themes/base16-apathy.Xresources"
+!#include        "Xresources-solarised-light"
 !#include       ".Xresources-themes/base16-ashes-256.Xresources"
 !#include       ".Xresources-themes/base16-ashes.Xresources"
 !#include       ".Xresources-themes/base16-atelier-cave-256.Xresources"
@@ -169,6 +121,7 @@ URxvt.keysym.Control-Shift-X    : perl:man:topdf
 !#include       ".Xresources-themes/base16-brewer-256.Xresources"
 !#include       ".Xresources-themes/base16-brewer.Xresources"
 !#include       ".Xresources-themes/base16-bright-256.Xresources"
+!#include        ".Xresources-themes/mocha.light.Xresources"
 !#include       ".Xresources-themes/base16-bright.Xresources"
 !#include       ".Xresources-themes/base16-chalk-256.Xresources"
 !#include       ".Xresources-themes/base16-chalk.Xresources"
@@ -178,7 +131,7 @@ URxvt.keysym.Control-Shift-X    : perl:man:topdf
 !#include       ".Xresources-themes/base16-cupcake.Xresources"
 !#include       ".Xresources-themes/base16-darktooth-256.Xresources"
 !#include       ".Xresources-themes/base16-darktooth.Xresources"
-#include       ".Xresources-themes/base16-default-dark-256.Xresources"
+!#include       ".Xresources-themes/base16-default-dark-256.Xresources"
 !#include       ".Xresources-themes/base16-default-dark.Xresources"
 !#include       ".Xresources-themes/base16-dracula-256.Xresources"
 !#include       ".Xresources-themes/base16-dracula.Xresources"
@@ -249,7 +202,7 @@ URxvt.keysym.Control-Shift-X    : perl:man:topdf
 !#include       ".Xresources-themes/base16-summerfruit-dark-256.Xresources"
 !#include       ".Xresources-themes/base16-summerfruit-dark.Xresources"
 !#include       ".Xresources-themes/base16-tomorrow-256.Xresources"
-!#include       ".Xresources-themes/base16-tomorrow-night-256.Xresources"
+##include       ".Xresources-themes/base16-tomorrow-night-256.Xresources"
 !#include       ".Xresources-themes/base16-tomorrow-night.Xresources"
 !#include       ".Xresources-themes/base16-tomorrow.Xresources"
 !#include       ".Xresources-themes/base16-tube-256.Xresources"

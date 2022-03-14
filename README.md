@@ -72,7 +72,7 @@ una install bat-cat-bin exa-bin picom-git dunst foot-bin neofetch-git neovim-git
 ```
 ### misc stuff you can get from MPR
 ```
-una install fzf-tab-completion-git st-siduck76-git lite-xl nnn-git polybar urxvt-config-git compix-git koreader-bin epy-git castero-git i3-gaps-git awesome-git projectlibre-bin siji-git cbonsai-git zentile-bin mangohud chadwm-git pokemonsay-newgenerations-git micro-git ntfd xfwm-effects nerd-fonts-ricty nnn-git musikcube-bin rum-bin 
+una install fzf-tab-completion-git st-siduck76-git lite-xl nnn-git polybar urxvt-config-git compix-git koreader-bin epy-git castero-git i3-gaps-git awesome-git projectlibre-bin siji-git cbonsai-git zentile-bin mangohud chadwm-git pokemonsay-newgenerations-git micro-git ntfd xfwm-effects nerd-fonts-ricty nnn-git musikcube-bin rum-bin tdrop-git
 ```
 
 ```
@@ -166,9 +166,11 @@ run `crontab -e` enter following command at the end
 >change the `~/.config/polybar/config` module-right to include the weather module. 
 ### make tmux symlink
 > make a symlink of the tmux config    `ln -s -f ~/.tmux/.tmux.conf ~/.tmux.conf`
+> make a symlink of ~/.cache/wal/colors.Xresources `ln -s -f ~/.cache/wal/colors.Xresources`
 
 ### NOTE: Change monitor in .config/polybar/config file to your monitor name. find it by running `xrandr` in a terminal. otherwise polybar wont work
 ### NOTE: if urxvt is built with 256color enabled then change xresources file as well.
+
 
 ### misc. links
 [Bgra-debian](https://github.com/ra-c/libxft-bgra-debian)\

@@ -16,7 +16,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'kien/rainbow_parentheses.vim'
     Plug 'mhinz/vim-startify'
     Plug 'flazz/vim-colorschemes'
-  "  Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline'
   "  Plug 'vim-airline/vim-airline-themes'
     Plug 'vim-utils/vim-man'
     "Plug 'sheerun/vim-polyglot'
@@ -24,15 +24,12 @@ call plug#begin('~/.vim/plugged')
     Plug 'chrisbra/colorizer'
     Plug 'vitalk/vim-simple-todo'
     Plug 'ajh17/vimcompletesme'
-    Plug 'itchyny/lightline.vim'
+    "Plug 'itchyny/lightline.vim'
     Plug 'jacoborus/tender.vim'
     Plug 'lilydjwg/colorizer'
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-surround'
     Plug 'airblade/vim-gitgutter'
-    Plug 'tpope/vim-markdown'
-    Plug 'plasticboy/vim-markdown'
-    Plug 'suan/vim-instant-markdown'
     Plug 'tpope/vim-vinegar'
     Plug 'sainnhe/everforest'
     Plug 'mcchrish/nnn.vim'
@@ -55,4 +52,4 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 "colorscheme monokai-chris
-colorscheme OceanicNext
+colorscheme wal
