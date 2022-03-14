@@ -10,7 +10,7 @@ URxvt.internalBorder:             2
 URxvt.cursorBlink:                true
 URxvt.cursorUnderline:            true
 URxvt.saveline:                   32768
-URxvt.scrollBar:                  false
+URxvt.scrollBar:                  true
 URxvt.scrollBar_right:            true
 URxvt.scrollBar_floating:         false
 URxvt.scrollstyle:                plain
@@ -30,7 +30,7 @@ URxvt.termName:                   rxvt-unicode
 !URxvt.letterSpace: -1
 
 ! URXVT EXTENSIONS
-URxvt.perl-ext-common:            default,clipboard,url-select,tabbedex
+URxvt.perl-ext-common:            default,clipboard,url-select,tabbedex,man
 
 ! TABBEDEX
 URxvt.tabbedex.no-tabbedex-keys:  yes
@@ -73,6 +73,9 @@ URxvt.keysym.M-u:                 perl:url-select:select_next
 URvxt.url-select.button:          2
 URxvt.url-select.launcher:        firefox-bin
 URxvt.url-select.underline:       true
+
+!man2pdf
+URxvt.keysym.Control-Shift-X    : perl:man:topdf
 
 ! COLOR SCHEME
 ! black > red > green > yellow > blue > magenta > cyan > white

@@ -110,7 +110,7 @@ format = "[[](bg:#57686B fg:#A6A6A6)$symbol$version[](bg:#A6A6A6 fg:#57686
 style = "bg:#A6A6A6 fg:#111111"
 min_time = 2_000
 show_milliseconds = true
-show_notifications = true
+show_notifications = false
 min_time_to_notify = 45_000
 format = "[ 祥$duration]($style)"
 
