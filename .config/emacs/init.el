@@ -1,4 +1,5 @@
 #+title: vipul's Config
+#+PROPERTY: header-args:emacs-lisp :tangle ~/.config/emacs.mine/init.el :mkdirp yes
 #+startup: content
 * README:
 After the first run that installs things, run the following
