@@ -1,7 +1,6 @@
 * dopedots
-[[file:.screenshot/1.png][doperice1]]
-[[file:.screenshot/3.png][doperice2]]
-
+[[file:.screenshot/1.png]]
+[[file:.screenshot/3.png]]
 ** Initial setup
 #+begin_src  bash
 mkdir ~/.gitall
