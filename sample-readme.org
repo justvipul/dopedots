@@ -1,0 +1,97 @@
+#+TITLE: Markup Cheat sheet for Org-mode
+
+* Heading 1
+** Heading 2
+*** Heading 3
+    
+: * Heading 1
+: ** Heading 2
+: *** Heading 3
+
+* styling
+*bold* /ital/ _underline_  =code= ~verbatim~ 
+: *bold* /ital/ _underline_  =code= ~verbatim~ 
+
+Or add : to beginning of line to ignore org markup
+
+* links
+ [[http://www.google.com][google]]
+: [[http://www.google.com][google]]
+ 
+[[http://orgmode.org/worg/images/orgweb/2.jpg]]
+: [[http://orgmode.org/worg/images/orgweb/2.jpg]]
+Links to images without description get inserted as is.
+ 
+C-c C-l to insert or edit a link 
+
+* quotes
+#+begin_quote
+quoted text
+#+end_quote
+  
+: #+begin_quote
+: quoted text
+: #+end_quote
+
+* source code
+#+begin_src javascript
+  cliks.onValue(function() {
+      vouchdb.docSave({ msg:'resetpwd',
+                        pwd: $("#password1")[0].value,
+                        uuid: location.search.slice(10),
+                        callback: callback
+                      }, 'reception')
+          .when(
+              function(data) {
+                  console.log('Posted resetpwd msg');
+              },
+              function(err) {
+                  console.log('Error posting resetpwd msg:', err);
+              }
+          );
+      
+  });
+#+end_src
+
+: #+begin_src javascript
+: <source code>
+: #+end_src
+
+C-c ' to edit source code, C-c ' to return and update
+
+* lines
+-----  horizontal line (5 dashes)
+: -----  horizontal line (5 dashes)
+
+* tables
+  
+| Col1 | Col 2| 
+|------|------|  Press | TAB 
+| KW   | Sep  | 
+| TW   | Aug  |
+
+: | Col1 | Col 2| 
+: |------|------|  Press | TAB 
+: | KW   | Sep  | 
+: | TW   | Aug  |
+
+* lists
+** numbered  
+1. number list, use 1. or 1)
+2. line
+3. line 3
+   
+** unnumbered 
+- use - or +
+- bullet list
+- line 2
+  
+: 1. number list, alternate 1)
+: - bullet list, alternate +
+
+alt-enter at end of line to add a new one 
+
+* comments  
+# comment (not exported)
+: # comment (not exported)
+
