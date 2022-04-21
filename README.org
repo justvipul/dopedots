@@ -1,0 +1,14 @@
+* dopedots
+[[file:.screenshot/1.png][doperice1]]
+[[file:.screenshot/3.png][doperice2]]
+
+** Initial setup
+#+begin_src  bash
+mkdir ~/.gitall
+mkdir ~/.pix
+mkdir ~/.pix/wall
+mkdir ~/.mpr
+cd ~/.gitall
+git clone https://gitlab.com/only_vip/mxtest-dope-dots.git
+#+end_src
+
