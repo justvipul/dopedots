@@ -193,6 +193,18 @@ Change the *[[file:.config/polybar/config][~/.config/polybar/config]]* module-ri
  #+begin_quote
  NOTE: if urxvt is built with 256color enabled then change xresources file as well.
  #+end_quote
+*** after first install for vim,
+open vim and run
+#+begin_src
+  :PlugInstall
+#+end_src
+*** for emacs,
+run,
+#+begin_verse
+#+begin_src
+  emacs --daemon
+#+end_src
+#+end_verse
 
 ** Misc. links
 | links                                     |
