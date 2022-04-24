@@ -191,15 +191,15 @@ change the *[[file:.config/polybar/config][~/.config/polybar/config]]* module-ri
  #+end_quote
 
 ** misc. links
-[[https://github.com/ra-c/libxft-bgra-debian][Bgra-debian]] \\
-[[https://github.com/jarun/nnn/wiki/Live-previews][nnn-livepreview]] \\
-[[https://github.com/wez/atomicparsley][For-art-downloading-in-ytdl,atomicparsley]] \\
-[[https://github.com/desbma/sacad][SACAD,SmartAutomaticCoverArtDownloader]] \\
-[[https://epsi-rns.github.io/desktop/2016/09/19/termite-install.html][Termite-terminal-install-guide]] \\
-[[https://cristianpb.github.io/vimwiki/st/][vimwiki]] \\
-[[https://github.com/pystardust/ytfzf][ytfzf]] \\
-[[https://tools.suckless.org/tabbed/][Suckless-tabbed]] \\
-[[https://github.com/Phate6660/rsfetch][Rsfetch]]
+*** [[https://github.com/ra-c/libxft-bgra-debian][Bgra-debian]]
+*** [[https://github.com/jarun/nnn/wiki/Live-previews][nnn-livepreview]]
+*** [[https://github.com/wez/atomicparsley][For-art-downloading-in-ytdl,atomicparsley]]
+*** [[https://github.com/desbma/sacad][SACAD,SmartAutomaticCoverArtDownloader]]
+*** [[https://epsi-rns.github.io/desktop/2016/09/19/termite-install.html][Termite-terminal-install-guide]]
+*** [[https://cristianpb.github.io/vimwiki/st/][vimwiki]]
+*** [[https://github.com/pystardust/ytfzf][ytfzf]]
+*** [[https://tools.suckless.org/tabbed/][Suckless-tabbed]]
+*** [[https://github.com/Phate6660/rsfetch][Rsfetch]]
 
 ** +termite is deprecated but the install script is still here just for nostalgia+
 
