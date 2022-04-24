@@ -41,7 +41,6 @@ sudo apt install texlive-full
   sudo aptitude install zzzfm
 #+end_src
 ** Setup [[https://mpr.hunterwittenborn.com/packages/mpm][MPR]]
-
 *** First, add the signing key:
 #+begin_src 
 wget -qO - 'https://proget.hunterwittenborn.com/debian-feeds/makedeb.pub' | \
@@ -68,7 +67,7 @@ cd tap
 makedeb -si
 sudo tap update
 #+end_src
-*** Optional prebuilt-mpr similar to chaotic aur for mpr
+*** Optional [[https://github.com/makedeb/prebuilt-mpr][prebuilt-mpr]] similar to chaotic aur for mpr
 
 ADD dependencies,
 #+begin_src 
@@ -115,7 +114,7 @@ pip3 install pywal colorz
 fc-cache -frv
 #+end_src
 
-** Get digestif
+** Get [[https://github.com/astoff/digestif][digestif]]
 #+begin_src 
 ~/.scripts/digestif
 #+end_src
