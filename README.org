@@ -203,7 +203,6 @@ run,
 #+begin_src
   emacs --daemon
 #+end_src
-
 ** Misc. links
 | links                                     |
 |-------------------------------------------|
