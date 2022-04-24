@@ -1,4 +1,4 @@
-* dopedots
+* DOPEDOTS
 [[file:.screenshot/1.png]]
 [[file:.screenshot/3.png]]
 ** Initial setup
@@ -10,9 +10,9 @@ mkdir ~/.mpr
 cd ~/.gitall
 git clone https://gitlab.com/only_vip/mxtest-dope-dots.git
 #+end_src
-** setup all files
+** Setup all files
 #+begin_verse
- copy all the contents of mxtest-dope-dots to ~ excluding README, .git and license.
+ Copy all the contents of mxtest-dope-dots to ~ excluding README, .git and license.
 #+end_verse
 ** Things to delete from mx after first install
 #+begin_src 
@@ -28,7 +28,7 @@ sudo aptitude install fonts-noto-color-emoji fonts-noto-color-emoji fonts-symbol
 sudo aptitude install vim cmake lxappearance fzf w3m w3m-img lolcat arandr nitrogen sxiv mpv x11-utils mpd mpc ncmpcpp pylint dmenu netcat jq ffmpeg caca-utils chafa libsixel1 flameshot libsixel-bin qbittorrent uget network-manager git curl wget tree libreadline-dev xattr zathura zathura-cb zathura-djvu zathura-pdf-poppler zathura-ps python3-setuptools python3-dev python3-pip atool rar moc mediainfo exiftool odt2txt rtorrent python3-wheel python3-docopt tmux python3-ueberzug ripgrep fd-find eyed3 python3-pylast lxpolkit dvisvgm roxterm atomicparsley ncat emacs emacs-gtk i3lock i3lock-fancy
 #+end_src
 
-** setup [[https://mpr.hunterwittenborn.com/packages/mpm][MPR]]
+** Setup [[https://mpr.hunterwittenborn.com/packages/mpm][MPR]]
 
 *** First, add the signing key:
 #+begin_src 
@@ -84,10 +84,12 @@ sudo tap instal epy-git castero-git mangohud chadwm-git pokemonsay-newgeneration
 #+end_src
 
 *** install compton or picom any one
->`sudo tap install compton-tryone-git` or 
->`sudo tap instal picom-git`or
->`sudo tap install picom-jonaburg-fix-git`
->`sudo tap install compix-git`
+#+begin_example
+sudo tap install compton-tryone-git or 
+sudo tap instal picom-git or
+sudo tap install picom-jonaburg-fix-git or
+sudo tap install compix-git
+#+end_example
 
 ** Get a nerd font
 [[https://www.nerdfonts.com][Nerd Font]]
@@ -97,16 +99,16 @@ sudo tap instal epy-git castero-git mangohud chadwm-git pokemonsay-newgeneration
 pip3 install pywal colorz
 #+end_src
 
-*** Reload font cache after copying the fonts folder to ~/.fonts/*
+** Reload font cache after copying the fonts folder to ~/.fonts/*
 #+begin_src 
 fc-cache -frv
 #+end_src
 
-*** install texlive
+** install texlive
 #+begin_src 
 sudo apt install texlive-full
 #+end_src
-*** get digestif
+** get digestif
 #+begin_src 
 ~/.scripts/digestif
 #+end_src
@@ -114,31 +116,31 @@ sudo apt install texlive-full
 ** Install papirus icon theme
 *** Papirus Installer
 
-*** Use the scripts to install the latest version directly from their github repo (independently of your distro):
+**** Use the scripts to install the latest version directly from their github repo (independently of your distro):
 
 ***** NOTE: Use the same script to update icon themes.
-*** ROOT directory (recommended)
+**** ROOT directory (recommended)
 #+begin_src 
 wget -qO- https://git.io/papirus-icon-theme-install | sh
 #+end_src
-*** HOME directory for GTK
+**** HOME directory for GTK
 #+begin_src 
 wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.icons" sh
 #+end_src
-*** HOME directory for KDE
+**** HOME directory for KDE
 #+begin_src 
 wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.local/share/icons" sh
 #+end_src
-*** *BSD systems
+**** BSD systems
 #+begin_src 
 wget -qO- https://git.io/papirus-icon-theme-install | env DESTDIR="/usr/local/share/icons" sh
 #+end_src
-*** Uninstall
+**** Uninstall
 #+begin_src 
 wget -qO- https://git.io/papirus-icon-theme-uninstall | sh
 #+end_src
 *** Papirus-folder install
-***** Use the script to install the latest version directly from their github repo (independently on your distro):
+**** Use the script to install the latest version directly from their github repo (independently on your distro):
 
 Install
 
@@ -147,55 +149,61 @@ wget -qO- https://git.io/papirus-folders-install | sh
 #+end_src
 
 
-**** To install papirus-folders on BSD systems using the following command:
+***** To install papirus-folders on BSD systems using the following command:
 
 #+begin_src 
 wget -qO- https://git.io/papirus-folders-install | env PREFIX=/usr/local sh
 #+end_src
 
-**** Uninstall
+***** Uninstall
 
 #+begin_src 
 wget -qO- https://git.io/papirus-folders-install | env uninstall=true sh
 #+end_src
 
 
-*** change crontab entry to have wal run every 10 minutes
-run `crontab -e` enter following command at the end
+** change crontab entry to have wal run every 10 minutes
+run #+begin_src crontab -e#+end_src enter following command at the end
 
 #+begin_src 
 ,*/30 * * * * DISPLAY=:0 ~/.local/bin/wal -a "50" --backend colorz -i $(find ~/.wals/* | shuf | head -n 1)
 #+end_src
 
-*** install ntfd
+** setup ntfd
+change the _~/.config/polybar/config_ module-right to include the weather module. 
+** make tmux symlink
+ make a symlink of the tmux config  #+begin_src ln -s -f ~/.tmux/.tmux.conf ~/.tmux.conf #+end_src
+** NOTES
+*** polybar doesnt work dues to a different monitor name
+ #+begin_verse
+ NOTE: Change monitor in .config/polybar/config file to your monitor name. find it by running _xrandr_ in a terminal. otherwise polybar wont work
+ #+end_verse
+*** urxvt isnt respecting all colors.
+ #+begin_verse
+ NOTE: if urxvt is built with 256color enabled then change xresources file as well.
+ #+end_verse
 
->change the `~/.config/polybar/config` module-right to include the weather module. 
-*** make tmux symlink
-> make a symlink of the tmux config    `ln -s -f ~/.tmux/.tmux.conf ~/.tmux.conf`
-> make a symlink of ~/.cache/wal/colors.Xresources `ln -s -f ~/.cache/wal/colors.Xresources`
+** misc. links
+[[https://github.com/ra-c/libxft-bgra-debian][Bgra-debian]]
+[[https://github.com/jarun/nnn/wiki/Live-previews][nnn-livepreview]]
+[[https://github.com/wez/atomicparsley][For-art-downloading-in-ytdl,atomicparsley]]
+[[https://github.com/desbma/sacad][SACAD,SmartAutomaticCoverArtDownloader]]
+[[https://epsi-rns.github.io/desktop/2016/09/19/termite-install.html][Termite-terminal-install-guide]]
+[[https://cristianpb.github.io/vimwiki/st/][vimwiki]]
+[[https://github.com/pystardust/ytfzf][ytfzf]]
+[[https://tools.suckless.org/tabbed/][Suckless-tabbed]]
+[[https://github.com/Phate6660/rsfetch][Rsfetch]]
 
-*** NOTE: Change monitor in .config/polybar/config file to your monitor name. find it by running `xrandr` in a terminal. otherwise polybar wont work
-*** NOTE: if urxvt is built with 256color enabled then change xresources file as well.
+** +termite is deprecated but the install script is still here just for nostalgia+
 
+*** +termite install+
 
-*** misc. links
-[Bgra-debian](https://github.com/ra-c/libxft-bgra-debian)\
-[nnn-livepreview](https://github.com/jarun/nnn/wiki/Live-previews)\
-[For-art-downloading-in-ytdl,atomicparsley](https://github.com/wez/atomicparsley)\
-[SACAD,SmartAutomaticCoverArtDownloader](https://github.com/desbma/sacad)\
-[Termite-terminal-install-guide](https://epsi-rns.github.io/desktop/2016/09/19/termite-install.html)\
-[vimwiki](https://cristianpb.github.io/vimwiki/st/)\
-[ytfzf](https://github.com/pystardust/ytfzf)\
-[Suckless-tabbed](https://tools.suckless.org/tabbed/)
-[Rsfetch](https://github.com/Phate6660/rsfetch)
-
-*** ~~termite is deprecated but the install script is still here just for nostalgia~~
-~~*** termite install~~
-
-
+#+begin_src 
 mkdir ~/git-src
 cd ~/git-src
+#+end_src
 
+#+begin_src 
 sudo apt install gtk-doc-tools valac libgirepository1.0-dev libgtk-3-dev libgnutls28-dev intltool libxml2-utils gperf
 
 git clone https://github.com/thestinger/vte-ng.git
@@ -218,9 +226,9 @@ sudo make install
 
 cd ~/git-src/vte-ng
 sudo make uninstall
+#+end_src
 
-~~for saner working of termite~~
-
++for saner working of termite+
 
 #+begin_src 
 wget https://raw.githubusercontent.com/thestinger/termite/master/termite.terminfo
