@@ -12,6 +12,7 @@ mkdir ~/.gitall
 mkdir ~/.pix
 mkdir ~/.pix/wall
 mkdir ~/.mpr
+mkdir `/.walls
 cd ~/.gitall
 git clone https://gitlab.com/only_vip/mxtest-dope-dots.git
 ```
@@ -27,91 +28,92 @@ sudo aptitude install fonts-noto-color-emoji fonts-noto-color-emoji fonts-symbol
 ```
 ### Dependencies and apps
 ```
-sudo aptitude install vim cmake lxappearance fzf w3m w3m-img lolcat arandr nitrogen sxiv mpv x11-utils mpd mpc ncmpcpp pylint dmenu netcat jq ffmpeg caca-utils chafa libsixel1 flameshot libsixel-bin qbittorrent uget network-manager git curl wget tree libreadline-dev xattr zathura zathura-cb zathura-djvu zathura-pdf-poppler zathura-ps python3-setuptools python3-dev python3-pip atool rar moc mediainfo exiftool odt2txt rtorrent python3-wheel python3-docopt tmux python3-ueberzug ripgrep fd-find eyed3 python3-pylast lxpolkit dvisvgm roxterm atomicparsley ncat
+sudo aptitude install vim cmake lxappearance fzf w3m w3m-img lolcat arandr nitrogen sxiv mpv x11-utils mpd mpc ncmpcpp pylint dmenu netcat jq ffmpeg caca-utils chafa libsixel1 flameshot libsixel-bin qbittorrent uget network-manager git curl wget tree libreadline-dev xattr zathura zathura-cb zathura-djvu zathura-pdf-poppler zathura-ps python3-setuptools python3-dev python3-pip atool rar moc mediainfo exiftool odt2txt rtorrent python3-wheel python3-docopt tmux python3-ueberzug ripgrep fd-find eyed3 python3-pylast lxpolkit dvisvgm roxterm atomicparsley ncat emacs emacs-gtk i3lock i3lock-fancy
 
 ```
 ## setup [MPR](https://mpr.hunterwittenborn.com/packages/mpm)
 >First, add the signing key:
 
 ```
-    wget -qO - 'https://proget.hunterwittenborn.com/debian-feeds/makedeb.pub' | gpg --dearmor | sudo tee /usr/share/keyrings/makedeb-archive-keyring.gpg &> /dev/null
-
+wget -qO - 'https://proget.hunterwittenborn.com/debian-feeds/makedeb.pub' | \
+gpg --dearmor | \
+sudo tee /usr/share/keyrings/makedeb-archive-keyring.gpg &> /dev/null
 ```
 >Next, add the repository information to your system:
 
 ```
-echo 'deb [signed-by=/usr/share/keyrings/makedeb-archive-keyring.gpg arch=all] https://proget.hunterwittenborn.com/ makedeb main' | sudo tee /etc/apt/sources.list.d/makedeb.list
-
+echo 'deb [signed-by=/usr/share/keyrings/makedeb-archive-keyring.gpg arch=all] https://proget.hunterwittenborn.com/ makedeb main' | \
+sudo tee /etc/apt/sources.list.d/makedeb.list
 ```
 >Lastly, update the repository cache on your system:
 
 ```
-sudo apt update && sudo apt install makedeb-beta
+sudo apt update && sudo apt install makedeb
 ```
 
 install from mpr
 
-1. una
+1. tap
 ```
 cd ~/.gitall
-git clone https://mpr.hunterwittenborn.com/una-bin.git
-cd una-bin
+git clone https://mpr.hunterwittenborn.com/tap.git
+cd tap
 makedeb -si
-una update
+sudo tap update
 ```
 #### optional prebuilt-mpr similar to chaotic aur for mpr
-```
-wget -qO - 'https://mpr.craftcat.dev/pubkey.gpg' | gpg --dearmor | sudo tee /usr/tap ins/keyrings/prebuiltmpr.gpg &> /dev/null
 
-echo 'deb [signed-by=/usr/share/keyrings/prebuiltmpr.gpg] https://mpr.craftcat.dev/ bullseye main' | sudo tee /etc/apt/sources.list.d/prebuiltmpr.list
+ADD dependencies,
+```
+sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
+```
+add gpg key
+```
+curl -1sLf 'https://dl.cloudsmith.io/public/prebuiltmpr/prebuiltmpr/gpg.96BF50280AB09218.key' | sudo apt-key add -
+```
+add repo
+```
+curl -1sLf 'https://dl.cloudsmith.io/public/prebuiltmpr/prebuiltmpr/config.deb.txt?distro=debian&codename=bullseye' | sudo tee /etc/apt/sources.list.d/prebuiltmpr.list
 ```
 
 ### Later on use tap to install from MPR.
 ```
-una install bat-cat-bin exa-bin picom-git dunst foot-bin neofetch-git neovim-git nerd-fonts-victor-mono ntfd rofi rxvt-unicode-256color shell-color-scripts nerd-fonts-jetbrains-mono ttf-weather-icons-bin ungoogled-chromium-linchrome-bin yt-dlp-bin ytfzf polybar bspwm-git bsptab-git sxhkd-git lemonbar-xft-git starship-bin
+sudo tap install libptytty-bin && sudo tap install bat-cat-bin exa-bin picom-git dunst foot-bin neofetch-git neovim-git nerd-fonts-victor-mono ntfd rofi rxvt-unicode-256color shell-color-scripts nerd-fonts-jetbrains-mono ttf-weather-icons-bin ungoogled-chromium-linchrome-bin yt-dlp-bin ytfzf polybar bspwm-git bsptab-git sxhkd-git lemonbar-xft-git starship-bin
 ```
 ### misc stuff you can get from MPR
 ```
-una install fzf-tab-completion-git st-siduck76-git lite-xl nnn-git polybar urxvt-config-git compix-git koreader-bin epy-git castero-git i3-gaps-git awesome-git projectlibre-bin siji-git cbonsai-git zentile-bin mangohud chadwm-git pokemonsay-newgenerations-git micro-git ntfd xfwm-effects nerd-fonts-ricty nnn-git musikcube-bin rum-bin tdrop-git
+sudo tap install rl-custom-function-git reproc &&
+sudo tap install fzf-tab-completion-git st-siduck76-git lite-xl polybar urxvt-config-git compix-git koreader-bin  i3-gaps-git awesome-git projectlibre-bin siji-git cbonsai-git zentile-bin ntfd nerd-fonts-ricty nnn-git tdrop-git bsptab-git zotero &&
+sudo tap instal epy-git castero-git mangohud chadwm-git pokemonsay-newgenerations-git micro-git xfwm-effects musikcube-bin rum-bin lossless-cut-bin
 ```
 
-```
-```
 ### install compton or picom any one
->`una install compton-tryone-git` or 
->`una instal picom-git`or
->`una install picom-jonaburg-git`
->`una install compix-git`
+>`sudo tap install compton-tryone-git` or 
+>`sudo tap instal picom-git`or
+>`sudo tap install picom-jonaburg-fix-git`
+>`sudo tap install compix-git`
+
 ## Get a nerd font
 [Nerd-fonts](https://www.nerdfonts.com/)
 
-### get [NVCHAD](https://nvchad.netlify.app/)
-```
-mv ~/.config/nvim ~/.config/NVIM.BAK
-git clone https://github.com/NvChad/NvChad ~/.config/nvim
-nvim +'hi NormalFloat guibg=#1e222a' +PackerSync
-```
-##### to remove nvchad config,
-```
-rm -rf ~/.config/nvim
-rm -rf ~/.local/share/nvim
-rm -rf ~/.cache/nvim
-```
-### libreoffice appimage
-[Libreoffice-appimage](https://www.libreoffice.org/download/appimage/)
-
-
 ## Get pywal,colorz,schemer2,ueberzug.
-
 ```
 pip3 install pywal colorz
 ```
-### Reload font cache after copying the fonts folder to ~/.fonts/*
 
+### Reload font cache after copying the fonts folder to ~/.fonts/*
 ```
 fc-cache -frv
 ```
 
+### install texlive
+```
+sudo apt install texlive-full
+```
+### get digestif
+```
+~/.scripts/digestif
+```
 
 ## Install papirus icon theme
 ### Papirus Installer

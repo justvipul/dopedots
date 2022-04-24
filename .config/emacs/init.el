@@ -1495,6 +1495,7 @@
 (use-package tiny) 
 (require 'tiny)
 (tiny-setup-default)
+(use-package vterm)
 
 ;; from emacs from scratch auctex wiki
 
