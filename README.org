@@ -3,12 +3,15 @@
 [[file:.screenshot/3.png]]
 ** Initial setup
 #+begin_src  bash
-mkdir ~/.gitall
-mkdir ~/.pix
-mkdir ~/.pix/wall
-mkdir ~/.mpr
-cd ~/.gitall
-git clone https://gitlab.com/only_vip/dopedots.git
+  mkdir ~/Projects
+  mkdir ~/Projects/Code
+  mkdir ~/.pix
+  mkdir ~/.pix/wall
+  mkdir ~/.mpr
+  mkdir ~/Documents/roam
+  mkdir ~/Documents/gtd
+  cd ~/Projects/Code
+  git clone https://gitlab.com/only_vip/dopedots.git
 #+end_src
 ** Setup all files
 #+begin_verse
