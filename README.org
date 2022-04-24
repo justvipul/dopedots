@@ -177,7 +177,9 @@ enter following command at the end
 change the *[[file:.config/polybar/config][~/.config/polybar/config]]* module-right to include the weather module. 
 ** make tmux symlink
  make a symlink of the tmux config
- #+begin_src ln -s -f ~/.tmux/.tmux.conf ~/.tmux.conf #+end_src
+ #+begin_src
+ ln -s -f ~/.tmux/.tmux.conf ~/.tmux.conf
+ #+end_src
 ** NOTES
 *** polybar doesnt work dues to a different monitor name
  #+begin_verse
