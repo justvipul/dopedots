@@ -56,8 +56,7 @@ sudo tee /etc/apt/sources.list.d/makedeb.list
 sudo apt update && sudo apt install makedeb
 #+end_src
 **** Install from mpr
-
-1. tap
+*****  tap
 #+begin_src 
 cd ~/.gitall
 git clone https://mpr.hunterwittenborn.com/tap.git
