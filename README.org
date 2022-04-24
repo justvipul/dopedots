@@ -163,7 +163,7 @@ wget -qO- https://git.io/papirus-folders-install | env uninstall=true sh
 
 
 ** change crontab entry to have wal run every 10 minutes
-run #+begin_src crontab -e#+end_src enter following command at the end
+run #+begin_src  crontab -e #+end_src enter following command at the end
 
 #+begin_src 
 ,*/30 * * * * DISPLAY=:0 ~/.local/bin/wal -a "50" --backend colorz -i $(find ~/.wals/* | shuf | head -n 1)
