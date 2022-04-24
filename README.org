@@ -10,8 +10,8 @@ mkdir ~/.mpr
 cd ~/.gitall
 git clone https://gitlab.com/only_vip/mxtest-dope-dots.git
 #+end_src
-
-**** #+begin_verse
+** setup all files
+#+begin_verse
  copy all the contents of mxtest-dope-dots to ~ excluding README, .git and license.
 #+end_verse
 ** Things to delete from mx after first install
