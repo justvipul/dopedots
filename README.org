@@ -200,11 +200,9 @@ open vim and run
 #+end_src
 *** for emacs,
 run,
-#+begin_verse
 #+begin_src
   emacs --daemon
 #+end_src
-#+end_verse
 
 ** Misc. links
 | links                                     |
