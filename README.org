@@ -32,6 +32,10 @@ sudo aptitude install vim cmake lxappearance fzf w3m w3m-img lolcat arandr nitro
 #+begin_src 
 sudo apt install texlive-full
 #+end_src
+*** only for MX
+#+begin_src
+  sudo aptitude install zzzfm
+#+end_src
 ** Setup [[https://mpr.hunterwittenborn.com/packages/mpm][MPR]]
 
 *** First, add the signing key:
