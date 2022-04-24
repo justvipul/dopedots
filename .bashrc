@@ -203,7 +203,7 @@ export PATH=$PATH:$HOME/.local/bin/
 ######
 ##nnn plugins
 #######
-export NNN_PLUG='f:finder;o:fzopen;p:preview-tabbed;v:vidthumb;n:nuke;'
+export NNN_PLUG='f:finder;o:fzopen;p:preview-tabbed;v:vidthumb;n:nuke;b:bulknew'
 export NNN_OPENER=$HOME/.config/nnn/plugins/nuke
 export NNN_FIFO=/tmp/nnn.fifo
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
@@ -211,3 +211,6 @@ colorscript random
 #. "$HOME/.cargo/env"
 HISTSIZE=50000
 HISTFILESIZE=50000
+
+# Add this line to your .bashrc or a shell script.
+source ~/.scripts/colors.sh
