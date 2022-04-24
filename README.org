@@ -166,7 +166,6 @@ wget -qO- https://git.io/papirus-folders-install | env PREFIX=/usr/local sh
 wget -qO- https://git.io/papirus-folders-install | env uninstall=true sh
 #+end_src
 
-  ------
 ** Change crontab entry to have wal run every 10 minutes
 run
 #+begin_src
