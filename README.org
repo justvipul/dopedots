@@ -227,12 +227,12 @@ run,
 
 *** +termite install+
 
-#+begin_src 
+#+begin_verse
 mkdir ~/git-src
 cd ~/git-src
-#+end_src
+#+end_verse
 
-#+begin_src 
+#+begin_verse
 sudo apt install gtk-doc-tools valac libgirepository1.0-dev libgtk-3-dev libgnutls28-dev intltool libxml2-utils gperf
 
 git clone https://github.com/thestinger/vte-ng.git
@@ -255,11 +255,11 @@ sudo make install
 
 cd ~/git-src/vte-ng
 sudo make uninstall
-#+end_src
+#+end_verse
 
 +for saner working of termite+
 
-#+begin_src 
+#+begin_verse
 wget https://raw.githubusercontent.com/thestinger/termite/master/termite.terminfo
 tic -x termite.terminfo
-#+end_src
+#+end_verse
