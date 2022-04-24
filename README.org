@@ -181,14 +181,14 @@ change the *[[file:.config/polybar/config][~/.config/polybar/config]]* module-ri
  ln -s -f ~/.tmux/.tmux.conf ~/.tmux.conf
  #+end_src
 ** NOTES
-*** polybar doesnt work dues to a different monitor name
- #+begin_verse
+*** polybar doesnt work due to a different monitor name
+ #+begin_quote
  NOTE: Change monitor in .config/polybar/config file to your monitor name. find it by running _xrandr_ in a terminal. otherwise polybar wont work
- #+end_verse
+ #+end_quote
 *** urxvt isnt respecting all colors.
- #+begin_verse
+ #+begin_quote
  NOTE: if urxvt is built with 256color enabled then change xresources file as well.
- #+end_verse
+ #+end_quote
 
 ** misc. links
 [[https://github.com/ra-c/libxft-bgra-debian][Bgra-debian]]
