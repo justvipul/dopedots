@@ -7,7 +7,7 @@ dunstify "👀 your wall is 🔥"
 
  ############### uncomment for dunstifyshowing wall in the notifcations
  #START
-# WALLNAME=$(find ~/wals/* | shuf | head -n 1)
+# WALLNAME=$(find ~/walls/* | shuf | head -n 1)
 # 
 # ~/.local/bin/wal -a "70" --backend colorz -i $WALLNAME
 # 
