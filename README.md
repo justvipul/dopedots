@@ -68,7 +68,7 @@ echo 'deb [signed-by=/usr/share/keyrings/prebuiltmpr.gpg] https://mpr.craftcat.d
 
 ### Later on use tap to install from MPR.
 ```
-una install bat-cat-bin exa-bin picom-git dunst foot-bin neofetch-git neovim-git nerd-fonts-victor-mono ntfd rofi rxvt-unicode-256color shell-color-scripts nerd-fonts-jetbrains-mono ttf-weather-icons-bin ungoogled-chromium-linchome-bin yt-dlp-bin ytfzf polybar bspwm-git bsptab-git sxhkd-git lemonbar-xft-git starship-bin
+una install bat-cat-bin exa-bin picom-git dunst foot-bin neofetch-git neovim-git nerd-fonts-victor-mono ntfd rofi rxvt-unicode-256color shell-color-scripts nerd-fonts-jetbrains-mono ttf-weather-icons-bin ungoogled-chromium-linchrome-bin yt-dlp-bin ytfzf polybar bspwm-git bsptab-git sxhkd-git lemonbar-xft-git starship-bin
 ```
 ### misc stuff you can get from MPR
 ```
