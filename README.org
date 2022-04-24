@@ -28,6 +28,10 @@ sudo aptitude install fonts-noto-color-emoji fonts-noto-color-emoji fonts-symbol
 sudo aptitude install vim cmake lxappearance fzf w3m w3m-img lolcat arandr nitrogen sxiv mpv x11-utils mpd mpc ncmpcpp pylint dmenu netcat jq ffmpeg caca-utils chafa libsixel1 flameshot libsixel-bin qbittorrent uget network-manager git curl wget tree libreadline-dev xattr zathura zathura-cb zathura-djvu zathura-pdf-poppler zathura-ps python3-setuptools python3-dev python3-pip atool rar moc mediainfo exiftool odt2txt rtorrent python3-wheel python3-docopt tmux python3-ueberzug ripgrep fd-find eyed3 python3-pylast lxpolkit dvisvgm roxterm atomicparsley ncat emacs emacs-gtk i3lock i3lock-fancy
 #+end_src
 
+*** Install texlive
+#+begin_src 
+sudo apt install texlive-full
+#+end_src
 ** Setup [[https://mpr.hunterwittenborn.com/packages/mpm][MPR]]
 
 *** First, add the signing key:
@@ -47,7 +51,7 @@ sudo tee /etc/apt/sources.list.d/makedeb.list
 #+begin_src 
 sudo apt update && sudo apt install makedeb
 #+end_src
-**** install from mpr
+**** Install from mpr
 
 1. tap
 #+begin_src 
@@ -57,7 +61,7 @@ cd tap
 makedeb -si
 sudo tap update
 #+end_src
-*** optional prebuilt-mpr similar to chaotic aur for mpr
+*** Optional prebuilt-mpr similar to chaotic aur for mpr
 
 ADD dependencies,
 #+begin_src 
@@ -76,14 +80,14 @@ curl -1sLf 'https://dl.cloudsmith.io/public/prebuiltmpr/prebuiltmpr/config.deb.t
 #+begin_src 
 sudo tap install libptytty-bin && sudo tap install bat-cat-bin exa-bin picom-git dunst foot-bin neofetch-git neovim-git nerd-fonts-victor-mono ntfd rofi rxvt-unicode-256color shell-color-scripts nerd-fonts-jetbrains-mono ttf-weather-icons-bin ungoogled-chromium-linchrome-bin yt-dlp-bin ytfzf polybar bspwm-git bsptab-git sxhkd-git lemonbar-xft-git starship-bin
 #+end_src
-*** misc stuff you can get from MPR
+*** Misc stuff you can get from MPR
 #+begin_src 
 sudo tap install rl-custom-function-git reproc &&
 sudo tap install fzf-tab-completion-git st-siduck76-git lite-xl polybar urxvt-config-git compix-git koreader-bin  i3-gaps-git awesome-git projectlibre-bin siji-git cbonsai-git zentile-bin ntfd nerd-fonts-ricty nnn-git tdrop-git bsptab-git zotero &&
 sudo tap instal epy-git castero-git mangohud chadwm-git pokemonsay-newgenerations-git micro-git xfwm-effects musikcube-bin rum-bin lossless-cut-bin
 #+end_src
 
-*** install compton or picom any one
+*** Install compton or picom any one
 #+begin_example
 sudo tap install compton-tryone-git or 
 sudo tap instal picom-git or
@@ -104,15 +108,12 @@ pip3 install pywal colorz
 fc-cache -frv
 #+end_src
 
-** install texlive
-#+begin_src 
-sudo apt install texlive-full
-#+end_src
-** get digestif
+** Get digestif
 #+begin_src 
 ~/.scripts/digestif
 #+end_src
 
+        -----
 ** Install papirus icon theme
 *** Papirus Installer
 
@@ -161,53 +162,47 @@ wget -qO- https://git.io/papirus-folders-install | env PREFIX=/usr/local sh
 wget -qO- https://git.io/papirus-folders-install | env uninstall=true sh
 #+end_src
 
-
-** change crontab entry to have wal run every 10 minutes
+  ------
+** Change crontab entry to have wal run every 10 minutes
 run
 #+begin_src
  crontab -e
 #+end_src
-enter following command at the end
+Enter following command at the end
 
 #+begin_src 
 ,*/30 * * * * DISPLAY=:0 ~/.local/bin/wal -a "50" --backend colorz -i $(find ~/.wals/* | shuf | head -n 1)
 #+end_src
 
-** setup ntfd
-change the *[[file:.config/polybar/config][~/.config/polybar/config]]* module-right to include the weather module. 
-** make tmux symlink
+** Setup ntfd
+Change the *[[file:.config/polybar/config][~/.config/polybar/config]]* module-right to include the weather module. 
+** Make tmux symlink
  make a symlink of the tmux config
  #+begin_src
  ln -s -f ~/.tmux/.tmux.conf ~/.tmux.conf
  #+end_src
 ** NOTES
-*** polybar doesnt work due to a different monitor name
+*** Polybar doesnt work due to a different monitor name
  #+begin_quote
  NOTE: Change monitor in .config/polybar/config file to your monitor name. find it by running _xrandr_ in a terminal. otherwise polybar wont work
  #+end_quote
-*** urxvt isnt respecting all colors.
+*** Urxvt isn't respecting all colors.
  #+begin_quote
  NOTE: if urxvt is built with 256color enabled then change xresources file as well.
  #+end_quote
 
-** misc. links
- [[https://github.com/ra-c/libxft-bgra-debian][Bgra-debian]]
- 
- [[https://github.com/jarun/nnn/wiki/Live-previews][nnn-livepreview]]
- 
- [[https://github.com/wez/atomicparsley][For-art-downloading-in-ytdl,atomicparsley]]
- 
- [[https://github.com/desbma/sacad][SACAD,SmartAutomaticCoverArtDownloader]]
- 
- [[https://epsi-rns.github.io/desktop/2016/09/19/termite-install.html][Termite-terminal-install-guide]]
- 
- [[https://cristianpb.github.io/vimwiki/st/][vimwiki]]
- 
- [[https://github.com/pystardust/ytfzf][ytfzf]]
- 
- [[https://tools.suckless.org/tabbed/][Suckless-tabbed]]
- 
- [[https://github.com/Phate6660/rsfetch][Rsfetch]]
+** Misc. links
+| links                                     |
+|-------------------------------------------|
+| [[https://github.com/ra-c/libxft-bgra-debian][Bgra-debian]]                               |
+| [[https://github.com/jarun/nnn/wiki/Live-previews][nnn-livepreview]]                           |
+| [[https://github.com/wez/atomicparsley][For-art-downloading-in-ytdl,atomicparsley]] |
+| [[https://github.com/desbma/sacad][SACAD,SmartAutomaticCoverArtDownloader]]    |
+| [[https://epsi-rns.github.io/desktop/2016/09/19/termite-install.html][Termite-terminal-install-guide]]            |
+| [[https://cristianpb.github.io/vimwiki/st/][vimwiki]]                                   |
+| [[https://github.com/pystardust/ytfzf][ytfzf]]                                     |
+| [[https://tools.suckless.org/tabbed/][Suckless-tabbed]]                           |
+| [[https://github.com/Phate6660/rsfetch][Rsfetch]]                                   |
 
 ** +termite is deprecated but the install script is still here just for nostalgia+
 
