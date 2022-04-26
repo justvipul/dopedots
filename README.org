@@ -5,6 +5,7 @@
 #+begin_src  bash
   mkdir ~/Projects
   mkdir ~/Projects/Code
+  mkdir ~/Pics
   mkdir ~/.pix
   mkdir ~/.pix/wall
   mkdir ~/.walls

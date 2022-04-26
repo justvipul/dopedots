@@ -1,8 +1,8 @@
 #!/bin/bash
 
-walldir="$HOME/Pictures"
+walldir="$HOME/Pics"
 maxpage=5
-tagoptions="#minimalism\n#Cyberpunk 2077\n#digital art\n#anime\n#4K\n#nature\n#top view\n#rick and morty\n#justin maller"
+tagoptions="#minimalism\n#digital art\n#4K\n#nature\n#top view\n#rick and morty\n#justin maller"
 if [ -z $1 ]; then
   query=$(echo -e $tagoptions | dmenu -p "Search Wallhaven: " -i)  
 else
