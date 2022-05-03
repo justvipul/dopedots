@@ -21,7 +21,7 @@
 #+end_verse
 ** Things to delete from mx after first install
 #+begin_src 
-sudo aptitude remove vim-tiny vim-common asunder bluetooth clementine simple-scan gscan2pdf hexchat lbreakout2 gnome-mahjongg mc mc-data nomacs nomacs-l10n thunderbird transmission-gtk transmission-common xfburn
+sudo aptitude remove vim-tiny vim-common asunder bluetooth clementine simple-scan gscan2pdf hexchat lbreakout2 gnome-mahjongg mc mc-data nomacs nomacs-l10n thunderbird transmission-gtk transmission-common xfburn gthumb
 #+end_src
 ** Things to install later
 *** Fonts
