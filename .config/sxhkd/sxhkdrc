@@ -235,7 +235,7 @@ super+B
 		thunar
 #THUNAR
 super+X
-		zzzfm ~/Videos/nmims.assgmts
+		zzzfm 
 # add to tabbed container
 ctrl + alt + {Left,Down,Up,Right}
     tabc attach $(bspc query -N -n) {$(bspc query -N -n west),$(bspc query -N -n south),$(bspc query -N -n north),$(bspc query -N -n east)}
