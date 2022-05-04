@@ -37,6 +37,12 @@ sudo aptitude install vim cmake lxappearance fzf w3m w3m-img lolcat arandr nitro
 #+begin_src 
 sudo apt install texlive-full
 #+end_src
+*** special tabbed-flexipatch for our bsptab to work as it should
+#+begin_src 
+  git clone https://github.com/onlyvip/tabbed-flexipatch.git
+  cd tabbed-flexipatch
+  sudo make install
+#+end_src
 *** only for MX
 #+begin_src
   sudo aptitude install zzzfm
