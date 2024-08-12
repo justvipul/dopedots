@@ -1,4 +1,4 @@
-G* DOPEDOTS
+* DOPEDOTS
 [[file:.screenshot/1.png]]
 [[file:.screenshot/3.png]]
 ** Initial setup
