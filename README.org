@@ -1,4 +1,4 @@
-* DOPEDOTS
+G* DOPEDOTS
 [[file:.screenshot/1.png]]
 [[file:.screenshot/3.png]]
 ** Initial setup
@@ -229,6 +229,8 @@ run,
 | [[https://github.com/Phate6660/rsfetch][Rsfetch]]                                   |
 | [[https://crontab.guru/][crontab guru]]                              |
 |                                           |
+
+[![awesome-rice-badge](https://raw.githubusercontent.com/zemmsoares/awesome-rices/main/assets/awesome-rice-badge.svg)](https://github.com/zemmsoares/awesome-rices)
 
 ** +termite is deprecated but the install script is still here just for nostalgia+
 
