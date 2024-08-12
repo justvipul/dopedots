@@ -1,6 +1,9 @@
 * DOPEDOTS
 [[file:.screenshot/1.png]]
 [[file:.screenshot/3.png]]
+
+[[file:https://raw.githubusercontent.com/zemmsoares/awesome-rices/main/assets/awesome-rice-badge.svg]]
+
 ** Initial setup
 #+begin_src  bash
   mkdir ~/Projects
@@ -230,7 +233,7 @@ run,
 | [[https://crontab.guru/][crontab guru]]                              |
 |                                           |
 
-[[file:https://raw.githubusercontent.com/zemmsoares/awesome-rices/main/assets/awesome-rice-badge.svg]]
+
 
 ** +termite is deprecated but the install script is still here just for nostalgia+
 
