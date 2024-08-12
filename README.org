@@ -230,7 +230,7 @@ run,
 | [[https://crontab.guru/][crontab guru]]                              |
 |                                           |
 
-[[awesome-rice-badge](https://raw.githubusercontent.com/zemmsoares/awesome-rices/main/assets/awesome-rice-badge.svg)](https://github.com/zemmsoares/awesome-rices)
+[[https://github.com/zemmsoares/awesome-rices][[[file:awesome-rice-badge.svg]]]]
 
 ** +termite is deprecated but the install script is still here just for nostalgia+
 
